@@ -1,0 +1,12 @@
+import static com.ying.util.Print.*;
+import static com.ying.util.Range.*;
+
+import package1.Dog;
+
+public class Main {
+
+	public static void main(String... args) {
+		
+	}
+
+}

@@ -1,0 +1,23 @@
+package package1;
+
+
+
+import static com.ying.util.Print.*;
+
+class Dog4 {
+
+	String name = "hello";
+	
+	private int age = 12;
+	
+	public Dog4() {
+		print("Create a Dog!");
+	}
+	
+	protected void bark() {
+		print("Wow, Wow, Wow!");
+	}
+	
+}
+
+class Dog2 {}
