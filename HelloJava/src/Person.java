@@ -1,15 +1,23 @@
+import static com.ying.util.Print.*;
 
-class Person { // ¶¨ÒåPersonÀà
-	private String name; // ĞÕÃû
-	private int age; // ÄêÁä
+class Person { // å®šä¹‰Personç±»
+	private String name; // å§“å
+	private int age; // å¹´é¾„
 
-	public Person(String name, int age) { // Í¨¹ı¹¹Ôì·½·¨¸³Öµ
-		name = name;
-		age = age;
+	public Person(String name, int age) { // é€šè¿‡æ„é€ æ–¹æ³•èµ‹å€¼
+//		name = name; // ä¸èƒ½å¤Ÿæ”¹å˜ç±»çš„æˆå‘˜å˜é‡å€¼
+//		age = age; //
+		this.name = name;
+		this.age = age;
 	}
 
-	public String getInfo() { // È¡µÃĞÅÏ¢µÄ·½·¨
-		return "ĞÕÃû£º" + name + "£¬ÄêÁä£º" + age;
+	public String getInfo() { // å–å¾—ä¿¡æ¯çš„æ–¹æ³•
+		return "å§“åï¼š" + name + "ï¼Œå¹´é¾„ï¼š" + age;
+	}
+	
+	public static void main(String[] args) {
+		Person person = new Person("zhang", 12);
+		print(person.getInfo());
 	}
 }
 

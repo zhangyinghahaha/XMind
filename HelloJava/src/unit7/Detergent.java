@@ -57,3 +57,17 @@ public class Detergent extends Cleanser {
 		Cleanser.main(args);
 	}
 }
+
+class Detergent1 {
+	
+	private String name;
+	private Cleanser cleanser = new Cleanser();
+	
+	public Detergent1(String name) {
+		this.name = name;
+	}
+	
+	public void dilute() {
+		cleanser.dilute();
+	}
+}
