@@ -13,8 +13,9 @@ public class Test {
 
     public static void main(String[] args) {
         Test t = new Test(2);
-        // p();
-        System.out.println(t.i);
+        //p();
+        //System.out.println(t.p());
+        t.p();
     }
 }
 
