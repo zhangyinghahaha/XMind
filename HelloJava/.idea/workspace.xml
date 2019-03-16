@@ -3,10 +3,51 @@
   <component name="ChangeListManager">
     <list default="true" id="e6583059-ed1b-4413-8c86-b86383723749" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/FinalData.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloJava/unit7/FinalData.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloJava/unit7/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Test2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/HelloJava/unit7/Test2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unit7/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unit7/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/A.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Amphibian.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Art.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/B.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/BlankFinal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/BoardGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/C.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Cartoon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Chess.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Cleanser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Component1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Component2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Component3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Custom.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Detergent.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Detergent1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/DinnerPlate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Drawing.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/FinalData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/FinalOverridingIllusion.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Fork.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Frog.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Game.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Instrument.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Knife.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Orc.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/OverridingPrivate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/OverridingPrivate2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/PlaceSetting.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Plate.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Poppet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Root.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Spoon.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Stem.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Test2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Utensil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Value.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Villain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Wind.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/WithFinals.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unit7/BlankFinal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unit7/FinalData.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unit7/FinalOverridingIllusion.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unit7/Test.java" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,56 +56,96 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="821777501">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="java" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="JAVA" value="5" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="1560" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="1560" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/unit7/Amphibian.java">
+        <entry file="file://$PROJECT_DIR$/src/unit8/FieldAccess.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+            <state relative-caret-position="500">
+              <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/unit7/FinalData.java">
+        <entry file="file://$PROJECT_DIR$/src/unit8/Frog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="640">
-              <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
+            <state relative-caret-position="671">
+              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#215#216#0" expanded="true" />
+                <element signature="e#260#261#0" expanded="true" />
+                <element signature="e#461#462#0" expanded="true" />
+                <element signature="e#486#487#0" expanded="true" />
+                <element signature="e#711#712#0" expanded="true" />
+                <element signature="e#763#764#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/unit7/BlankFinal.java">
+        <entry file="file://$PROJECT_DIR$/src/unit8/ReferenceCounting.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="380">
-              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+            <state relative-caret-position="369">
+              <caret line="60" column="24" lean-forward="true" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
               <folding>
-                <element signature="e#68#69#0" expanded="true" />
-                <element signature="e#94#95#0" expanded="true" />
+                <element signature="e#162#163#0" expanded="true" />
+                <element signature="e#183#184#0" expanded="true" />
+                <element signature="e#248#249#0" expanded="true" />
+                <element signature="e#271#272#0" expanded="true" />
+                <element signature="e#519#520#0" expanded="true" />
+                <element signature="e#556#557#0" expanded="true" />
+                <element signature="e#915#916#0" expanded="true" />
+                <element signature="e#953#954#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/unit7/FinalOverridingIllusion.java">
+        <entry file="file://$PROJECT_DIR$/src/unit8/PolyConstructors.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/unit7/Test.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+            <state relative-caret-position="425">
+              <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+              <folding>
+                <element signature="e#46#47#0" expanded="true" />
+                <element signature="e#67#68#0" expanded="true" />
+                <element signature="e#461#462#0" expanded="true" />
+                <element signature="e#482#483#0" expanded="true" />
+                <element signature="e#616#617#0" expanded="true" />
+                <element signature="e#647#648#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -89,14 +170,23 @@
         <option value="$PROJECT_DIR$/src/unit7/BlankFinal.java" />
         <option value="$PROJECT_DIR$/src/unit7/Test.java" />
         <option value="$PROJECT_DIR$/src/unit7/FinalOverridingIllusion.java" />
+        <option value="$PROJECT_DIR$/src/unit8/Frog.java" />
+        <option value="$PROJECT_DIR$/src/unit8/ReferenceCounting.java" />
+        <option value="$PROJECT_DIR$/src/unit8/PolyConstructors.java" />
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="87" />
-    <option name="y" value="12" />
-    <option name="width" value="1734" />
-    <option name="height" value="995" />
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -106,7 +196,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -123,33 +213,20 @@
               <item name="HelloJava" type="b2602c69:ProjectViewProjectNode" />
               <item name="HelloJava" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="unit7" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="HelloJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HelloJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="unit7" type="462c0819:PsiDirectoryNode" />
-              <item name="Orc.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
-            </path>
-            <path>
-              <item name="HelloJava" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HelloJava" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="unit7" type="462c0819:PsiDirectoryNode" />
-              <item name="Test.java" type="529ef68f:ClassesTreeStructureProvider$PsiClassOwnerTreeNode" />
+              <item name="unit8" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1551623028513" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552725548623" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
@@ -169,7 +246,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.PolyConstructors">
     <configuration name="BlankFinal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="unit7.BlankFinal" />
       <module name="HelloJava" />
@@ -196,12 +273,28 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="Main" />
+    <configuration name="PolyConstructors" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="unit8.PolyConstructors" />
       <module name="HelloJava" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unit8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReferenceCounting" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="unit8.ReferenceCounting" />
+      <module name="HelloJava" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unit8.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -219,25 +312,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="unit7.Test2" />
-      <module name="HelloJava" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="unit7.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+    <list>
+      <item itemvalue="Application.BlankFinal" />
+      <item itemvalue="Application.FinalData" />
+      <item itemvalue="Application.Test" />
+      <item itemvalue="Application.ReferenceCounting" />
+      <item itemvalue="Application.PolyConstructors" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PolyConstructors" />
+        <item itemvalue="Application.ReferenceCounting" />
         <item itemvalue="Application.Test" />
         <item itemvalue="Application.BlankFinal" />
         <item itemvalue="Application.FinalData" />
-        <item itemvalue="Application.Test2" />
       </list>
     </recent_temporary>
   </component>
@@ -256,17 +344,18 @@
       <workItem from="1551281633613" duration="3717000" />
       <workItem from="1551368340051" duration="2206000" />
       <workItem from="1551622987852" duration="220000" />
+      <workItem from="1552716645395" duration="7978000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6909000" />
+    <option name="totallyTimeSpent" value="14887000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1577" height="853" extended-state="6" />
+    <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2626728" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26545843" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -275,17 +364,18 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32871014" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32790446" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32871014" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32790446" />
+      <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -300,35 +390,30 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java" />
-    <entry file="file://$PROJECT_DIR$/src/unit7/Frog.java">
+    <entry file="file://$PROJECT_DIR$/src/unit7/Frog.java" />
+    <entry file="file://$PROJECT_DIR$/src/unit7/Amphibian.java" />
+    <entry file="file://$PROJECT_DIR$/src/unit7/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state relative-caret-position="325">
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/unit7/Amphibian.java">
+    <entry file="file://$PROJECT_DIR$/src/unit7/FinalOverridingIllusion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="12" column="5" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/unit7/FinalData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="640">
-          <caret line="39" column="45" selection-start-line="39" selection-start-column="45" selection-end-line="39" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="50">
+          <caret line="2" column="36" lean-forward="true" selection-start-line="2" selection-start-column="36" selection-end-line="2" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/unit7/BlankFinal.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
+        <state relative-caret-position="521">
           <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
           <folding>
             <element signature="e#68#69#0" expanded="true" />
@@ -337,17 +422,67 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/unit7/Test.java">
+    <entry file="file://$PROJECT_DIR$/src/unit7/FinalData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        <state relative-caret-position="100">
+          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/unit7/FinalOverridingIllusion.java">
+    <entry file="file://$PROJECT_DIR$/src/unit8/FieldAccess.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="29" column="16" lean-forward="true" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+        <state relative-caret-position="500">
+          <caret line="20" column="5" lean-forward="true" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unit8/Frog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="671">
+          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+          <folding>
+            <element signature="e#215#216#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#486#487#0" expanded="true" />
+            <element signature="e#711#712#0" expanded="true" />
+            <element signature="e#763#764#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unit8/ReferenceCounting.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="60" column="24" lean-forward="true" selection-start-line="60" selection-start-column="24" selection-end-line="60" selection-end-column="24" />
+          <folding>
+            <element signature="e#162#163#0" expanded="true" />
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#248#249#0" expanded="true" />
+            <element signature="e#271#272#0" expanded="true" />
+            <element signature="e#519#520#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+            <element signature="e#915#916#0" expanded="true" />
+            <element signature="e#953#954#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unit8/PolyConstructors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+          <folding>
+            <element signature="e#46#47#0" expanded="true" />
+            <element signature="e#67#68#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="true" />
+            <element signature="e#482#483#0" expanded="true" />
+            <element signature="e#616#617#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
