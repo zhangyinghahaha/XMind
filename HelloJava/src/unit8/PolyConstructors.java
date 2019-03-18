@@ -13,7 +13,7 @@ class Glyph {
 }
 
 class RoundGlyph extends Glyph {
-    private  int radius = 1;
+    private int radius = 1;
 
     RoundGlyph(int r) {
         radius = r;

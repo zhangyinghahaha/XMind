@@ -3,51 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e6583059-ed1b-4413-8c86-b86383723749" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/A.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Amphibian.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Art.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/B.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/BlankFinal.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/BoardGame.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/C.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Cartoon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Chess.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Cleanser.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Component1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Component2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Component3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Custom.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Detergent.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Detergent1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/DinnerPlate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Drawing.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/FinalData.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/FinalOverridingIllusion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Fork.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Frog.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Instrument.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Knife.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Orc.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/OverridingPrivate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/OverridingPrivate2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/PlaceSetting.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Plate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Poppet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Root.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Spoon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Stem.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Test2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Utensil.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Value.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Villain.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/Wind.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/HelloJava/unit7/WithFinals.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unit7/BlankFinal.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unit7/FinalData.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unit7/FinalOverridingIllusion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unit7/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unit8/PolyConstructors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/unit8/PolyConstructors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Thinking in Java.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/../Thinking in Java.xmind" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,22 +23,22 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="java" value="5" />
+          <entry key="java" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="5" />
+          <entry key="JAVA" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1560" />
+          <entry key="java" value="2296" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1560" />
+          <entry key="JAVA" value="2296" />
         </counts>
       </usages-collector>
     </session>
@@ -133,11 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/unit8/PolyConstructors.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+            <state relative-caret-position="725">
+              <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
               <folding>
                 <element signature="e#46#47#0" expanded="true" />
                 <element signature="e#67#68#0" expanded="true" />
@@ -145,6 +102,53 @@
                 <element signature="e#482#483#0" expanded="true" />
                 <element signature="e#616#617#0" expanded="true" />
                 <element signature="e#647#648#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unit8/Transmogrify.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="369">
+              <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+              <folding>
+                <element signature="e#127#128#0" expanded="true" />
+                <element signature="e#150#151#0" expanded="true" />
+                <element signature="e#233#234#0" expanded="true" />
+                <element signature="e#279#280#0" expanded="true" />
+                <element signature="e#329#330#0" expanded="true" />
+                <element signature="e#375#376#0" expanded="true" />
+                <element signature="e#559#560#0" expanded="true" />
+                <element signature="e#586#587#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/unit8/Beetle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/unit8/CovariantReturn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="214">
+              <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+              <folding>
+                <element signature="e#59#60#0" expanded="true" />
+                <element signature="e#89#90#0" expanded="true" />
+                <element signature="e#150#151#0" expanded="true" />
+                <element signature="e#180#181#0" expanded="true" />
+                <element signature="e#218#219#0" expanded="true" />
+                <element signature="e#252#253#0" expanded="true" />
+                <element signature="e#309#310#0" expanded="true" />
+                <element signature="e#336#337#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -173,6 +177,9 @@
         <option value="$PROJECT_DIR$/src/unit8/Frog.java" />
         <option value="$PROJECT_DIR$/src/unit8/ReferenceCounting.java" />
         <option value="$PROJECT_DIR$/src/unit8/PolyConstructors.java" />
+        <option value="$PROJECT_DIR$/src/unit8/CovariantReturn.java" />
+        <option value="$PROJECT_DIR$/src/unit8/Transmogrify.java" />
+        <option value="$PROJECT_DIR$/src/unit8/Beetle.java" />
       </list>
     </option>
   </component>
@@ -225,12 +232,13 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552725548623" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552910689313" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.tabs" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ying.zhang01\Desktop\temp\Study Materials\Java\XMind\HelloJava\src\unit8" />
       <recent name="C:\Users\zhangying\Desktop\temp\JAVA\XMind\HelloJava\src" />
     </key>
   </component>
@@ -246,13 +254,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.PolyConstructors">
-    <configuration name="BlankFinal" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="unit7.BlankFinal" />
+  <component name="RunManager" selected="Application.Beetle">
+    <configuration name="Beetle" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="unit8.Beetle" />
       <module name="HelloJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="unit7.*" />
+          <option name="PATTERN" value="unit8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -260,12 +268,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FinalData" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="unit7.FinalData" />
+    <configuration name="CovariantReturn" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="unit8.CovariantReturn" />
       <module name="HelloJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="unit7.*" />
+          <option name="PATTERN" value="unit8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -299,12 +307,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="unit7.Test" />
+    <configuration name="Transmogrify" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="unit8.Transmogrify" />
       <module name="HelloJava" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="unit7.*" />
+          <option name="PATTERN" value="unit8.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -313,19 +321,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.BlankFinal" />
-      <item itemvalue="Application.FinalData" />
-      <item itemvalue="Application.Test" />
       <item itemvalue="Application.ReferenceCounting" />
       <item itemvalue="Application.PolyConstructors" />
+      <item itemvalue="Application.CovariantReturn" />
+      <item itemvalue="Application.Transmogrify" />
+      <item itemvalue="Application.Beetle" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Beetle" />
+        <item itemvalue="Application.Transmogrify" />
+        <item itemvalue="Application.CovariantReturn" />
         <item itemvalue="Application.PolyConstructors" />
         <item itemvalue="Application.ReferenceCounting" />
-        <item itemvalue="Application.Test" />
-        <item itemvalue="Application.BlankFinal" />
-        <item itemvalue="Application.FinalData" />
       </list>
     </recent_temporary>
   </component>
@@ -344,12 +352,12 @@
       <workItem from="1551281633613" duration="3717000" />
       <workItem from="1551368340051" duration="2206000" />
       <workItem from="1551622987852" duration="220000" />
-      <workItem from="1552716645395" duration="7978000" />
+      <workItem from="1552716645395" duration="17083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14887000" />
+    <option name="totallyTimeSpent" value="23992000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -473,8 +481,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/unit8/PolyConstructors.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="29" column="26" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
+        <state relative-caret-position="725">
+          <caret line="29" column="26" lean-forward="true" selection-start-line="29" selection-start-column="26" selection-end-line="29" selection-end-column="26" />
           <folding>
             <element signature="e#46#47#0" expanded="true" />
             <element signature="e#67#68#0" expanded="true" />
@@ -483,6 +491,47 @@
             <element signature="e#616#617#0" expanded="true" />
             <element signature="e#647#648#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unit8/CovariantReturn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="214">
+          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <element signature="e#59#60#0" expanded="true" />
+            <element signature="e#89#90#0" expanded="true" />
+            <element signature="e#150#151#0" expanded="true" />
+            <element signature="e#180#181#0" expanded="true" />
+            <element signature="e#218#219#0" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
+            <element signature="e#309#310#0" expanded="true" />
+            <element signature="e#336#337#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unit8/Transmogrify.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+          <folding>
+            <element signature="e#127#128#0" expanded="true" />
+            <element signature="e#150#151#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="true" />
+            <element signature="e#279#280#0" expanded="true" />
+            <element signature="e#329#330#0" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
+            <element signature="e#586#587#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/unit8/Beetle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="16" column="30" lean-forward="true" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="30" />
         </state>
       </provider>
     </entry>
