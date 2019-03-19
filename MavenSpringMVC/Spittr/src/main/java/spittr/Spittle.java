@@ -14,6 +14,7 @@ public class Spittle {
     private Double longitude;
 
     public Spittle(String message, Date time) {
+
         this(null, message, time, null, null);
     }
 
@@ -47,11 +48,13 @@ public class Spittle {
 
     @Override
     public boolean equals(Object that) {
+
         return EqualsBuilder.reflectionEquals(this, that, "id", "time");
     }
 
     @Override
     public int hashCode() {
+
         return HashCodeBuilder.reflectionHashCode(this, "id", "time");
     }
 
