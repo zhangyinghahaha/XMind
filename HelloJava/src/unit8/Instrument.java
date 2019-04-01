@@ -1,15 +1,9 @@
 package unit8;
 
-public class Instrument {
-    public void play(Note n) {
-        System.out.println("Instrument.play()" + n);
-    }
+import unit8.Note;
 
-    String what() {
-        return "Instrument";
-    }
-
-    void adjust() {
-        System.out.println("Adjusting Instrument");
-    }
+public interface Instrument {
+    int VALUE = 5;
+    void play(Note n);
+    void adjust();
 }
