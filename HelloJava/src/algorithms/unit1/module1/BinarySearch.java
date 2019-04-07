@@ -1,11 +1,18 @@
-package Algorithms.unit1.unit1_1;
+package algorithms.unit1.module1;
 
-import Algorithms.util.In;
-import Algorithms.util.StdIn;
-import Algorithms.util.StdOut;
+import algorithms.util.StdIn;
+import algorithms.util.StdOut;
 
 import java.util.Arrays;
 
+/**
+ * BinarySearch class
+ *
+ * 二分查找算法
+ *
+ * @author zhangying
+ * @date 2019/04/07
+ */
 public class BinarySearch {
     public static int rank(int key, int[] a) {
         int lo = 0;

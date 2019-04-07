@@ -1,4 +1,4 @@
-package Algorithms.util;
+package algorithms.util;
 
 /******************************************************************************
  *  Compilation:  javac In.java
@@ -799,7 +799,7 @@ public final class In {
  *
  *  This file is part of algs4.jar, which accompanies the textbook
  *
- *      Algorithms, 4th edition by Robert Sedgewick and Kevin Wayne,
+ *      algorithms, 4th edition by Robert Sedgewick and Kevin Wayne,
  *      Addison-Wesley Professional, 2011, ISBN 0-321-57351-X.
  *      http://algs4.cs.princeton.edu
  *

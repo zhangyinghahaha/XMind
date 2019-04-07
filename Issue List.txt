@@ -1,7 +1,0 @@
-访问权限控制？根据类（对象），还是文件的位置？
-完全根据类文件的位置控制
-
-git忽略规则不生效？
-git rm -r --cached .
-
-https://github.com/kevin-wayne/algs4/tree/master/src/main/java/edu/princeton/cs/algs4
