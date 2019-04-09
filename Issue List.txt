@@ -12,8 +12,5 @@ https://github.com/kevin-wayne/algs4/tree/master/src/main/java/edu/princeton/cs/
 idea同一个Project如何包含多个moudle?
 
 
-理清楚接口和抽象类？
-
-
 静态成员（字段、方法）是否可以被继承？
 静态成员可以被继承，但不能实现多态
