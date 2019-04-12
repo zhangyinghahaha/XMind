@@ -10,6 +10,6 @@ import tij.unit9.Months;
  */
 public class Main {
     public static void main(String[] args) {
-        System.out.println(Months.a);
+
     }
 }
