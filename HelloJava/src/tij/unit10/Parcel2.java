@@ -7,42 +7,34 @@ package tij.unit10;
  * @date 2019/4/10
  */
 public class Parcel2 {
-    class Contents {
-        private int i = 11;
-        public int value() {
-            return i;
-        }
-    }
+
+    private String label;
+    private Destination destination;
 
     class Destination {
-        private String label;
+
         Destination(String whereTo) {
             label = whereTo;
         }
 
-        String readLaabel() {
+        private String label2;
+        String readLabel() {
+            label2 = label;
             return label;
         }
     }
 
-    public Destination to(String s) {
-        return new Destination(s);
-    }
-
-    public Contents contents() {
-        return new Contents();
-    }
-
-    public void ship(String dest) {
-        Contents s = new Contents();
-        Destination d = new Destination(dest);
-        System.out.println(d.readLaabel());
+    public void to(String s) {
+        destination = new Destination(s);
     }
 
     public static void main(String[] args) {
-        //Parcel2 p = new Parcel2();
-        //p.ship("Ta");
-        //Parcel2.Contents c = p.contents();
-        //Parcel2.Destination d = new Parcel2.Destination("to");
+        Parcel2 p = new Parcel2();
+        Parcel2.Destination d = p.new Destination("Shanghai");
+        System.out.println(d.readLabel());
+        System.out.println(d.label2);
+        p.to("Beijing");
+        System.out.println(p.label);
+        System.out.println(p.destination.label2);
     }
 }

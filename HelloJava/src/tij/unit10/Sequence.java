@@ -44,6 +44,9 @@ public class Sequence {
                 i++;
             }
         }
+        public Sequence getOuter() {
+            return Sequence.this;
+        }
     }
 
     public Selector selector() {
@@ -53,7 +56,7 @@ public class Sequence {
     public static void main(String[] args) {
         Sequence sequence = new Sequence(10);
         for(int i=0; i < 10; i++) {
-            sequence.add(new Dog("dog "+Integer.toString(i)));
+            sequence.add(new Animal("dog "+Integer.toString(i)));
         }
         Selector selector = sequence.selector();
         while (!selector.end()) {

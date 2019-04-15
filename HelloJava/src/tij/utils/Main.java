@@ -1,5 +1,6 @@
 package tij.utils;
 
+import tij.unit10.Animal;
 import tij.unit9.Months;
 
 /**
@@ -10,6 +11,8 @@ import tij.unit9.Months;
  */
 public class Main {
     public static void main(String[] args) {
-
+        Animal animal = new Animal("xiaobai");
+        Animal.Dog dog = animal.new Dog();
+        System.out.println(dog);
     }
 }

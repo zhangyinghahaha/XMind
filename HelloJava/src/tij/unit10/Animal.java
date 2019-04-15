@@ -6,14 +6,14 @@ package tij.unit10;
  * @author ying.zhang01
  * @date 2019/4/10
  */
-public class Dog {
+public class Animal {
     private String name;
 
-    public Dog(String name) {
+    public Animal(String name) {
         this.name = name;
     }
 
-    public class InnerDog {
+    public class Dog {
         @Override
         public String toString() {
             return name;
@@ -21,7 +21,6 @@ public class Dog {
     }
 
     public static void main(String[] args) {
-        Dog dog = new Dog("aa");
-        //Dog.InnerDog innerDog = new Dog.InnerDog();
+
     }
 }
