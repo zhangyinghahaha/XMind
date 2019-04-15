@@ -7,28 +7,26 @@ package tij.unit10;
  * @date 2019/4/15
  */
 public class Parcel3 {
-    class Contents {
-        private int i = 11;
-        public int value() {
-            return i;
-        }
-    }
 
-    class Destination {
-        private String lable;
+    private class PDestination implements Destination {
+        public String lable;
 
-        Destination(String whereTo) {
+        PDestination(String whereTo) {
             lable = whereTo;
         }
-
-        String readLabel() {
+        @Override
+        public String readLabel() {
             return lable;
         }
     }
 
+    public Destination getDestination() {
+        return new PDestination("Shanghai");
+    }
+
     public static void main(String[] args) {
         Parcel3 p = new Parcel3();
-        Parcel3.Contents c = p.new Contents();
-        Parcel3.Destination d = p.new Destination("Tasmaina");
+        Destination d = p.getDestination();
+        System.out.println(((Parcel3.PDestination)d).lable);
     }
 }
