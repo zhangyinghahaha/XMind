@@ -8,9 +8,9 @@ package tij.unit10;
  */
 public class Parcel5 {
     public Destination destination(String s) {
-        class PDestination implements Destination {
+        class PclDestination implements Destination {
             private String label;
-            private PDestination(String whereTo) {
+            private PclDestination(String whereTo) {
                 label = whereTo;
             }
             @Override
@@ -18,7 +18,7 @@ public class Parcel5 {
                 return label;
             }
         }
-        return new PDestination(s);
+        return new PclDestination(s);
     }
 
     public static void main(String[] args) {
