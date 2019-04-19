@@ -6,8 +6,6 @@ interface Selector {
     void next();
 }
 
-
-
 /**
  * Sequence class
  *
@@ -49,8 +47,35 @@ public class Sequence {
         }
     }
 
+    private class ReverseSelector implements Selector {
+        private int i = items.length - 1;
+
+        @Override
+        public boolean end() {
+            return i==items.length-1;
+        }
+        @Override
+        public Object current() {
+            return items[i];
+        }
+        @Override
+        public void next() {
+            if(i > 0) {
+                i--;
+            }
+        }
+        public Sequence getOuter() {
+            return Sequence.this;
+        }
+    }
+
     public Selector selector() {
+
         return new SequenceSelector();
+    }
+
+    public Selector reverseSelector() {
+        return new ReverseSelector();
     }
 
     public static void main(String[] args) {
