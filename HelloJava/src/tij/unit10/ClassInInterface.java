@@ -10,7 +10,9 @@ public interface ClassInInterface {
     void howdy();
 
     class Test  {
-
+        public void f() {
+            System.out.println("fff");
+        }
         public static void main(String[] args) {
 
         }
