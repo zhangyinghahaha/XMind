@@ -1,5 +1,8 @@
 package tij.unit10;
 
+import java.util.ArrayList;
+import java.util.List;
+
 interface Selector {
     boolean end();
     Object current();
@@ -13,15 +16,15 @@ interface Selector {
  * @date 2019/4/10
  */
 public class Sequence {
-    private Object[] items;
+    private List<Object> items;
     private int next = 0;
 
     public Sequence(int size) {
-        items = new Object[size];
+        items = new ArrayList<>();
     }
     public void add(Object x) {
-        if(next < items.length) {
-            items[next++] = x;
+        if(next < items.size()) {
+            items.add(x);
         }
     }
 
@@ -30,15 +33,15 @@ public class Sequence {
 
         @Override
         public boolean end() {
-            return i==items.length;
+            return i==items.size();
         }
         @Override
         public Object current() {
-            return items[i];
+            return items.get(i);
         }
         @Override
         public void next() {
-            if(i < items.length) {
+            if(i < items.size()) {
                 i++;
             }
         }
@@ -48,15 +51,15 @@ public class Sequence {
     }
 
     private class ReverseSelector implements Selector {
-        private int i = items.length - 1;
+        private int i = items.size() - 1;
 
         @Override
         public boolean end() {
-            return i==items.length-1;
+            return i==items.size()-1;
         }
         @Override
         public Object current() {
-            return items[i];
+            return items.get(i);
         }
         @Override
         public void next() {
