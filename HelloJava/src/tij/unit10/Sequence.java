@@ -3,7 +3,7 @@ package tij.unit10;
 import java.util.ArrayList;
 import java.util.List;
 
-interface Selector {
+interface Iterator {
     boolean end();
     Object current();
     void next();
@@ -28,7 +28,7 @@ public class Sequence {
         }
     }
 
-    private class SequenceSelector implements Selector {
+    private class SequenceSelector implements Iterator {
         private int i = 0;
 
         @Override
@@ -50,7 +50,7 @@ public class Sequence {
         }
     }
 
-    private class ReverseSelector implements Selector {
+    private class ReverseSelector implements Iterator {
         private int i = items.size() - 1;
 
         @Override
@@ -72,12 +72,12 @@ public class Sequence {
         }
     }
 
-    public Selector selector() {
+    public Iterator iterator() {
 
         return new SequenceSelector();
     }
 
-    public Selector reverseSelector() {
+    public Iterator reverseSelector() {
         return new ReverseSelector();
     }
 
@@ -86,7 +86,7 @@ public class Sequence {
         for(int i=0; i < 10; i++) {
             sequence.add(new Animal("dog "+Integer.toString(i)));
         }
-        Selector selector = sequence.selector();
+        Iterator selector = sequence.iterator();
         while (!selector.end()) {
             System.out.println(selector.current() + " ");
             selector.next();

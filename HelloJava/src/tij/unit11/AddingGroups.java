@@ -1,9 +1,6 @@
 package tij.unit11;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collection;
-import java.util.List;
+import java.util.*;
 
 /**
  * AddingGroups class
@@ -19,5 +16,6 @@ public class AddingGroups {
         collection.addAll(Arrays.asList(moreInts));
 
         System.out.println(collection);
+        //Collection.addAll();
     }
 }
