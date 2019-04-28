@@ -1,5 +1,6 @@
 package tij.utils;
 
+import com.sun.deploy.util.ArrayUtil;
 import tij.unit10.Animal;
 import tij.unit10.ClassInInterface;
 import tij.unit9.Months;
@@ -17,21 +18,17 @@ import java.util.List;
  */
 public class Main {
     public static void main(String[] args) {
-        String input = "";
-        LinkedList<Character> linkedList = new LinkedList<Character>();
-        //Collections.addAll(linkedList, {'c'});
+        String inputStr = "+U+n+c---+e+r+t---+a-+i-+n+t+y---+~+r+u--+l+e+s---";
+        char[] strArray = inputStr.toCharArray();
 
-
-        Stack<Character> stack = new Stack<Character>();
-        for(Character s : input.toCharArray()){
-            if(s == '+'){
-
-            }else if(s == '-') {
-
+        Stack<Character> stack = new Stack<>();
+        for(int i = 0; i < strArray.length; i++) {
+            if(strArray[i] == '+'){
+                i++;
+                stack.push(strArray[i]);
+            }else if(strArray[i] == '-') {
+                System.out.print(stack.pop());
             }
-        }
-        while (!stack.empty()) {
-            System.out.println(stack.pop());
         }
     }
 }
