@@ -3,7 +3,7 @@ package tij.unit11;
 import java.util.ArrayList;
 
 class ReversibleArrayList<T> extends ArrayList<T> {
-    
+
 }
 
 /**

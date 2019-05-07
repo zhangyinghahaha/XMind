@@ -89,13 +89,13 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id='" + id + '\'' +
+                "id=" + id +
                 ", userName='" + userName + '\'' +
                 ", password='" + password + '\'' +
                 ", name='" + name + '\'' +
                 ", age=" + age +
                 ", sex=" + sex +
-                ", birthday='" + new SimpleDateFormat("yyyy-MM-dd").format(birthday) + '\'' +
+                ", birthday=" + birthday +
                 ", created='" + created + '\'' +
                 ", updated='" + updated + '\'' +
                 '}';

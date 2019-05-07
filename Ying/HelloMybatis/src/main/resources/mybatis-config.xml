@@ -12,12 +12,14 @@
         <property name="username" value="root"/>
         <property name="password" value="123456"/>
     </properties>
-    <!-- 环境，可以配置多个，default：指定采用哪个环境 -->
-    
+
+
     <settings>
         <setting name="logImpl" value="LOG4J"/>
     </settings>
-    
+
+
+    <!-- 环境，可以配置多个，default：指定采用哪个环境 -->
     <environments default="test">
         <!-- id：唯一标识 -->
         <environment id="test">
@@ -31,6 +33,7 @@
                 <property name="password" value="123456"/>
             </dataSource>
         </environment>
+
         <environment id="development">
             <!-- 事务管理器，JDBC类型的事务管理器 -->
             <transactionManager type="JDBC"/>
@@ -45,8 +48,10 @@
         </environment>
     </environments>
 
+
     <mappers>
         <mapper resource="mappers/UserDaoMapper.xml"/>
         <mapper resource="mappers/OrderMapper.xml"/>
+        <mapper resource="mappers/UserMapper.xml"/>
     </mappers>
 </configuration>
