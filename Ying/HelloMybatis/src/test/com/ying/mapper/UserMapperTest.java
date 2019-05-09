@@ -94,5 +94,31 @@ public class UserMapperTest {
     public void testDeleteUserById() {
         this.userMapper.deleteUserById(1);
     }
+
+    @Test
+    public void testQueryUserList() {
+        List<User> users = userMapper.queryUserList("鹏程");
+        for(User user : users) {
+            System.out.println(user);
+        }
+    }
+
+    @Test
+    public void queryUserListByNameOrAge() throws Exception {
+        List<User> users = this.userMapper.queryUserListByNameOrAge(null, 16);
+        for (User user : users) {
+            System.out.println(user);
+        }
+    }
+
+    @Test
+    public void queryUserListByNameAndAge() throws Exception {
+        List<User> users = this.userMapper.queryUserListByNameAndAge("鹏程", 18);
+        for (User user : users) {
+            System.out.println(user);
+        }
+    }
+
+
 }
 

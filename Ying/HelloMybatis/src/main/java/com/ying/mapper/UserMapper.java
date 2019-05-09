@@ -58,6 +58,26 @@ public interface UserMapper {
      * @param id
      */
     public void deleteUserById(int id);
+
+    /**
+     * 查询男性用户，如果输入了姓名，则按姓名查询
+     * @param name
+     * @return
+     */
+    List<User> queryUserList(@Param("name") String name);
+
+    /**
+     * 查询男性用户，如果输入了姓名则按照姓名模糊查找
+     * @param name
+     * @param age
+     * @return
+     */
+    List<User> queryUserListByNameOrAge(@Param("name") String name, @Param("age") Integer age);
+
+    List<User> queryUserListByNameAndAge(@Param("name") String name, @Param("age") Integer age);
+
+    List<User> queryUserListByIds(@Param("ids") String[] ids);
+
 }
 
 
