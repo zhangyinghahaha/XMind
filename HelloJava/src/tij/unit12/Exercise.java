@@ -32,8 +32,8 @@ class C extends Exception {
  * @date 2019/5/20
  */
 public class Exercise {
-    public static void f() throws A, B, C {
-        throw new A();
+    public static void f(){
+        //throw new A();
         //throw new B();
         //throw new C();
     }
