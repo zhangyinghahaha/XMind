@@ -24,6 +24,21 @@ class C extends Exception {
     }
 }
 
+class Animal {
+    public static int i = 1;
+    public Animal()  {
+        //throw new A();
+    }
+
+}
+
+class Dog extends Animal {
+    public static int i = 2;
+    public Dog()  {
+        //throw new B();
+    }
+}
+
 
 /**
  * Exercise class
@@ -32,17 +47,17 @@ class C extends Exception {
  * @date 2019/5/20
  */
 public class Exercise {
-    public static void f(){
+    public static void f(Animal animal){
         //throw new A();
         //throw new B();
         //throw new C();
+        //System.out.println(animal.i);
     }
 
     public static void main(String[] args) {
-        try {
-            Exercise.f();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+        Animal animal = new Animal();
+        Dog dog = new Dog();
+        f(animal);
+        f(dog);
     }
 }
