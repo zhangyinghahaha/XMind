@@ -1,0 +1,62 @@
+2018/10/25 17:33:21 [emerg] 11036#13168: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2018/10/25 17:35:01 [emerg] 18824#18232: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2018/10/25 17:36:10 [emerg] 8608#17196: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2018/10/25 17:37:16 [emerg] 20460#11536: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2018/10/25 17:45:48 [emerg] 9460#9464: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2018/10/25 17:52:19 [error] 12036#11484: *1 CreateFile() "D:\Program Files\nginx-1.12.2/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8081", referrer: "http://localhost:8081/"
+2019/05/28 14:23:09 [notice] 12780#32252: signal process started
+2019/05/28 14:25:01 [notice] 32132#25852: signal process started
+2019/05/28 14:47:23 [error] 32540#30724: *1 CreateFile() "D:\Program Files\nginx-1.12.2/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8081", referrer: "http://localhost:8081/"
+2019/05/28 14:53:05 [error] 32540#30724: *4 CreateFile() "D:\Program Files\nginx-1.12.2/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8081"
+2019/05/28 14:56:07 [error] 32540#30724: *6 CreateFile() "D:\Program Files\nginx-1.12.2/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "www.zymooc.com:8081"
+2019/05/28 14:59:31 [emerg] 17864#16636: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/05/28 15:01:56 [emerg] 31244#32736: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/05/28 17:47:00 [error] 13332#6948: *1 CreateFile() "D:\Program Files\nginx-1.12.2/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "www.zymooc.com:8081", referrer: "http://www.zymooc.com:8081/"
+2019/05/28 18:01:22 [emerg] 31172#28980: invalid number of arguments in "root" directive in D:\Program Files\nginx-1.12.2/conf/vhost/image.imooc.com.conf:17
+2019/05/28 18:04:54 [emerg] 15368#33912: invalid number of arguments in "root" directive in D:\Program Files\nginx-1.12.2/conf/vhost/image.imooc.com.conf:17
+2019/05/28 18:05:10 [emerg] 25856#20952: invalid number of arguments in "root" directive in D:\Program Files\nginx-1.12.2/conf/vhost/image.imooc.com.conf:17
+2019/05/29 09:57:32 [emerg] 43200#41816: invalid number of arguments in "root" directive in D:\Program Files\nginx-1.12.2/conf/vhost/image.imooc.com.conf:17
+2019/05/29 10:00:04 [emerg] 26872#41072: invalid number of arguments in "root" directive in D:\Program Files\nginx-1.12.2/conf/vhost/image.imooc.com.conf:17
+2019/05/29 10:07:10 [emerg] 44240#44676: invalid number of arguments in "root" directive in D:\Program Files\nginx-1.12.2/conf/vhost/image.imooc.com.conf:17
+2019/05/29 10:07:46 [emerg] 42844#44232: invalid number of arguments in "root" directive in D:\Program Files\nginx-1.12.2/conf/vhost/image.imooc.com.conf:17
+2019/05/29 10:11:00 [emerg] 44632#44324: CreateFile() "C:\Users\ying.zhang01\Desktop	emp\access.log" failed (123: The filename, directory name, or volume label syntax is incorrect)
+2019/05/29 14:11:05 [error] 13332#6948: *3 CreateFile() "D:\Program Files\nginx-1.12.2/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:12:31 [error] 13332#6948: *4 CreateFile() "D:\Program Files\nginx-1.12.2/html/111.jjpg" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /111.jjpg HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:12:36 [error] 13332#6948: *4 CreateFile() "D:\Program Files\nginx-1.12.2/html/111.jpg" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /111.jpg HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:12:50 [error] 13332#6948: *4 CreateFile() "D:\Program Files\nginx-1.12.2/html/image" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /image HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:13:05 [error] 13332#6948: *4 CreateFile() "D:\Program Files\nginx-1.12.2/html/111" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /111 HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:15:34 [emerg] 47260#41612: bind() to 0.0.0.0:80 failed (10013: An attempt was made to access a socket in a way forbidden by its access permissions)
+2019/05/29 14:16:27 [notice] 45428#47344: signal process started
+2019/05/29 14:16:42 [error] 13332#6948: *5 CreateFile() "D:\Program Files\nginx-1.12.2/html/111" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /111 HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:16:48 [error] 13332#6948: *5 CreateFile() "D:\Program Files\nginx-1.12.2/html/111.jpg" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /111.jpg HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:17:21 [error] 13332#6948: *5 CreateFile() "D:\Program Files\nginx-1.12.2/html/1.jpg" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /1.jpg HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:20:04 [emerg] 48160#48140: invalid number of arguments in "root" directive in D:\Program Files\nginx-1.12.2/conf/vhost/image.imooc.com.conf:18
+2019/05/29 14:20:58 [notice] 41024#47332: signal process started
+2019/05/29 14:21:22 [error] 13332#6948: *6 CreateFile() "D:\Program Files\nginx-1.12.2/html/1" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /1 HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:21:28 [error] 13332#6948: *6 CreateFile() "D:\Program Files\nginx-1.12.2/html/1.jpg" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /1.jpg HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:22:38 [error] 13332#6948: *7 CreateFile() "D:\Program Files\nginx-1.12.2/html/1.jpg" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /1.jpg HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:28:19 [notice] 47776#42744: signal process started
+2019/05/29 14:30:21 [notice] 45772#42464: signal process started
+2019/05/29 14:30:24 [error] 13332#6948: *8 CreateFile() "D:\Program Files\nginx-1.12.2/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:30:25 [error] 13332#6948: *9 CreateFile() "D:\Program Files\nginx-1.12.2/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:30:41 [notice] 34176#46276: signal process started
+2019/05/29 14:30:41 [error] 34176#46276: CreateFile() "D:\Program Files\nginx-1.12.2/logs/nginx.pid" failed (2: The system cannot find the file specified)
+2019/05/29 14:31:25 [error] 44188#45772: *1 directory index of "D:\Templates\mmall\ftpfile\img/" is forbidden, client: 127.0.0.1, server: image.imooc.com, request: "GET / HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:31:25 [error] 44188#45772: *1 CreateFile() "D:\Templates\mmall\ftpfile\img/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: image.imooc.com, request: "GET /favicon.ico HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:31:29 [error] 44188#45772: *2 directory index of "D:\Templates\mmall\ftpfile\img/" is forbidden, client: 127.0.0.1, server: image.imooc.com, request: "GET / HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:31:29 [error] 44188#45772: *2 CreateFile() "D:\Templates\mmall\ftpfile\img/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: image.imooc.com, request: "GET /favicon.ico HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:31:30 [error] 44188#45772: *3 directory index of "D:\Templates\mmall\ftpfile\img/" is forbidden, client: 127.0.0.1, server: image.imooc.com, request: "GET / HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:31:30 [error] 44188#45772: *3 CreateFile() "D:\Templates\mmall\ftpfile\img/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: image.imooc.com, request: "GET /favicon.ico HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:31:31 [error] 44188#45772: *4 directory index of "D:\Templates\mmall\ftpfile\img/" is forbidden, client: 127.0.0.1, server: image.imooc.com, request: "GET / HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:31:49 [error] 44188#45772: *4 directory index of "D:\Templates\mmall\ftpfile\img/" is forbidden, client: 127.0.0.1, server: image.imooc.com, request: "GET / HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:31:49 [error] 44188#45772: *4 CreateFile() "D:\Templates\mmall\ftpfile\img/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: image.imooc.com, request: "GET /favicon.ico HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:32:31 [notice] 48360#48556: signal process started
+2019/05/29 14:34:02 [error] 47620#44716: *1 directory index of "D:\Templates\mmall\ftpfile\img/" is forbidden, client: 127.0.0.1, server: image.imooc.com, request: "GET / HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 14:34:02 [error] 47620#44716: *1 CreateFile() "D:\Templates\mmall\ftpfile\img/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: image.imooc.com, request: "GET /favicon.ico HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 16:15:52 [error] 47620#44716: *2 CreateFile() "D:\Program Files\nginx-1.12.2/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "localhost:8081"
+2019/05/29 16:15:57 [error] 47620#44716: *3 directory index of "D:\Templates\mmall\ftpfile\img/" is forbidden, client: 127.0.0.1, server: image.imooc.com, request: "GET / HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 16:15:57 [error] 47620#44716: *3 CreateFile() "D:\Templates\mmall\ftpfile\img/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: image.imooc.com, request: "GET /favicon.ico HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 16:17:57 [error] 47620#44716: *4 directory index of "D:\Templates\mmall\ftpfile\img/" is forbidden, client: 127.0.0.1, server: image.imooc.com, request: "GET / HTTP/1.1", host: "image.imooc.com:8081"
+2019/05/29 17:28:20 [notice] 49004#50072: signal process started
+2019/05/29 19:39:07 [notice] 41520#23288: signal process started
+2019/05/29 19:42:17 [error] 20520#30740: *20 CreateFile() "D:\Program Files\nginx-1.12.2/html/favicon.ico" failed (2: The system cannot find the file specified), client: 127.0.0.1, server: localhost, request: "GET /favicon.ico HTTP/1.1", host: "image.happmmall.com:8081", referrer: "http://image.happmmall.com:8081/"
