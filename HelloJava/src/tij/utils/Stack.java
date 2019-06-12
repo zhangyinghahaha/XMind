@@ -27,4 +27,6 @@ public class Stack<T> {
     public String toString() {
         return storage.toString();
     }
+
+    private static void hi() {}
 }
