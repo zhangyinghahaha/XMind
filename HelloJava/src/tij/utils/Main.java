@@ -22,6 +22,8 @@ public class Main {
         System.out.println("Hi");
     }
     public static void main(String[] args) {
-        Stack.hi();
+        String a = "Templates_636963720321412898_uMR 安装维修部件交接单X2.pdf";
+        String[] b = a.split(".");
+        System.out.println(b[0]);
     }
 }
