@@ -1,5 +1,6 @@
 package algorithms.unit1.module1;
 
+import algorithms.util.In;
 import algorithms.util.StdIn;
 import algorithms.util.StdOut;
 
@@ -31,7 +32,8 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        int[] whitelist = {12, 454, 67, 34, 767, 78};
+        //int[] whitelist = {12, 454, 67, 34, 767, 78};
+        int[] whitelist = new In(args[0]).readAllInts();
         Arrays.sort(whitelist);
         while(!StdIn.isEmpty()) {
             int key = StdIn.readInt();
@@ -39,5 +41,11 @@ public class BinarySearch {
                 StdOut.println(key);
             }
         }
+//        int sum = 0;
+//        while (!StdIn.isEmpty()) {
+//            sum += StdIn.readDouble();
+//            StdOut.println(sum);
+//        }
     }
 }
+

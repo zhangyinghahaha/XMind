@@ -23,7 +23,25 @@ public class Main {
     }
     public static void main(String[] args) {
         String a = "Templates_636963720321412898_uMR 安装维修部件交接单X2.pdf";
-        String[] b = a.split(".");
-        System.out.println(b[0]);
+        String test = "0123456789";
+        int len = 2;
+
+        while(test.length()>len) {
+            String childStr = test.substring(0, 2);
+            System.out.println("childStr:" + childStr);
+            test = test.substring(len);
+            System.out.println("test:" + test);
+        }
+
+    }
+
+    public static String substring(String str, Integer f, Integer t) {
+        if (f > str.length())
+        {return null;}
+        if (t > str.length()) {
+            return str.substring(f, str.length());
+        } else {
+            return str.substring(f, t);
+        }
     }
 }
