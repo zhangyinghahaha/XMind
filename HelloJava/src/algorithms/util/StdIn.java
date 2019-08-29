@@ -1,5 +1,12 @@
 package algorithms.util;
 
+import java.util.ArrayList;
+import java.util.InputMismatchException;
+import java.util.Locale;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
+import java.util.regex.Pattern;
+
 /******************************************************************************
  *  Compilation:  javac StdIn.java
  *  Execution:    java StdIn   (interactive test of basic functionality)
@@ -8,15 +15,6 @@ package algorithms.util;
  *  Reads in data of various types from standard input.
  *
  ******************************************************************************/
-
-import java.util.ArrayList;
-import java.util.InputMismatchException;
-import java.util.Locale;
-import java.util.NoSuchElementException;
-import java.util.Scanner;
-import java.util.regex.Pattern;
-
-
 public final class StdIn {
 
     /*** begin: section (1 of 2) of code duplicated from In to StdIn. */

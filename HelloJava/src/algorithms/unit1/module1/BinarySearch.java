@@ -32,8 +32,8 @@ public class BinarySearch {
     }
 
     public static void main(String[] args) {
-        //int[] whitelist = {12, 454, 67, 34, 767, 78};
-        int[] whitelist = new In(args[0]).readAllInts();
+        int[] whitelist = {12, 454, 67, 34, 767, 78};
+        //int[] whitelist = new In(args[0]).readAllInts();
         Arrays.sort(whitelist);
         while(!StdIn.isEmpty()) {
             int key = StdIn.readInt();

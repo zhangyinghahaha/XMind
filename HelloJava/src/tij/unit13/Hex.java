@@ -1,5 +1,8 @@
 package tij.unit13;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Hex class
  *
@@ -8,4 +11,10 @@ package tij.unit13;
  */
 public class Hex {
 
+    String a;
+
+
+    public static void main(String[] args) {
+        String s = "salfjasljflaj taoejahgkhal;jahgiahaosjfoehtgannn;a";
+    }
 }
