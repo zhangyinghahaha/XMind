@@ -4,12 +4,7 @@ import algorithms.util.StdIn;
 import algorithms.util.StdOut;
 import algorithms.util.StdRandom;
 
-/**
- * Accumulator class
- *
- * @author ying.zhang01
- * @date 2019/8/29
- */
+
 public class Accumulator {
     private double total;
     private int N;

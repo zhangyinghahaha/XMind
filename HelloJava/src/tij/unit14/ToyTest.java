@@ -7,7 +7,7 @@ interface Waterproof {}
 interface Shoots {}
 
 class Toy {
-    Toy() {}
+    //Toy() {}
     Toy(int i) {}
 
     int i;
@@ -61,6 +61,7 @@ public class ToyTest {
         FancyToy fancyToy = new FancyToy();
         char[] chars = {'a', 'b', 'c'};
         printSuperClass(chars);
+
 //        FancyToy fancyToy = new FancyToy();
 //        System.out.println(fancyToy.getClass());
 //        Toy toy = fancyToy;
