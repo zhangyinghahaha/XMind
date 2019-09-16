@@ -7,16 +7,13 @@ package tij.unit10;
  * @date 2019/4/19
  */
 public class Parcel11 {
-    public class Dog {
-        String name;
-        public class Dog1 {
-            String a;
-        }
+    public static class Dog {
+        String name = "a";
+
     }
 
     public static void main(String[] args) {
-        Parcel11 parcel11 = new Parcel11();
-        Dog dog = parcel11.new Dog();
-        dog.name = "xiaobai";
+        Dog d = new Dog();
+        System.out.println(d.name);
     }
 }

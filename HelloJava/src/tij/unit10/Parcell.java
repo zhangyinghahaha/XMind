@@ -33,7 +33,7 @@ public class Parcell {
     }
 
     public static void main(String[] args) {
-        Parcell p = new Parcell();
-        p.ship("Taasmania");
+        Parcel11.Dog d = new Parcel11.Dog();
+        System.out.println(d.name);
     }
 }
