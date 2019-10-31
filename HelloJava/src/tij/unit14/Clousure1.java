@@ -9,11 +9,10 @@ import java.util.function.*;
  * @date 2019/10/22
  */
 public class Clousure1 {
-
     IntSupplier makeFun(int x) {
-        Integer i=0;
-        i++;
-        //int ifinal = i;
-        return () -> x + i;
+        int i =0;
+        //x = x + 1;
+        //i++;
+        return () -> {return x + i;};
     }
 }

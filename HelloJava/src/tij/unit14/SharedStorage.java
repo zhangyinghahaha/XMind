@@ -17,5 +17,6 @@ public class SharedStorage {
         System.out.println(f1.getAsInt());
         System.out.println(f2.getAsInt());
         System.out.println(f3.getAsInt());
+
     }
 }
