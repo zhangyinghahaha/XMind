@@ -10,12 +10,60 @@
 </head>
 
 <body>
-	<div id="root">{{msg}}</div>
+	<!-- 挂载点，模版与实例 -->
+
+	<div id="root">
+		<!--事件绑定-->
+		<h1 v-on:click="handClick">{{content}}</h1>
+		<h1 @click="handClick">{{content}}</h1>
+	</div>
+
+	<hr>
+
+	<!--属性绑定和双向数据绑定-->
+	<div id="root2">
+		<!--属性绑定-->
+		<div v-bind:title="'express ' + title">hello world</div>
+		<div :title="'express ' + title">hello world</div>
+		<!--属性双向绑定-->
+		<input type="text" v-model="content">
+		<div>{{content}}</div>
+	</div>
+
+	<hr>
+
+	<!--计算属性与侦听器-->
+
+	<hr>
+
 	<script>
+		// 实例
 		new Vue({
 			el: "#root",
+			// template: '',
+			// 数据
 			data: {
-				msg: "hello zhang"
+				msg: "hello zhang",
+				number: 123,
+				content: "hello"
+			},
+			// 方法
+			methods: {
+				handClick: function () {
+					if (this.content === "world") {
+						this.content = "hello";
+					} else {
+						this.content = "world";
+					}
+				}
+			}
+		});
+
+		new Vue({
+			el: "#root2",
+			data: {
+				title: "this is title massage",
+				content: "this is content"
 			}
 		});
 	</script>
