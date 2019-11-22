@@ -10,8 +10,8 @@
 </head>
 
 <body>
-	<!-- 挂载点，模版与实例 -->
-
+	<!--  -->
+	<h2>挂载点，模版与实例</h2>
 	<div id="root">
 		<!--事件绑定-->
 		<h1 v-on:click="handClick">{{content}}</h1>
@@ -20,7 +20,8 @@
 
 	<hr>
 
-	<!--属性绑定和双向数据绑定-->
+	<!---->
+	<h2>属性绑定和双向数据绑定</h2>
 	<div id="root2">
 		<!--属性绑定-->
 		<div v-bind:title="'express ' + title">hello world</div>
@@ -32,9 +33,28 @@
 
 	<hr>
 
-	<!--计算属性与侦听器-->
-
+	<!---->
+	<h2>计算属性与侦听器</h2>
+	<div id="root3">
+		姓：<input type="text" v-model="firstName">
+		名：<input type="text" v-model="lastName">
+		<div>{{fullName}}</div>
+		<div>{{count}}</div>
+	</div>
 	<hr>
+
+	<!---->
+	<h2>v-if, v-show, v-for指令</h2>
+	<div id="root4">
+		<!--元素移除-->
+		<div v-if="show">hello world</div>
+		<!--元素隐藏，display=None-->
+		<div v-show="show">hello world</div>
+		<button @click="handleClick">toggle</button>
+		<ul>
+			<li v-for="(item, index) of list" :key="index">{{item}}</li>
+		</ul>
+	</div>
 
 	<script>
 		// 实例
@@ -64,6 +84,40 @@
 			data: {
 				title: "this is title massage",
 				content: "this is content"
+			}
+		});
+	
+		new Vue({
+			el: "#root3",
+			data: {
+				firstName: "",
+				lastName: "",
+				count: 0
+			},
+			// 计算属性
+			computed: {
+				fullName: function() {
+					return this.firstName + " " + this.lastName;
+				}
+			},
+			// 侦听器
+			watch: {
+				fullName: function() {
+					this.count++;
+				}
+			}
+		});
+		
+		new Vue({
+			el: "#root4",
+			data: {
+				show: true,
+				list: [1, 2, 3]
+			},
+			methods: {
+				handleClick: function() {
+					this.show = !this.show;
+				}
 			}
 		});
 	</script>
