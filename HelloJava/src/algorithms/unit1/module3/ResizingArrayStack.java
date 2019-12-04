@@ -1,5 +1,7 @@
 package algorithms.unit1.module3;
 
+import java.util.Iterator;
+
 /**
  * ResizingArrayStack class
  *
@@ -18,5 +20,10 @@ public class ResizingArrayStack<Item> implements Iterable<Item> {
     }
     private void resize(int max) {
 
+    }
+
+    @Override
+    public Iterator<Item> iterator() {
+        return null;
     }
 }
