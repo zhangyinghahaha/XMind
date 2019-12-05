@@ -9,6 +9,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * Main class
@@ -22,17 +24,29 @@ public class Main {
         System.out.println("Hi");
     }
     public static void main(String[] args) {
-        String a = "Templates_636963720321412898_uMR 安装维修部件交接单X2.pdf";
-        String test = "0123456789";
-        int len = 2;
+        List<Integer> nums = Arrays.asList(1, null, 3, 4, null, 5);
+        nums.stream().filter(num -> {
+            System.out.println(num);
+            return num != null;
+        }).count();
 
-        while(test.length()>len) {
-            String childStr = test.substring(0, 2);
-            System.out.println("childStr:" + childStr);
-            test = test.substring(len);
-            System.out.println("test:" + test);
+        List<String> collected = Stream.of("a", "b", "hello")
+                .map(string -> string.toUpperCase())
+                .collect(Collectors.toList());
+        System.out.println(collected);
+
+        Stream<List<Integer>> inputStream = Stream.of(Arrays.asList(1), Arrays.asList(2, 3), Arrays.asList(4, 5, 6));
+        Stream<Integer> outputStream = inputStream.flatMap(childList -> childList.stream());
+        List<Integer> collected2 = outputStream.collect(Collectors.toList());
+        System.out.println(collected2);
+
+        Integer[] sixNums = {1,2,3,4,5,6};
+        Integer[] evens = Stream.of(sixNums)
+                .filter(n -> n%2 == 0)
+                .toArray(Integer[]::new);
+        for (Integer i : evens) {
+            System.out.println(i);
         }
-
     }
 
     public static String substring(String str, Integer f, Integer t) {
