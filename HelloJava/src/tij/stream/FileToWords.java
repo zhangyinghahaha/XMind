@@ -15,6 +15,6 @@ public class FileToWords {
     public static Stream<String> stream(String filePath) throws Exception {
         return Files.lines(Paths.get(filePath))
                 .skip(1)
-                .flatMap(line -> Pattern.compile("\\w+").splitAsStream(line));
+                .flatMap(line -> Pattern.compile("[ .,?]+").splitAsStream(line));
     }
 }

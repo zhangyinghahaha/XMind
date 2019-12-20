@@ -26,4 +26,12 @@ public class FileToWordsBuilder {
     Stream<String> stream() {
         return builder.build();
     }
+
+    public static void main(String[] args) throws Exception {
+        new FileToWordsBuilder("C:\\Users\\ying.zhang01\\Desktop\\temp\\Study Materials\\Java\\XMind\\HelloJava\\src\\tij\\stream\\Cheese.dat")
+                .stream()
+                .limit(7)
+                .map(w -> w + " ")
+                .forEach(System.out::print);
+    }
 }
