@@ -6,7 +6,7 @@
         </div>
         <ul>
             <todo-item 
-            v-for="item of list" 
+            v-for="(item, index) of list" 
             :content="item" 
             :index="index"
             :key="index"
