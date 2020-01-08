@@ -25,11 +25,14 @@ class I3 extends I2 implements I1{
  * @author zhangying
  * @date 2019/4/7
  */
-public class Test {
-
+public class Test implements A, B {
     public static void main(String[] args) {
+        Test t = new Test();
+        t.a();
+    }
 
-        I2 i3 = new I3();
-        i3.f();
+    @Override
+    public void a() {
+        System.out.println("这是覆盖类");
     }
 }
