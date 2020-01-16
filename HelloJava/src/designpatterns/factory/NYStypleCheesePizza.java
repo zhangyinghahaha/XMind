@@ -9,9 +9,14 @@ package designpatterns.factory;
 public class NYStypleCheesePizza extends Pizza {
     public NYStypleCheesePizza() {
         name = "NY Style Sauce and Cheese Pizza";
-        dough = "Thin Crust Dough";
-        sauce = "Marinara Sauce";
+        //dough = "Thin Crust Dough";
+        //sauce = "Marinara Sauce";
 
         toppings.add("Grated Reggiano Cheese");
+    }
+
+    @Override
+    void prepare() {
+
     }
 }
