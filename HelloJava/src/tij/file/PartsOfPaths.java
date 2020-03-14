@@ -1,5 +1,6 @@
 package tij.file;
 
+import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -14,13 +15,16 @@ public class PartsOfPaths {
         System.out.println(System.getProperty("os.name"));
         Path p = Paths.get("PartsOfPaths.java").toAbsolutePath();
         System.out.println(p);
+        System.out.println(Files.exists(p));
+
         for (int i = 0; i < p.getNameCount(); i++) {
             System.out.print(p.getName(i) + " ");
         }
         System.out.println();
+
         System.out.println("ends with '.java': " + p.endsWith("PartsOfPaths.java"));
 
-        for(Path pp : p) {
+        for (Path pp : p) {
             System.out.print(pp + ": ");
             System.out.print(p.startsWith(pp) + " : ");
             System.out.println(p.endsWith(pp));

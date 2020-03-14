@@ -10,7 +10,7 @@ public class RemoteControl {
         this.offCommands = new Command[7];
 
         Command noCommand = new NoCommand();
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i < this.onCommands.length; i++) {
             this.onCommands[i] = noCommand;
             this.offCommands[i] = noCommand;
         }
