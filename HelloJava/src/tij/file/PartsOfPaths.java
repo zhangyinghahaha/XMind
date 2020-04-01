@@ -22,7 +22,7 @@ public class PartsOfPaths {
         }
         System.out.println();
 
-        System.out.println("ends with '.java': " + p.endsWith("PartsOfPaths.java"));
+        System.out.println("ends with '.java': " + p.endsWith(".java"));
 
         for (Path pp : p) {
             System.out.print(pp + ": ");
