@@ -19,18 +19,21 @@ public class Counter {
     public void increment() {
         count++;
     }
+
     public int tally() {
         return count;
     }
+
     @Override
     public String toString() {
         return count + " " + name;
     }
 
     public static void main(String[] args) {
+        // User Case
         Counter heads = new Counter("heads");
         Counter tails = new Counter("tails");
-        
+
         heads.increment();
         heads.increment();
         tails.increment();
