@@ -188,6 +188,7 @@ export default {
             self.audio = document.querySelector("audio");
             self.recorder.play(self.audio);
             self.recording = false;
+            //this.voice = true;
             this.step = 1;
 						//self.audio.src = window.URL.createObjectURL(res);
 						console.log("stop record successfully.");
