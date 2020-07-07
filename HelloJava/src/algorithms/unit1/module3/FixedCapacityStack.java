@@ -29,6 +29,11 @@ public class FixedCapacityStack<Item> implements Iterable<Item> {
         return N;
     }
 
+    /**
+     * 将元素添加到栈顶
+     *
+     * @param item
+     */
     public void push(Item item) {
         if (N == a.length) {
             resize(2 * a.length);
@@ -36,6 +41,11 @@ public class FixedCapacityStack<Item> implements Iterable<Item> {
         a[N++] = item;
     }
 
+    /**
+     * 从栈顶删除元素
+     *
+     * @return
+     */
     public Item pop() {
         Item item = a[--N];
         // 避免对象游离
@@ -46,6 +56,11 @@ public class FixedCapacityStack<Item> implements Iterable<Item> {
         return item;
     }
 
+    /**
+     * 将栈移动到一个大小为max的新数组
+     *
+     * @param max
+     */
     private void resize(int max) {
         Item[] temp = (Item[]) new Object[max];
         for (int i = 0; i < N; i++) {
@@ -54,6 +69,9 @@ public class FixedCapacityStack<Item> implements Iterable<Item> {
         a = temp;
     }
 
+    /**
+     * 支持后进先出的迭代
+     */
     private class ReverseArrayIterator implements Iterator<Item> {
         private int i = N;
 
