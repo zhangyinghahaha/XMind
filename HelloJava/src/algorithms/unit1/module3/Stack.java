@@ -17,6 +17,10 @@ public class Stack<Item> {
 
     public Item pop() {
         // 检查是否为空
+        if (isEmpty()) {
+            StdOut.print("Stack is Empty!");
+            return null;
+        }
         Item item = first.item;
         first = first.next;
         N--;
@@ -41,10 +45,12 @@ public class Stack<Item> {
 
         while (!StdIn.isEmpty()) {
             String item = StdIn.readString();
-            if (!item.equals("-")) {
+            if (!item.equals("-") && !item.equals("exit")) {
                 s.push(item);
-            } else if (!s.isEmpty()) {
+            } else if (item.equals("-")) {
                 StdOut.print(s.pop() + " ");
+            } else if (item.equals("exit")) {
+                break;
             }
         }
 
