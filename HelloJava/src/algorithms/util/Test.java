@@ -8,13 +8,9 @@ package algorithms.util;
  */
 public class Test {
     public static void main(String[] args) {
-        int a = 1;
-        int b = 1;
+        Object[] objectArry = new String[10];
+        objectArry[0] = 11;
 
-        if(a == 1) {
-            System.out.println("a == 1");
-        } else if(b == 1) {
-            System.out.println("b == 1");
-        }
+        //List<Object> objectList = new ArrayList<String>();
     }
 }
