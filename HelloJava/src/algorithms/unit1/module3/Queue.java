@@ -5,6 +5,12 @@ import algorithms.util.StdOut;
 
 import java.util.Iterator;
 
+/**
+ * Test class
+ *
+ * @author zhangying
+ * @date 2020/9/1
+ */
 public class Queue<Item> implements Iterable<Item> {
     private Node first;
     private Node last;
