@@ -53,6 +53,7 @@ public class Parentheses {
                         return false;
                     }
                     break;
+                default:
             }
         }
         return stack.isEmpty();
