@@ -33,6 +33,13 @@ public class Queue<Item> implements Iterable<Item> {
         N++;
     }
 
+    public Item peek() {
+        if (isEmpty()) {
+            return null;
+        }
+        Item item = first.item;
+        return item;
+    }
 
     public Item dequeue() {
         Item item = first.item;
