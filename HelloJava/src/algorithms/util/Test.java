@@ -8,14 +8,14 @@ package algorithms.util;
  */
 public class Test {
     public static void main(String[] args) {
-        //method(null);
-        InnerClass ic = new InnerClass();
-        ic.a = 0;
-        System.out.println(ic.a);
-
-        InnerClass2 ic2 = new InnerClass2();
-        ic2.b = 0;
-        System.out.println(ic2.b);
+        method(null);
+//        InnerClass ic = new InnerClass();
+//        ic.a = 0;
+//        System.out.println(ic.a);
+//
+//        InnerClass2 ic2 = new InnerClass2();
+//        ic2.b = 0;
+//        System.out.println(ic2.b);
     }
 
     static class InnerClass {
