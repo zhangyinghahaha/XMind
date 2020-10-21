@@ -1,8 +1,5 @@
 package algorithms.unit1.module3;
 
-import algorithms.util.StdIn;
-import algorithms.util.StdOut;
-
 /**
  * @author ying.zhang01
  */
@@ -22,10 +19,24 @@ public class InfixToPostfix {
         }
 
         while (!inputQueue.isEmpty()) {
-            switch (inputQueue.peek()) {
-                case "":
+            String inputElement = inputQueue.peek();
+            String topOperator = operatorStack.peek();
+            switch (inputElement) {
+                case "+":
+                    if (topOperator != null) {
+                        if (operatorConvert(inputElement) > operatorConvert(topOperator)) {
+                            
+                        }
+                    }
+                    break;
+                case "-":
+                    break;
+                case "*":
+                    break;
+                case "/":
                     break;
                 default:
+                    outputQueue.enqueue(inputQueue.dequeue());
                     break;
             }
         }
@@ -33,16 +44,28 @@ public class InfixToPostfix {
         return null;
     }
 
-    public static void main(String[] args) {
-        Stack<String> stack = new Stack<String>();
-        while (!StdIn.isEmpty()) {
-            String s = StdIn.readString();
-            if (s.equals("+")) stack.push(s);
-            else if (s.equals("*")) stack.push(s);
-            else if (s.equals(")")) StdOut.print(stack.pop() + " ");
-            else if (s.equals("(")) StdOut.print("");
-            else StdOut.print(s + " ");
+    private static int operatorConvert(String operator) {
+        int operatorInteger = 0;
+        switch (operator) {
+            case "+":
+                operatorInteger = 1;
+                break;
+            case "-":
+                operatorInteger = 1;
+                break;
+            case "*":
+                operatorInteger = 2;
+                break;
+            case "/":
+                operatorInteger = 2;
+                break;
+            default:
+                break;
         }
-        StdOut.println();
+        return operatorInteger;
+    }
+
+    public static void main(String[] args) {
+        // A + B * C - D
     }
 }
