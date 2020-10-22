@@ -5,7 +5,7 @@ package algorithms.unit1.module3;
  */
 public class InfixToPostfix {
 
-    public static String toPostfix(String infix) {
+    public static Queue<String> toPostfix(String infix) {
         if (infix == null) {
             return null;
         }
@@ -19,43 +19,94 @@ public class InfixToPostfix {
         }
 
         while (!inputQueue.isEmpty()) {
-            String inputElement = inputQueue.peek();
+            String inputElement = inputQueue.dequeue();
             String topOperator = operatorStack.peek();
             switch (inputElement) {
                 case "+":
+                case "-":
+                case "*":
+                case "/":
                     if (topOperator != null) {
-                        if (operatorConvert(inputElement) > operatorConvert(topOperator)) {
-                            
+                        if (operatorConvert(inputElement) >= operatorConvert(topOperator)) {
+                            operatorStack.push(inputElement);
+                        } else {
+                            while (!operatorStack.isEmpty()) {
+                                outputQueue.enqueue(operatorStack.pop());
+                            }
+                            operatorStack.push(inputElement);
                         }
+                    } else {
+                        operatorStack.push(inputElement);
                     }
                     break;
-                case "-":
+                case "(":
+                    operatorStack.push(inputElement);
                     break;
-                case "*":
-                    break;
-                case "/":
+                case ")":
+                    while (!"(".equals(operatorStack.peek())) {
+                        outputQueue.enqueue(operatorStack.pop());
+                    }
+                    operatorStack.pop();
                     break;
                 default:
-                    outputQueue.enqueue(inputQueue.dequeue());
+                    outputQueue.enqueue(inputElement);
+                    break;
+            }
+        }
+        while (!operatorStack.isEmpty()) {
+            outputQueue.enqueue(operatorStack.pop());
+        }
+
+        return outputQueue;
+    }
+
+    public static int evaluate(String infix) {
+
+        Queue<String> outputQueue = toPostfix(infix);
+
+        Stack<Integer> resultStack = new Stack<Integer>();
+        while (!outputQueue.isEmpty()) {
+            String inputElement = outputQueue.dequeue();
+            int operator1;
+            int operator2;
+            switch (inputElement) {
+                case "+":
+                    operator1 = Integer.valueOf(resultStack.pop());
+                    operator2 = Integer.valueOf(resultStack.pop());
+                    resultStack.push(operator2 + operator1);
+                    break;
+                case "-":
+                    operator1 = Integer.valueOf(resultStack.pop());
+                    operator2 = Integer.valueOf(resultStack.pop());
+                    resultStack.push(operator2 - operator1);
+                    break;
+                case "*":
+                    operator1 = Integer.valueOf(resultStack.pop());
+                    operator2 = Integer.valueOf(resultStack.pop());
+                    resultStack.push(operator2 * operator1);
+                    break;
+                case "/":
+                    operator1 = Integer.valueOf(resultStack.pop());
+                    operator2 = Integer.valueOf(resultStack.pop());
+                    resultStack.push(operator2 / operator1);
+                    break;
+                default:
+                    resultStack.push(Integer.valueOf(inputElement));
                     break;
             }
         }
 
-        return null;
+        return resultStack.pop();
     }
 
     private static int operatorConvert(String operator) {
         int operatorInteger = 0;
         switch (operator) {
             case "+":
-                operatorInteger = 1;
-                break;
             case "-":
                 operatorInteger = 1;
                 break;
             case "*":
-                operatorInteger = 2;
-                break;
             case "/":
                 operatorInteger = 2;
                 break;
@@ -67,5 +118,8 @@ public class InfixToPostfix {
 
     public static void main(String[] args) {
         // A + B * C - D
+        String infix = "2 + ( 3 - 1 ) / 2 + 1";
+        System.out.println(infix);
+        System.out.println(evaluate(infix));
     }
 }
