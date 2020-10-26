@@ -117,9 +117,5 @@ public class InfixToPostfix {
     }
 
     public static void main(String[] args) {
-        // A + B * C - D
-        String infix = "2 + ( 3 - 1 ) / 2 + 1";
-        System.out.println(infix);
-        System.out.println(evaluate(infix));
     }
 }
