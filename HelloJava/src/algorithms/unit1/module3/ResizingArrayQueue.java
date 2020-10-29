@@ -2,7 +2,6 @@ package algorithms.unit1.module3;
 
 import algorithms.util.StdIn;
 import algorithms.util.StdOut;
-import org.omg.CORBA.Object;
 
 /**
  * Queue implementation with a resizing arry.
@@ -20,15 +19,19 @@ public class ResizingArrayQueue<Item> {
 
     public void enqueue(Item item) {
         if (size == q.length) {
-            resize(2 * size);
+            resize(2 * q.length);
         }
         q[size++] = item;
     }
 
     public Item dequeue() {
-        if (size <= 0) {
+        if (size < 1) {
             System.out.println("Queue is empty!");
             return null;
+        }
+
+        if (size <= q.length / 4) {
+            resize(q.length / 2);
         }
         Item oldfirst = q[0];
         size--;
@@ -57,7 +60,7 @@ public class ResizingArrayQueue<Item> {
 
     @Override
     public String toString() {
-        String result = "";
+        String result = this.size + ": ";
         for (int i = 0; i < size; i++) {
             result += q[i] + " ";
         }
@@ -65,11 +68,16 @@ public class ResizingArrayQueue<Item> {
     }
 
     public static void main(String[] args) {
+        int num = 0;
         ResizingArrayQueue<String> queue = new ResizingArrayQueue();
         while (!StdIn.isEmpty()) {
             String s = StdIn.readString();
-            queue.enqueue(s);
-            StdOut.println(s);
+            if ("-".equals(s)) {
+                StdOut.println(queue.dequeue());
+            } else {
+                queue.enqueue(s);
+                StdOut.println(++num);
+            }
         }
         StdOut.println(queue);
     }
