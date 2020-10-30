@@ -4,7 +4,7 @@ import algorithms.util.StdIn;
 import algorithms.util.StdOut;
 
 /**
- * Queue implementation with a resizing arry.
+ * Queue implementation with a resizing arry(wrap-around).
  *
  * @author ying.zhang01
  */
