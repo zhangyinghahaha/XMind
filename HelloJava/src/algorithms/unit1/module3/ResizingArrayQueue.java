@@ -3,15 +3,20 @@ package algorithms.unit1.module3;
 import algorithms.util.StdIn;
 import algorithms.util.StdOut;
 
+import java.util.Iterator;
+import java.util.NoSuchElementException;
+
 /**
  * Queue implementation with a resizing arry(wrap-around).
  *
  * @author ying.zhang01
  */
 public class ResizingArrayQueue<Item> {
-    private final static int MIN_SIZE = 10;
+    private final static int MIN_SIZE = 5;
     private Item[] q;
     private int size = 0;
+    private int first = 0;
+    private int last = 0;
 
     ResizingArrayQueue() {
         q = (Item[]) new Object[MIN_SIZE];
@@ -21,25 +26,38 @@ public class ResizingArrayQueue<Item> {
         if (size == q.length) {
             resize(2 * q.length);
         }
-        q[size++] = item;
+        q[last++] = item;
+        if (last == q.length) {
+            // wrap-around
+            last = 0;
+        }
+        size++;
     }
 
     public Item dequeue() {
-        if (size < 1) {
-            System.out.println("Queue is empty!");
-            return null;
+        if (isEmpty()) {
+            throw new NoSuchElementException();
         }
-
-        if (size <= q.length / 4) {
+        Item item = q[first];
+        // to avoid loitering
+        q[first] = null;
+        size--;
+        first++;
+        if (first == q.length) {
+            // wrap-around
+            first = 0;
+        }
+        if (size > 0 && size == q.length / 4) {
             resize(q.length / 2);
         }
-        Item oldfirst = q[0];
-        size--;
-        for (int i = 0; i < size; i++) {
-            q[i] = q[i + 1];
-        }
+        return item;
+    }
 
-        return oldfirst;
+    public Item peek() {
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        return q[first];
     }
 
     public boolean isEmpty() {
@@ -50,14 +68,6 @@ public class ResizingArrayQueue<Item> {
         return size;
     }
 
-    private void resize(int max) {
-        Item[] temp = (Item[]) new Object[max];
-        for (int i = 0; i < size; i++) {
-            temp[i] = q[i];
-        }
-        q = temp;
-    }
-
     @Override
     public String toString() {
         String result = this.size + ": ";
@@ -65,6 +75,42 @@ public class ResizingArrayQueue<Item> {
             result += q[i] + " ";
         }
         return result;
+    }
+
+    private void resize(int max) {
+        assert max > size;
+        Item[] copy = (Item[]) new Object[max];
+        for (int i = 0; i < size; i++) {
+            // (first + 1) % q.length
+            copy[i] = q[(first + i) % q.length];
+        }
+        q = copy;
+        first = 0;
+        last = size;
+    }
+
+    private class ArrayIterator implements Iterator<Item> {
+        private int i = 0;
+
+        @Override
+        public boolean hasNext() {
+            return i < size;
+        }
+
+        @Override
+        public void remove() {
+            throw new UnsupportedOperationException();
+        }
+
+        @Override
+        public Item next() {
+            if (!hasNext()) {
+                throw new NoSuchElementException();
+            }
+            Item item = q[(i + first) % q.length];
+            i++;
+            return item;
+        }
     }
 
     public static void main(String[] args) {

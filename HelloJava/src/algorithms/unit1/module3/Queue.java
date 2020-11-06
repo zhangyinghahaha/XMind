@@ -4,6 +4,7 @@ import algorithms.util.StdIn;
 import algorithms.util.StdOut;
 
 import java.util.Iterator;
+import java.util.NoSuchElementException;
 
 /**
  * Test class
@@ -60,7 +61,35 @@ public class Queue<Item> implements Iterable<Item> {
         return N;
     }
 
+    public Item deleteNode(int k) {
+        return null;
+    }
+
+    public Item removeLast() {
+        // 空节点
+        if (isEmpty()) {
+            throw new NoSuchElementException();
+        }
+        Node oldLast = last;
+        // 单节点
+        if (first == last) {
+            last = null;
+            first = null;
+            return oldLast.item;
+        }
+
+        Node current = first;
+        while (current.next != last) {
+            current = current.next;
+        }
+        current.next = null;
+        last = current;
+
+        return oldLast.item;
+    }
+
     @Override
+
     public Iterator<Item> iterator() {
         return null;
     }
