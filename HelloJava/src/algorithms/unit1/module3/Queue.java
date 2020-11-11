@@ -115,6 +115,21 @@ public class Queue<Item> implements Iterable<Item> {
         Node next;
     }
 
+    public Node reverse(Node x) {
+        Node first = x;
+        Node reverse = null;
+        Node second = null;
+
+        while (first != null) {
+            second = first.next;
+            first.next = reverse;
+            reverse = first;
+            first = second;
+        }
+
+        return reverse;
+    }
+
 
     public static void main(String[] args) {
         Queue<String> q = new Queue<>();

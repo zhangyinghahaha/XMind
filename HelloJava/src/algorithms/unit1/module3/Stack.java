@@ -16,6 +16,12 @@ public class Stack<Item> implements Iterable<Item> {
      */
     private int N;
 
+    public Stack() {
+    }
+
+    public Stack(Stack s) {
+    }
+
     public void push(Item item) {
         Node oldfirst = first;
         first = new Node();
