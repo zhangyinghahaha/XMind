@@ -19,7 +19,13 @@ public class Stack<Item> implements Iterable<Item> {
     public Stack() {
     }
 
-    public Stack(Stack s) {
+    public Stack(Stack<Item> s) {
+        if (s.first != null) {
+            first = new Node(s.first);
+            for (Node x = first; x.next != null; x = x.next) {
+                x.next = new Node(x.next);
+            }
+        }
     }
 
     public void push(Item item) {
@@ -108,6 +114,14 @@ public class Stack<Item> implements Iterable<Item> {
     private class Node {
         Item item;
         Node next;
+
+        Node() {
+        }
+
+        Node(Node x) {
+            this.item = x.item;
+            this.next = x.next;
+        }
     }
 
     public static void main(String[] args) {
