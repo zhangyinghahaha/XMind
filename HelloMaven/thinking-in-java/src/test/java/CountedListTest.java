@@ -75,8 +75,7 @@ public class CountedListTest {
     @Test
     public void addAll() {
         System.out.println("Running testAddAll()");
-        list.addAll(Arrays.asList(new String[] {
-                "An", "African", "Swallow"}));
+        list.addAll(Arrays.asList("An", "African", "Swallow"));
         assertEquals(list.size(), 6);
         compare(list, new String[] { "0", "1", "2",
                 "An", "African", "Swallow" });
