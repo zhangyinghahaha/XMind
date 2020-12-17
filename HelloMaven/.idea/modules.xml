@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/HelloMaven.iml" filepath="$PROJECT_DIR$/.idea/HelloMaven.iml" />
+      <module fileurl="file://$PROJECT_DIR$/thinking-in-java/thinking-in-java.iml" filepath="$PROJECT_DIR$/thinking-in-java/thinking-in-java.iml" />
+    </modules>
+  </component>
+</project>

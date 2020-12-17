@@ -9,5 +9,8 @@
         <module name="thinking-in-java" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="thinking-in-java" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
