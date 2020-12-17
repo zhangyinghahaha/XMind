@@ -1,25 +1,268 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="31e2c29a-c630-4671-97b3-ea6e1e1a0004" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/HelloMaven.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/String/Concatenation.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/String/Concatenation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/String/Immutable.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/String/Immutable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/String/UsingStringBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/String/UsingStringBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/file/AddAndSubtractPaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/file/AddAndSubtractPaths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/file/Cheese.txt" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/file/Cheese.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/file/Directories.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/file/Directories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/file/FileSystemDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/file/FileSystemDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/file/Find.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/file/Find.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/file/ListOfLines.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/file/ListOfLines.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/file/PartsOfPaths.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/file/PartsOfPaths.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/file/PathAnalysis.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/file/PathAnalysis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/file/PathInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/file/PathInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/file/PathWatcher.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/file/PathWatcher.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/file/ReadLineStream.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/file/ReadLineStream.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/file/StreamInAndOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/file/StreamInAndOut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/file/Writing.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/file/Writing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/file/bytes.dat" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/file/bytes.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/generic/GenericHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/generic/GenericHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/generic/Holder1.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/generic/Holder1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/generic/ObjectHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/generic/ObjectHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/onjava/RmDir.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/onjava/RmDir.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/Bubble.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/Bubble.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/Bubbles.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/Bubbles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/Cheese.dat" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/Cheese.dat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/CreatingOptionals.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/CreatingOptionals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/Duplicator.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/Duplicator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/Fibonacci.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/Fibonacci.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/FileToWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/FileToWords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/FileToWordsBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/FileToWordsBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/FileToWordsRegexp.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/FileToWordsRegexp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/FlatMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/FlatMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/ForEach.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/ForEach.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/FunctionMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/FunctionMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/FunctionMap3.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/FunctionMap3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/Generator.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/Generator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/Numbered.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/Numbered.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/OptionalBasics.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/OptionalBasics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/OptionalFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/OptionalFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/OptionalFlatMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/OptionalFlatMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/OptionalMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/OptionalMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/Optionals.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/Optionals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/OptionalsFromEmptyStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/OptionalsFromEmptyStreams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/Peeking.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/Peeking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/Prime.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/Prime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/RandInts.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/RandInts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/RandomWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/RandomWords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/Randoms.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/Randoms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/Ranges.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/Ranges.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/Signal.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/Signal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/SortedComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/SortedComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/StreamOf.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/StreamOf.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/StreamOfOptionals.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/StreamOfOptionals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/StreamOfRandoms.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/StreamOfRandoms.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/StreamOfStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/StreamOfStreams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/stream/TreeSetOfWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/stream/TreeSetOfWords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/temp/AutoCloseableDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/temp/AutoCloseableDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/temp/ConstructorException.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/temp/ConstructorException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/temp/Informational.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/temp/Informational.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/temp/InputFile2.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/temp/InputFile2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/temp/LastElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/temp/LastElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/temp/Matching.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/temp/Matching.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/temp/NumericStreamInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/temp/NumericStreamInfo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/temp/OptionalsFromEmptyStreams.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/temp/OptionalsFromEmptyStreams.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/temp/Reduce.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/temp/Reduce.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/temp/TreeSetOfWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/temp/TreeSetOfWords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/temp/TryWithResources.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/temp/TryWithResources.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/typeinfo/ClassInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/typeinfo/ClassInitialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/typeinfo/DynamicSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/typeinfo/DynamicSupplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/typeinfo/GenericClassReferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/typeinfo/GenericClassReferences.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/typeinfo/GenericToyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/typeinfo/GenericToyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/typeinfo/Shapes.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/typeinfo/Shapes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/typeinfo/SweetShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/typeinfo/SweetShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/typeinfo/ToyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/typeinfo/ToyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Animal.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Animal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/AnonymousConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/AnonymousConstructor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/BigEgg.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/BigEgg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/BigEgg2.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/BigEgg2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Callbacks.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Callbacks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/ClassInInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/ClassInInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Contents.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Contents.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Destination.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Destination.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/DotNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/DotNew.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/DotThis.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/DotThis.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Event.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Factories.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Factories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/GreenhouseControls.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/GreenhouseControls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/InheritInner.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/InheritInner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/LocalInnerClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/LocalInnerClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/MultiImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/MultiImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/MultiInterfaces.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/MultiInterfaces.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Parcel10.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Parcel10.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Parcel11.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Parcel11.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Parcel2.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Parcel2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Parcel3.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Parcel3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Parcel5.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Parcel5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Parcel6.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Parcel6.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Parcel7.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Parcel7.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Parcel8.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Parcel8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Parcel9.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Parcel9.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Parcell.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Parcell.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Sequence.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Sequence.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/TestBeb.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/TestBeb.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/TestParcel.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/TestParcel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit10/Wrapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit10/Wrapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/AdapterMethodIdiom.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/AdapterMethodIdiom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/AddingGroups.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/AddingGroups.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/ApplesAndOrangesWithoutGenerics.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/ApplesAndOrangesWithoutGenerics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/ArrayIsNotIterable.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/ArrayIsNotIterable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/AsListInference.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/AsListInference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/InterfaceVsIterator.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/InterfaceVsIterator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/LinkedListFeatures.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/LinkedListFeatures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/ListFeatures.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/ListFeatures.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/ListIteration.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/ListIteration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/MapOfList.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/MapOfList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/PetMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/PetMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/PrintingContainers.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/PrintingContainers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/PriorityQueueDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/PriorityQueueDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/QueueDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/QueueDemo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/SetOfInteger.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/SetOfInteger.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/SetOperations.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/SetOperations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/SimpleCollection.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/SimpleCollection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/SimpleIteration.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/SimpleIteration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/Statistics.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/Statistics.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit11/UniqueWordsAlphabetic.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit11/UniqueWordsAlphabetic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/AlwaysFinally.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/AlwaysFinally.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/CleanupIdiom.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/CleanupIdiom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/DynamicFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/DynamicFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/ExceptionMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/ExceptionMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/Exercise.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/Exercise.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/FinallyWorks.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/FinallyWorks.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/FullConstructors.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/FullConstructors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/InheritingExceptions.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/InheritingExceptions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/InputFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/InputFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/LoggingException.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/LoggingException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/LostMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/LostMessage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/MultipleReturns.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/MultipleReturns.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/Rethrowing.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/Rethrowing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/StormyInning.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/StormyInning.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/TurnOffChecking.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/TurnOffChecking.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit12/WhoCalled.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit12/WhoCalled.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit13/Concatenation.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit13/Concatenation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit13/Conversion.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit13/Conversion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit13/Hex.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit13/Hex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit13/Immutable.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit13/Immutable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit13/InfiniteRecursion.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit13/InfiniteRecursion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit13/Turtle.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit13/Turtle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit13/UsingStringBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit13/UsingStringBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/AnImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/AnImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/AnInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/AnInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/AnonymousClosure.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/AnonymousClosure.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/ClassFunctionals.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/ClassFunctionals.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/ClassInitialization.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/ClassInitialization.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/Closure8.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/Closure8.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/Clousure1.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/Clousure1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/ConsumeFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/ConsumeFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/CtorReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/CtorReference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/Curry3Args.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/Curry3Args.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/CurryingAndPartials.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/CurryingAndPartials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/DynamicSupplier.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/DynamicSupplier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/FinctionComposition.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/FinctionComposition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/FunctionalAnnotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/FunctionalAnnotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/GenericClassReferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/GenericClassReferences.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/IntCall.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/IntCall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/LambdaExpressions.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/LambdaExpressions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/MethodReferences.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/MethodReferences.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/MultiUnbound.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/MultiUnbound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/PredicateCompositon.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/PredicateCompositon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/ProduceFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/ProduceFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/RecursiveFactorial.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/RecursiveFactorial.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/RunnableMethodReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/RunnableMethodReference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/Shape.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/SharedStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/SharedStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/Strategize.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/Strategize.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/SweetShop.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/SweetShop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/ToyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/ToyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/TransformFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/TransformFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/TriFunctionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/TriFunctionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/UnboundMethodReference.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/UnboundMethodReference.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/Cat.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/Cat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/Cymric.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/Cymric.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/Dog.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/Dog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/EgyptianMau.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/EgyptianMau.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/ForNameCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/ForNameCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/Hamster.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/Hamster.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/Individual.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/Individual.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/LiteralPetCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/LiteralPetCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/Manx.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/Manx.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/Mouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/Mouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/Mutt.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/Mutt.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/Pet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/PetCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/PetCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/Pets.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/Pets.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/Pug.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/Pug.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/Rat.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/Rat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit14/pets/Rodent.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit14/pets/Rodent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit9/A.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit9/A.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit9/AdaptedRandomDoubles.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit9/AdaptedRandomDoubles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit9/B.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit9/B.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit9/Factories.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit9/Factories.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit9/Months.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit9/Months.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit9/RandomDoubles.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit9/RandomDoubles.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit9/RandomWords.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit9/RandomWords.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/unit9/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/unit9/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/utils/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/utils/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/utils/Stack.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/utils/Stack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/validating/Assert1.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/validating/Assert1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../HelloJava/src/tij/validating/StringInverter.java" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/src/main/java/validating/StringInverter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/thinking-in-java/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/thinking-in-java/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\Program Files\Maven\repository" />
-        <option name="mavenHome" value="D:/Program Files/Maven/apache-maven-3.6.0" />
-        <option name="userSettingsFile" value="D:\Program Files\Maven\apache-maven-3.6.0\conf\settings.xml" />
+        <option name="mavenHome" value="D:\Program Files\apache-maven-3.5.4" />
+        <option name="usePluginRegistry" value="true" />
+        <option name="userSettingsFile" value="D:\Program Files\apache-maven-3.5.4\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="985" />
-    <option name="height" value="1048" />
+  <component name="ProjectId" id="1lm4kfk27lreZdqxtEAGQLzWYLM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1608131297557" />
-    <property name="last_opened_file_path" value="E:/workspace/LingXi/temp" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Project" />
@@ -27,8 +270,119 @@
     <property name="project.structure.side.proportion" value="0.29310346" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ying.zhang01\Desktop\temp\Study Materials\Java\XMind\HelloMaven\thinking-in-java\src\main\java" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.GuavaAssertions">
+    <configuration name="Assert1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="validating.Assert1" />
+      <module name="get-start-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="validating.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GuavaAssertions" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="validating.GuavaAssertions" />
+      <module name="get-start-java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="validating.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CountedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="get-start-java" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CountedListTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.GuavaAssertions" />
+        <item itemvalue="JUnit.CountedListTest" />
+        <item itemvalue="Application.Assert1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration>C:\Users\zhangying\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="31e2c29a-c630-4671-97b3-ea6e1e1a0004" name="Default Changelist" comment="" />
+      <created>1608189078348</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1608189078348</updated>
+      <workItem from="1608189080257" duration="1821000" />
+      <workItem from="1608190984607" duration="2511000" />
+      <workItem from="1608193581365" duration="2166000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2659" y="274" key="FileChooserDialogImpl" timestamp="1608191159037">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2659" y="274" key="FileChooserDialogImpl/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1608191159037" />
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1608198139370">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1608198139370" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1608198139370">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.center/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1608198139370" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1608198139370">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.left/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1608198139370" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1608198139370">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="281" key="GridCell.Tab.0.right/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1608198139370" />
+    <state x="2460" y="262" key="IDE.errors.dialog" timestamp="1608192368837">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2460" y="262" key="IDE.errors.dialog/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1608192368837" />
+    <state x="2373" y="163" key="SettingsEditor" timestamp="1608193387196">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2373" y="163" key="SettingsEditor/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1608193387196" />
+    <state x="2254" y="118" key="new project wizard" timestamp="1608191580734">
+      <screen x="1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="2254" y="118" key="new project wizard/1920.0.1920.1040/0.0.1920.1040@1920.0.1920.1040" timestamp="1608191580734" />
   </component>
   <component name="masterDetails">
     <states>
