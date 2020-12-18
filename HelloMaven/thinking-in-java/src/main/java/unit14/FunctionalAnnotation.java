@@ -9,6 +9,16 @@ interface FunctionalNoAnn {
     String goodbye(String arg);
 }
 
+interface FunctionalInt {
+    void goodbye(int arg);
+}
+
+//@FunctionalInterface
+//interface NotFunctional {
+//    String goodbye(String arg);
+//    String hello(String arg);
+//}
+
 /**
  * FunctionalAnnotation class
  *
@@ -23,10 +33,19 @@ public class FunctionalAnnotation {
     public static void main(String[] args) {
         FunctionalAnnotation fa = new FunctionalAnnotation();
         Functional f = fa::goodbye;
-        FunctionalNoAnn fna = fa::goodbye;
-        Functional fl = a -> "Goodbye, " + a;
-        FunctionalNoAnn fnal = a -> "Goodbye, " + a;
+        System.out.println(f.goodbye("1"));
 
-        System.out.println(fl.goodbye("zhang ying"));
+        FunctionalNoAnn fna = fa::goodbye;
+        System.out.println(fna.goodbye("2"));
+
+        FunctionalInt fi = a -> {
+            System.out.println("void return");
+        };
+        fi.goodbye(3);
+
+//        Functional fl = a -> "Goodbye, " + a;
+//        FunctionalNoAnn fnal = a -> "Goodbye, " + a;
+//
+//        System.out.println(fl.goodbye("zhang ying"));
     }
 }
