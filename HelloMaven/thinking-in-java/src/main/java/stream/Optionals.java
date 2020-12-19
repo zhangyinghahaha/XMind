@@ -19,11 +19,16 @@ public class Optionals {
         }
     }
     static void ifPresent(Optional<String> optString) {
-        optString.ifPresent(System.out::println);
+        // optString.ifPresent(System.out::println);
+        optString.ifPresent(element -> {
+            System.out.println("hello" + element);
+        });
     }
+
     static void orElse(Optional<String> optString) {
         System.out.println(optString.orElse("Nada"));
     }
+
     static void orElseThrow(Optional<String> optString) {
         try {
             System.out.println(optString.orElseThrow(
@@ -40,8 +45,13 @@ public class Optionals {
     }
 
     public static void main(String[] args) {
-        test("basics", Optionals::basics);
-        test("ifPresent", Optionals::ifPresent);
-        test("orElse", Optionals::orElseThrow);
+//        test("basics", Optionals::basics);
+//        test("ifPresent", Optionals::ifPresent);
+//        test("orElse", Optionals::orElseThrow);
+        ifPresent(Optional.empty());
+        ifPresent(Optional.ofNullable(null));
+        Optional.ofNullable(new Optionals()).ifPresent(element -> {
+            System.out.println(element);
+        });
     }
 }

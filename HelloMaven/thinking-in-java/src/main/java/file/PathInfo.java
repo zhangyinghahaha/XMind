@@ -22,9 +22,9 @@ public class PathInfo {
         System.out.println("----------------------------");
         show("toString", p);
         show("Exists", Files.exists(p));
-        show("RegularFile", Files.isRegularFile(p));
-        show("Directory", Files.isDirectory(p));
-        show("Absolute", p.isAbsolute());
+        show("isRegularFile", Files.isRegularFile(p));
+        show("isDirectory", Files.isDirectory(p));
+        show("isAbsolute", p.isAbsolute());
         show("AbsolutePath", p.toAbsolutePath());
         show("FileName", p.getFileName());
         show("Parent", p.getParent());
@@ -34,7 +34,7 @@ public class PathInfo {
 
     public static void main(String[] args) {
         System.out.println(System.getProperty("os.name"));
-        Path p = Paths.get("src", "tij", "file", "PathInfo.java");
+        Path p = Paths.get("thinking-in-java", "src", "main", "java", "file", "PathInfo.java");
         info(p);
 
         Path ap = p.toAbsolutePath();
@@ -48,12 +48,12 @@ public class PathInfo {
 
         URI u = p.toUri();
         System.out.println("URI: " + u);
-
-        Path puri = Paths.get(u);
-        System.out.println(Files.exists(puri));
-
-        // shit
-        File f = ap.toFile();
-        System.out.println(f);
+//
+//        Path puri = Paths.get(u);
+//        System.out.println(Files.exists(puri));
+//
+//        // shit
+//        File f = ap.toFile();
+//        System.out.println(f);
     }
 }
