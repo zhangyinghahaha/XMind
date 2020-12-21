@@ -16,6 +16,7 @@ public class PartsOfPaths {
         Path p = Paths.get("PartsOfPaths.java").toAbsolutePath();
         System.out.println(p);
         System.out.println(Files.exists(p));
+        System.out.println(p.getNameCount());
 
         for (int i = 0; i < p.getNameCount(); i++) {
             System.out.print(p.getName(i) + " ");
@@ -29,6 +30,6 @@ public class PartsOfPaths {
             System.out.print(p.startsWith(pp) + " : ");
             System.out.println(p.endsWith(pp));
         }
-        System.out.println("Starts with " + p.getRoot() + " " + p.startsWith(p.getRoot()));
+//        System.out.println("Starts with " + p.getRoot() + " " + p.startsWith(p.getRoot()));
     }
 }

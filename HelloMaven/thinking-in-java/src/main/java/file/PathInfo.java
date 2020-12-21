@@ -49,8 +49,8 @@ public class PathInfo {
         URI u = p.toUri();
         System.out.println("URI: " + u);
 //
-//        Path puri = Paths.get(u);
-//        System.out.println(Files.exists(puri));
+        Path puri = Paths.get(u);
+        info(puri);
 //
 //        // shit
 //        File f = ap.toFile();

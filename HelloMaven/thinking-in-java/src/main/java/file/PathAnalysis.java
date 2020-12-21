@@ -11,13 +11,13 @@ public class PathAnalysis {
 
     public static void main(String[] args) throws Exception {
         System.out.println(System.getProperty("os.name"));
-        Path p = Paths.get("src", "tij", "file", "PathInfo.java").toAbsolutePath();
+        Path p = Paths.get("thinking-in-java", "src", "main", "java", "file", "PathInfo.java").toAbsolutePath();
         System.out.println(p);
 
         say("Exists", Files.exists(p));
         say("Directory", Files.isDirectory(p));
         say("Executable", Files.isExecutable(p));
-        say("Readable", Files.isExecutable(p));
+        say("Readable", Files.isReadable(p));
         say("RegularFile", Files.isRegularFile(p));
         say("Writeable", Files.isWritable(p));
         say("notExists", Files.notExists(p));
