@@ -5,7 +5,7 @@ import java.nio.file.Path;
 import java.nio.file.Paths;
 
 public class AddAndSubtractPaths {
-    static Path base = Paths.get("..", "..", "..").toAbsolutePath().normalize();
+    static Path base = Paths.get(".").toAbsolutePath().normalize();
 
     static void show(int id, Path result) {
         if (result.isAbsolute()) {
@@ -24,6 +24,9 @@ public class AddAndSubtractPaths {
     public static void main(String[] args) {
         System.out.println(System.getProperty("os.name"));
         System.out.println(base);
+        System.out.println(base.getParent());
+        System.out.println(base.getRoot());
+        System.out.println(base.resolve("Zhang Ying"));
         System.out.println();
 
         Path p = Paths.get("AddAndSubtractPaths.java").toAbsolutePath();
@@ -31,8 +34,8 @@ public class AddAndSubtractPaths {
         show(1, p);
         System.out.println();
 
-        Path convoluted = p.getParent().getParent().resolve("strings").resolve("..").resolve(p.getParent().getFileName());
-        show(2, convoluted);
-        show(3, convoluted.normalize());
+//        Path convoluted = p.getParent().getParent().resolve("strings").resolve("..").resolve(p.getParent().getFileName());
+//        show(2, convoluted);
+//        show(3, convoluted.normalize());
     }
 }
