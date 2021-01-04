@@ -21,9 +21,10 @@ public class Directories {
     static void refreshTestDir() throws Exception {
         if (Files.exists(test)) {
             RmDir.rmdir(test);
-        } else {
-            Files.createDirectory(test);
         }
+
+        Files.createDirectory(test);
+        Files.createFile(test.resolve("Hello.txt"));
     }
 
     static void populateTestDir() throws Exception {
@@ -40,14 +41,14 @@ public class Directories {
     public static void main(String[] args) throws Exception {
         refreshTestDir();
         Files.createFile(test.resolve("Hello.txt"));
-        Path variant = makeVariant();
-        System.out.println(variant);
-
-        try {
-            Files.createDirectory(variant);
-        } catch (Exception e) {
-            System.out.println("Nope, that doesn't work.");
-        }
+//        Path variant = makeVariant();
+//        System.out.println(variant);
+//
+//        try {
+//            Files.createDirectory(variant);
+//        } catch (Exception e) {
+//            System.out.println("Nope, that doesn't work.");
+//        }
 
         populateTestDir();
         Path tempdir = Files.createTempDirectory(test, "DIR_");
