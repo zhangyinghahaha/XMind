@@ -34,8 +34,7 @@ class Triangle extends Shape {
 
 public class Shapes {
     public static void main(String[] args) {
-        Stream.of(
-                new Circle(), new Square(), new Triangle())
-                .forEach(Shape::draw);
+        Stream.of(new Circle(), new Square(), 1)
+                .forEach(System.out::println);
     }
 }

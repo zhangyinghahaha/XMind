@@ -8,7 +8,7 @@ public class Immutable {
     public static void main(String[] args) {
         String q = "howdy";
         System.out.println(q);
-        String qq = upcase(q);
+        String qq = q.toUpperCase();
         System.out.println(qq);
         System.out.println(q);
     }
