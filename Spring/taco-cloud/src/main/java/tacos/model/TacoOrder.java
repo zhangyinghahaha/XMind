@@ -1,4 +1,4 @@
-package tacos;
+package tacos.model;
 
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;

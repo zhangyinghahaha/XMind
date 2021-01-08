@@ -1,4 +1,4 @@
-package tacos;
+package tacos.model;
 
 public class Ingredient {
     private final String id;

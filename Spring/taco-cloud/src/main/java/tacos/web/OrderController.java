@@ -6,7 +6,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import tacos.TacoOrder;
+import tacos.model.TacoOrder;
 
 import javax.validation.Valid;
 

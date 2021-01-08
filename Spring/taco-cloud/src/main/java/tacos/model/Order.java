@@ -1,4 +1,4 @@
-package tacos;
+package tacos.model;
 
 public class Order {
 }

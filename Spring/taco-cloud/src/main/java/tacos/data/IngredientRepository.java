@@ -1,6 +1,6 @@
 package tacos.data;
 
-import tacos.Ingredient;
+import tacos.model.Ingredient;
 
 import java.util.List;
 import java.util.Optional;
