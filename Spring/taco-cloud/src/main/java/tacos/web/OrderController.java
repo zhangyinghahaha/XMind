@@ -2,11 +2,13 @@ package tacos.web;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import tacos.Order;
 import tacos.TacoOrder;
+
+import javax.validation.Valid;
 
 @Controller
 @RequestMapping("/orders")
@@ -18,7 +20,12 @@ public class OrderController {
     }
 
     @PostMapping
-    public String processOrder(Order order) {
+    public String processOrder(@Valid TacoOrder order, Errors errors) {
+        System.out.println(order.getDeliveryName());
+        if (errors.hasErrors()) {
+            return "orderForm";
+        }
+        System.out.println("提交订单");
         return "redirect:/";
     }
 }
