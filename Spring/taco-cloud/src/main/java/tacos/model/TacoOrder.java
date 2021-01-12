@@ -1,9 +1,19 @@
 package tacos.model;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
+
+import javax.persistence.CascadeType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.OneToMany;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
+@Table
 public class TacoOrder {
     private static final long serialVersionUID = 1L;
     @NotBlank(message = "Delivery name is required")
@@ -21,10 +31,20 @@ public class TacoOrder {
     @Digits(integer=3, fraction=0, message="Invalid CVV")
     private String ccCVV;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private Date placedAt;
+    @OneToMany(cascade = CascadeType.ALL)
+    private List<Taco> tacos = new ArrayList<>();
 
     public TacoOrder() {}
+    public void addTaco(Taco taco) {
+        this.tacos.add(taco);
+    }
+    public List<Taco> getTacos() {
+        return this.tacos;
+    }
 
     public TacoOrder(
             String deliveryName,

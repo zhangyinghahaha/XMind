@@ -1,7 +1,13 @@
 package tacos.data;
 
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.CrudRepository;
 import tacos.model.TacoOrder;
 
-public interface OrderRepository {
-    TacoOrder save(TacoOrder order);
+import java.util.Date;
+import java.util.List;
+
+public interface OrderRepository extends CrudRepository<TacoOrder, Long> {
+    List<TacoOrder> findByDeliveryZip(String deliveryZip);
+    List<TacoOrder> readOrdersByDeliveryZipAndPlacedAtBetween(String deliveryZip, Date startDate, Date endDate);
 }

@@ -1,15 +1,24 @@
 package tacos.model;
 
+import org.springframework.data.relational.core.sql.In;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+@Entity
 public class Ingredient {
-    private final String id;
-    private final String name;
-    private final Type type;
+    @Id
+    private String id;
+    private String name;
+    private Type type;
 
     public Ingredient(String id, String name, Type type) {
         this.id = id;
         this.name = name;
         this.type = type;
     }
+
+    public Ingredient() {}
 
     public String getId() {
         return id;
