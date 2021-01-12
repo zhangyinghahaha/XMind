@@ -1,5 +1,7 @@
 package typeinfo;
 
+import java.nio.file.Paths;
+
 class Cookie {
     static {
         System.out.println("Loading Cookie");
@@ -24,7 +26,7 @@ public class SweetShop {
         new Candy();
         System.out.println("After creating Candy");
         try {
-            Class.forName("tij.typeinfo.Gum");
+            Class.forName("typeinfo.Gum");
         } catch (ClassNotFoundException e) {
             System.out.println("Couldn't find Gum");
         }

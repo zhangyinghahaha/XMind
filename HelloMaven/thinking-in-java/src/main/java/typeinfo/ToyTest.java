@@ -37,7 +37,7 @@ public class ToyTest {
     public static void main(String[] args) {
         Class c = null;
         try {
-            c = Class.forName("tij.typeinfo.FancyToy");
+            c = Class.forName("typeinfo.FancyToy");
         } catch (ClassNotFoundException e) {
             System.out.println("Can't find FancyToy");
             System.exit(1);
@@ -63,5 +63,6 @@ public class ToyTest {
         }
 
         printInfo(obj.getClass());
+        Class test = ToyTest.class;
     }
 }
