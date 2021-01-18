@@ -1,7 +1,5 @@
 package tacos.model;
 
-import org.springframework.data.relational.core.sql.In;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 

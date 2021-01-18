@@ -1,7 +1,5 @@
 package tacos.model;
 
-import org.springframework.data.relational.core.mapping.Table;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;

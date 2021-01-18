@@ -1,21 +1,16 @@
 package tacos.model;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.relational.core.mapping.Table;
-
-import javax.persistence.CascadeType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.OneToMany;
+import javax.persistence.*;
 import javax.validation.constraints.Digits;
 import javax.validation.constraints.NotBlank;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-@Table
+@Entity
 public class TacoOrder {
     private static final long serialVersionUID = 1L;
+
     @NotBlank(message = "Delivery name is required")
     private String deliveryName;
     @NotBlank(message="Street is required")

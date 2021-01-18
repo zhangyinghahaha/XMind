@@ -17,14 +17,12 @@ import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 @Controller
 @RequestMapping("/design")
 public class DesignTacoController {
-    private final IngredientRepository ingredientRepository;
+    private IngredientRepository ingredientRepository;
 
-    @Autowired
     public DesignTacoController(IngredientRepository ingredientRepository) {
         this.ingredientRepository = ingredientRepository;
     }
@@ -32,9 +30,13 @@ public class DesignTacoController {
     @ModelAttribute
     public void addIngredientsToModel(Model model) {
         List<Ingredient> ingredients =  new ArrayList<>();
+        System.out.println("Ingredients: ");
+        System.out.println(this.ingredientRepository);
+        System.out.println("-------------");
         this.ingredientRepository.findAll().forEach(ingredients::add);
 
         for (Type type : Type.values()) {
+            System.out.println(filterByType(ingredients, type));
             model.addAttribute(type.toString().toLowerCase(), filterByType(ingredients, type));
         }
     }
