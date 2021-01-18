@@ -1,5 +1,5 @@
 //: typeinfo/pets/Manx.java
-package unit14.pets;
+package typeinfo.pets;
 
 public class Manx extends Cat {
   public Manx(String name) { super(name); }

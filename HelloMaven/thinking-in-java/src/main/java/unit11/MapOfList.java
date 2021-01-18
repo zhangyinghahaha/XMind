@@ -1,5 +1,6 @@
 package unit11;
 
+import typeinfo.pets.*;
 import unit14.pets.*;
 
 import java.util.*;

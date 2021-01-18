@@ -1,5 +1,5 @@
 //: typeinfo/pets/Rodent.java
-package unit14.pets;
+package typeinfo.pets;
 
 public class Rodent extends Pet {
   public Rodent(String name) { super(name); }

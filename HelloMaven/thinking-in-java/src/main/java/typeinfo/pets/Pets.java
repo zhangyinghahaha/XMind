@@ -1,6 +1,6 @@
 //: typeinfo/pets/Pets.java
 // Facade to produce a default PetCreator.
-package unit14.pets;
+package typeinfo.pets;
 import java.util.*;
 
 public class Pets {

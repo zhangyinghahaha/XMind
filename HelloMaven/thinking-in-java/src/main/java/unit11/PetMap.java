@@ -1,8 +1,8 @@
 package unit11;
 
-import unit14.pets.Cat;
-import unit14.pets.Dog;
-import unit14.pets.Pet;
+import typeinfo.pets.Cat;
+import typeinfo.pets.Dog;
+import typeinfo.pets.Pet;
 
 import java.util.HashMap;
 import java.util.Map;

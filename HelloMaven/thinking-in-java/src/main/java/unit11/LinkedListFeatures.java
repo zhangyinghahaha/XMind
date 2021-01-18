@@ -1,5 +1,8 @@
 package unit11;
 
+import typeinfo.pets.Pet;
+import typeinfo.pets.Pets;
+import typeinfo.pets.Rat;
 import unit14.pets.*;
 
 import java.util.LinkedList;
