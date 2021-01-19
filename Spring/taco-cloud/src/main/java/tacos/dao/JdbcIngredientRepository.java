@@ -1,14 +1,4 @@
-package tacos.data;
-
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.stereotype.Repository;
-import tacos.model.Ingredient;
-
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.List;
-import java.util.Optional;
+package tacos.dao;
 
 //@Repository
 //public class JdbcIngredientRepository implements IngredientRepository {

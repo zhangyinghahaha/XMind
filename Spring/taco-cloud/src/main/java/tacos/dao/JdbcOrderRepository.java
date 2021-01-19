@@ -1,18 +1,4 @@
-package tacos.data;
-
-import org.springframework.jdbc.core.JdbcTemplate;
-import org.springframework.jdbc.core.PreparedStatementCreator;
-import org.springframework.jdbc.core.PreparedStatementCreatorFactory;
-import org.springframework.jdbc.support.GeneratedKeyHolder;
-import org.springframework.stereotype.Repository;
-import tacos.model.Ingredient;
-import tacos.model.Taco;
-import tacos.model.TacoOrder;
-
-import java.sql.Types;
-import java.util.Arrays;
-import java.util.Date;
-import java.util.List;
+package tacos.dao;
 
 //@Repository
 //public class JdbcOrderRepository implements OrderRepository{
