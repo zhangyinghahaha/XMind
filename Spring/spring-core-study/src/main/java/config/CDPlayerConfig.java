@@ -13,7 +13,7 @@ import org.springframework.context.annotation.Import;
 //@ComponentScan("ioc")
 public class CDPlayerConfig {
     //@Bean
-    public CDPlayer cdPlayer(CompactDisc compactDisc) {
-        return new CDPlayer(compactDisc);
-    }
+//    public CDPlayer cdPlayer(CompactDisc compactDisc) {
+//        return new CDPlayer(compactDisc);
+//    }
 }

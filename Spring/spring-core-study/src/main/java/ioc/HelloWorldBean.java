@@ -14,6 +14,6 @@ public class HelloWorldBean {
         CDPlayer cp2 = context.getBean(CDPlayer.class);
         cp2.play();
         System.out.println(cp2.getCount());
-
+        MagicBean mb = context.getBean(MagicBean.class);
     }
 }
