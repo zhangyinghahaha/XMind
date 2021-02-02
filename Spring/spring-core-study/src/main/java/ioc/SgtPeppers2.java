@@ -1,8 +1,9 @@
 package ioc;
 
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
+//@Component
 public class SgtPeppers2 implements CompactDisc{
     private String title = "Sgt. Pepper's Lonely2";
     private String artist = "The Beatles2";

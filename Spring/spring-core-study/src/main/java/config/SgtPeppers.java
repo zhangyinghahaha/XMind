@@ -1,10 +1,11 @@
-package ioc;
+package config;
 
+import ioc.CompactDisc;
 import org.springframework.stereotype.Component;
 
 @Component
-public class SgtPeppers implements CompactDisc{
-    private String title = "Sgt. Pepper's Lonely";
+public class SgtPeppers implements CompactDisc {
+    private String title = "Sgt. Pepper's Lonely Copy";
     private String artist = "The Beatles";
 
     @Override

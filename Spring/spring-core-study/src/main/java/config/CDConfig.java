@@ -9,9 +9,9 @@ import org.springframework.context.annotation.Import;
 /**
  * @author ying.zhang01
  */
-@Configuration
+//@Configuration
 public class CDConfig {
-    @Bean
+    //@Bean
     public CompactDisc sgtPeppers() {
         return new SgtPeppers();
     }
