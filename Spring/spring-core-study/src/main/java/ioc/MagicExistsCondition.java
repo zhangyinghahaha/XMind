@@ -10,6 +10,6 @@ public class MagicExistsCondition implements Condition {
     public boolean matches(ConditionContext conditionContext, AnnotatedTypeMetadata annotatedTypeMetadata) {
         Environment env = conditionContext.getEnvironment();
         //return env.containsProperty("magic");
-        return false;
+        return true;
     }
 }

@@ -8,7 +8,7 @@ import org.springframework.context.annotation.Import;
  * @author ying.zhang01
  */
 @Configuration
-@Import({CDConfig.class, CDPlayerConfig.class})
+@Import({CDConfig.class, CDPlayerConfig.class, ExpressiveConfig.class})
 @ComponentScan("ioc")
 public class SoundSystemConfig {
 }
