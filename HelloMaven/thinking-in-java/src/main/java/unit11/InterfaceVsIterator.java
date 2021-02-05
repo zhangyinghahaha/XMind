@@ -2,7 +2,6 @@ package unit11;
 
 import typeinfo.pets.Pet;
 import typeinfo.pets.Pets;
-import unit14.pets.*;
 
 import java.util.Collection;
 import java.util.Iterator;

@@ -1,5 +1,7 @@
 package typeinfo;
 
+import typeinfo.pets.Pet;
+
 import java.util.HashMap;
 
 public class PetCount {
@@ -12,5 +14,19 @@ public class PetCount {
                 put(type, quantity + 1);
             }
         }
+    }
+
+    public static void countPets(PetCreator petCreator) {
+        Counter counter = new Counter();
+        for (Pet pet : Pets.list(20)) {
+            System.out.print(pet.getClass().getSimpleName() + " ");
+            if (pet instanceof Pet) {
+                counter.count("Pet");
+            }
+        }
+    }
+
+    public static void main(String[] args) {
+
     }
 }
