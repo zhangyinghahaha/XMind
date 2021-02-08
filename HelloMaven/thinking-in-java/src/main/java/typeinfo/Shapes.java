@@ -1,5 +1,7 @@
 package typeinfo;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Stream;
 
 abstract class Shape {
@@ -34,7 +36,9 @@ class Triangle extends Shape {
 
 public class Shapes {
     public static void main(String[] args) {
-        Stream.of(new Circle(), new Square(), 1)
-                .forEach(System.out::println);
+        Triangle t = new Triangle();
+        Shape s = t;
+        List<Triangle> triangles = new ArrayList<>();
+        triangles.add(t);
     }
 }
