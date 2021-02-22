@@ -2,6 +2,7 @@ package typeinfo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.stream.Stream;
 
 abstract class Shape {
@@ -40,5 +41,10 @@ public class Shapes {
         Shape s = t;
         List<Triangle> triangles = new ArrayList<>();
         triangles.add(t);
+        int i = 1;
+        Integer i2 = 1;
+        Integer i3 = 1;
+        System.out.println(i == i2);
+        System.out.println(Objects.equals(i2, i3));
     }
 }
