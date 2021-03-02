@@ -40,7 +40,7 @@ public class Holder<T> {
         d = (Apple) fruit.get();
 
         try {
-            Orange c = (Orange) fruit.get();
+            //Orange c = (Orange) fruit.get();
         } catch (Exception e) {
             System.out.println(e);
         }
