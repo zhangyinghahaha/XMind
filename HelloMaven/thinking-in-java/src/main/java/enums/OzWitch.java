@@ -15,7 +15,7 @@ public enum OzWitch {
     SOUTH("Good by inference, but missing");
 
     private String description;
-    OzWitch(String description) {
+    private OzWitch(String description) {
         this.description = description;
     }
 
