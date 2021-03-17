@@ -9,5 +9,7 @@ public class AopMain {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(AudienceConfig.class);
         Performance performance = applicationContext.getBean(Performance.class);
         performance.perform();
+
+        performance.perform("窗前明月光");
     }
 }

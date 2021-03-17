@@ -6,6 +6,12 @@ import org.springframework.stereotype.Component;
 public class ComedyShow implements Performance{
     @Override
     public void perform() {
-        System.out.println("Comedy Show!!!");
+        throw new RuntimeException("can not perform!");
+        // System.out.println("Comedy Show!!!");
+    }
+
+    @Override
+    public void perform(String name) {
+        System.out.println("Comedy show: " + name);
     }
 }
