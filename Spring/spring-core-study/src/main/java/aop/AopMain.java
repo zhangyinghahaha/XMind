@@ -11,5 +11,7 @@ public class AopMain {
         performance.perform();
 
         performance.perform("窗前明月光");
+
+        //performance.performEncore();
     }
 }
