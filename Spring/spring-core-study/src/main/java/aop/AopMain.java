@@ -12,6 +12,7 @@ public class AopMain {
 
         performance.perform("窗前明月光");
 
-        //performance.performEncore();
+        Encoreable encoreable = (Encoreable)performance;
+        encoreable.performEncore();
     }
 }
