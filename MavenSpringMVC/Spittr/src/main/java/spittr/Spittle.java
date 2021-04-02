@@ -14,7 +14,6 @@ public class Spittle {
     private Double longitude;
 
     public Spittle(String message, Date time) {
-
         this(null, message, time, null, null);
     }
 
