@@ -20,30 +20,31 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         InternalResourceViewResolver resolver = new InternalResourceViewResolver();
         resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".jsp");
+        resolver.setExposeContextBeansAsAttributes(true);
         return resolver;
     }
 
-    @Bean
-    public ViewResolver cnViewResolver(ContentNegotiationManager cnm) {
-        ContentNegotiatingViewResolver cnvr = new ContentNegotiatingViewResolver();
-        cnvr.setContentNegotiationManager(cnm);
-        return cnvr;
-    }
+//    @Bean
+//    public ViewResolver cnViewResolver(ContentNegotiationManager cnm) {
+//        ContentNegotiatingViewResolver cnvr = new ContentNegotiatingViewResolver();
+//        cnvr.setContentNegotiationManager(cnm);
+//        return cnvr;
+//    }
 
-    @Override
-    public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
-        configurer.defaultContentType(MediaType.APPLICATION_JSON);
-    }
+//    @Override
+//    public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
+//        configurer.defaultContentType(MediaType.APPLICATION_JSON);
+//    }
 
     @Override
     public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
         configurer.enable();
     }
 
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        // TODO Auto-generated method stub
-        super.addResourceHandlers(registry);
-    }
+//    @Override
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//        // TODO Auto-generated method stub
+//        super.addResourceHandlers(registry);
+//    }
 
 }
