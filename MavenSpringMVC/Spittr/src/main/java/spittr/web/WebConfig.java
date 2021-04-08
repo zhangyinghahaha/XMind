@@ -24,6 +24,11 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         return resolver;
     }
 
+    @Bean
+    public ViewResolver thymeleafViewResolver() {
+        return null;
+    }
+
 //    @Bean
 //    public ViewResolver cnViewResolver(ContentNegotiationManager cnm) {
 //        ContentNegotiatingViewResolver cnvr = new ContentNegotiatingViewResolver();
