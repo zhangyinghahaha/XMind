@@ -20,6 +20,10 @@ public class SpittleRepositoryImpl implements SpittleRepository{
 
     @Override
     public Spittle findOne(long spittleId) {
-        return new Spittle(spittleId, "Spittle " + spittleId, new Date(), 100d, 100d);
+        Spittle spittle = null;
+        if (spittleId != 0) {
+            spittle = new Spittle(spittleId, "Spittle " + spittleId, new Date(), 100d, 100d);
+        }
+        return spittle;
     }
 }
