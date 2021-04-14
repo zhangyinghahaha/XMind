@@ -32,7 +32,7 @@ public class SpittleController {
     }
 
     @RequestMapping(value = "/{spittleId}", method = RequestMethod.GET)
-    public String spittle(@PathVariable("spittleId") long spittleId, Model model) throws SpittleNotFoundException {
+    public String spittle(@PathVariable("spittleId") long spittleId, Model model){
         Spittle spittle = spittleRepository.findOne(spittleId);
         if (spittle == null) {
             throw new SpittleNotFoundException();

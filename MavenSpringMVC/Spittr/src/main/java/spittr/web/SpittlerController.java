@@ -29,12 +29,13 @@ public class SpittlerController {
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public String processRegistration(@Valid Spitter spitter, Errors errors) {
+    public String processRegistration(@Valid Spitter spitter, Errors errors, Model model) {
         // spittleRepository.save(spitter);
         if (errors.hasErrors()) {
             return "registerForm";
         }
-        return "redirect:/spitter/" + spitter.getUsername();
+        model.addAttribute("username", spitter.getUsername());
+        return "redirect:/spitter/{username}";
     }
 
     @RequestMapping(value = "/{username}", method = RequestMethod.GET)
