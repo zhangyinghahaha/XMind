@@ -2,12 +2,21 @@ package unit2.module1;
 
 import util.In;
 
-public class Example {
+public class Insertion {
     private static int compareCount = 0;
     private static int exchangeCount = 0;
-
+    /**
+     * 升序排列
+     * @param a
+     */
     public static void sort(Comparable[] a) {
-
+        int n = a.length;
+        for (int i = 1; i < n; i++) {
+            // 这种写法类似冒泡
+            for (int j = i; j > 0 && less(a[j], a[j-1]); j--) {
+                exch(a, j, j-1);
+            }
+        }
     }
 
     private static boolean less(Comparable v, Comparable w) {
@@ -40,7 +49,6 @@ public class Example {
 
     public static void main(String[] args) {
         String[] a = In.readStrings();
-        show(a);
         sort(a);
         //System.out.println(isSorted(a));
         show(a);
