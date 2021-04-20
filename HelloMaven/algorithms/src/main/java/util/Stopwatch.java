@@ -1,4 +1,4 @@
-package unit1.module4;
+package util;
 
 public class Stopwatch {
     private final long start;
@@ -9,7 +9,7 @@ public class Stopwatch {
 
     public double elapsedTime() {
         long now = System.currentTimeMillis();
-        return (now - start) / 1000;
+        return now - start;
     }
 
     public static void main(String[] args) {
