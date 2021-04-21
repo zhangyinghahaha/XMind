@@ -26,4 +26,14 @@ public class SpittleRepositoryImpl implements SpittleRepository{
         }
         return spittle;
     }
+
+    @Override
+    public List<Spittle> findRecentSpittles() {
+        return null;
+    }
+
+    @Override
+    public void save(Spittle spittle) {
+
+    }
 }

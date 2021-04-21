@@ -9,4 +9,9 @@ public class SpitterRepositoryImpl implements SpitterRepository{
     public Spitter findByUsername(String username) {
         return new Spitter(username, "1", "1", "1", "1");
     }
+
+    @Override
+    public Spitter save(Spitter spitter) {
+        return null;
+    }
 }
