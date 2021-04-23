@@ -8,7 +8,10 @@ package util;
  */
 public class Test {
     public static void main(String[] args) {
-        method(null);
+        for (;;) {
+            System.out.println("for");
+        }
+        // method(null);
 //        InnerClass ic = new InnerClass();
 //        ic.a = 0;
 //        System.out.println(ic.a);
