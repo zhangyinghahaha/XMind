@@ -2,6 +2,7 @@ package com.nowcoder.community.service;
 
 import com.nowcoder.community.dao.UserMapper;
 import com.nowcoder.community.entity.User;
+import com.nowcoder.community.util.CommunityConstant;
 import com.nowcoder.community.util.CommunityUtil;
 import com.nowcoder.community.util.MailClient;
 import org.apache.commons.lang3.StringUtils;
@@ -75,5 +76,17 @@ public class UserService {
         mailClient.sendMail(user.getEmail(), "激活账号", content);
 
         return map;
+    }
+
+    public int activation(int userId, String code) {
+        User user = userMapper.selectById(userId);
+        if (user.getStatus() == 1) {
+            return CommunityConstant.ACTIVATION_REPEAT;
+        } else if (user.getActivationCode().equals(code)) {
+            userMapper.updateStatus(userId, 1);
+            return CommunityConstant.ACTIVATION_SUCCESS;
+        } else {
+            return CommunityConstant.ACTIVATION_FAILED;
+        }
     }
 }
