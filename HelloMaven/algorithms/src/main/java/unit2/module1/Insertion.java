@@ -12,16 +12,10 @@ public class Insertion {
     public static void sort(Comparable[] a) {
         int n = a.length;
         for (int i = 1; i < n; i++) {
-            // 这种写法类似冒泡
-            Comparable current = a[i];
-            for (int j = i; j >= 0 ; j--) {
-                //exch(a, j, j-1);
-                if (j>0 && less(current, a[j-1])) {
-                    a[j] = a[j-1];
-                } else {
-                    a[j] = current;
-                    break;
-                }
+            // 将a[i]插入到a[i-1]、a[i-2]、a[i-3]...a[0]之中
+            // 基于交换操作
+            for (int j = i; j > 0 && less(a[j], a[j-1]) ; j--) {
+                exch(a, j, j-1);
             }
         }
     }

@@ -2,7 +2,7 @@ package unit2.module1;
 
 import util.In;
 
-public class Example {
+public class Shell {
     private static int compareCount = 0;
     private static int exchangeCount = 0;
 
@@ -11,7 +11,20 @@ public class Example {
      * @param a
      */
     public static void sort(Comparable[] a) {
+        int n = a.length;
+        int h = 1;
+        while (h < n/3) {
+            h = 3*h + 1;
+        }
 
+        while (h >= 1) {
+            for (int i = h; i < n; i++) {
+                for(int j = i; j >= h && less(a[j], a[j-h]); j -= h) {
+                    exch(a, j, j-h);
+                }
+            }
+            h = h/3;
+        }
     }
 
     private static boolean less(Comparable v, Comparable w) {
