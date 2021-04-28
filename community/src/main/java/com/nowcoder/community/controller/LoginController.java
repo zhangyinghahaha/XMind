@@ -39,11 +39,6 @@ public class LoginController {
     @Value("${server.servlet.context-path}")
     private String contextPath;
 
-    @RequestMapping(path = "/login", method = RequestMethod.GET)
-    public String getLoginPage() {
-        return "/site/login";
-    }
-
     @RequestMapping(path = "/register", method = RequestMethod.GET)
     public String getRegisterPage() {
         return "/site/register";
@@ -97,6 +92,11 @@ public class LoginController {
         } catch (IOException e) {
             logger.error("响应验证码失败:" + e.getMessage());
         }
+    }
+
+    @RequestMapping(path = "/login", method = RequestMethod.GET)
+    public String getLoginPage() {
+        return "/site/login";
     }
 
     @RequestMapping(path = "/login", method = RequestMethod.POST)
