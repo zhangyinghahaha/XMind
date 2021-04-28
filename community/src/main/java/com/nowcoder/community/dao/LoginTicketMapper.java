@@ -22,7 +22,7 @@ public interface LoginTicketMapper {
     LoginTicket selectByTicket(String ticket);
 
     @Update({
-            "update login_ticket set status={#status} where ticket=#{ticket}"
+            "update login_ticket set status=#{status} where ticket=#{ticket}"
     })
     int updateStatus(String ticket, int status);
 }

@@ -21,7 +21,7 @@ public class KapthcaConfig {
     @Bean
     public Producer kaptchaProducer() {
         Properties properties = new Properties();
-        properties.setProperty("kaptcha.image.width", kaptchaProperties.getWidth());
+        properties.setProperty("kaptcha.image.width", "100");
         properties.setProperty("kaptcha.image.height", kaptchaProperties.getHeight());
         properties.setProperty("kaptcha.image.font.size", kaptchaProperties.getSize());
         properties.setProperty("kaptcha.image.font.color", kaptchaProperties.getColor());
