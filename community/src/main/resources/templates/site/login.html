@@ -9,8 +9,8 @@
 	<link rel="stylesheet" th:href="@{/css/login.css}" />
 	<title>牛客网-登录</title>
 </head>
-<body>
-	<div class="nk-container">
+	<body>
+		<div class="nk-container">
 		<!-- 头部 -->
 		<header class="bg-dark sticky-top" th:replace="index::header">
 			<div class="container">
@@ -63,7 +63,8 @@
 		<div class="main">
 			<div class="container pl-5 pr-5 pt-3 pb-3 mt-3 mb-3">
 				<h3 class="text-center text-info border-bottom pb-3">登&nbsp;&nbsp;录</h3>
-				<form class="mt-5" method="post" th:action="@{/login}">
+				<form id="loginForm" class="mt-5" method="post" th:action="@{/login}">
+					<textarea id="publicKey" class="hidden" th:text="${publicKey}">publicKey</textarea>
 					<div class="form-group row">
 						<label for="username" class="col-sm-2 col-form-label text-right">账号:</label>
 						<div class="col-sm-10">
@@ -85,7 +86,7 @@
 								   name="password" placeholder="请输入您的密码!" required>
 							<div class="invalid-feedback" th:text="${passwordMsg}">
 								密码长度不能小于8位!
-							</div>							
+							</div>
 						</div>
 					</div>
 					<div class="form-group row mt-4">
@@ -103,7 +104,7 @@
 							<img th:src="@{/kaptcha}" id="kaptcha" style="width:100px;height:40px;" class="mr-2"/>
 							<a href="javascript:refreshKaptcha()" class="font-size-12 align-bottom">刷新验证码</a>
 						</div>
-					</div>				
+					</div>
 					<div class="form-group row mt-4">
 						<div class="col-sm-2"></div>
 						<div class="col-sm-10">
@@ -111,14 +112,14 @@
 							<label class="form-check-label" for="remember-me">记住我</label>
 							<a href="forget.html" class="text-danger float-right">忘记密码?</a>
 						</div>
-					</div>				
+					</div>
 					<div class="form-group row mt-4">
 						<div class="col-sm-2"></div>
 						<div class="col-sm-10 text-center">
-							<button type="submit" class="btn btn-info text-white form-control">立即登录</button>
+							<button id="login" type="submit" class="btn btn-info text-white form-control">立即登录</button>
 						</div>
 					</div>
-				</form>				
+				</form>
 			</div>
 		</div>
 
@@ -184,15 +185,29 @@
 			</div>
 		</footer>
 	</div>
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
-	<script th:src="@{/js/global.js}"></script>
-	<script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+		<script th:src="@{/js/global.js}"></script>
+		<script th:src="@{/js/jsencrypt.js}"></script>
+		<script>
 		function refreshKaptcha() {
 			var path = "/community/kaptcha?=" + Math.random();
 			$("#kaptcha").attr("src", path);
 		}
-	</script>
-</body>
+
+		$(function () {
+			$("#loginForm").submit(function (){
+				// Encrypt with the public key...
+				var encrypt = new JSEncrypt();
+				encrypt.setPublicKey($('#publicKey').text());
+				var username = encrypt.encrypt($('#username').val());
+				var password = encrypt.encrypt($('#password').val());
+				$('#username').val(username);
+				$('#password').val(password);
+				return true;
+			});
+		});
+		</script>
+	</body>
 </html>

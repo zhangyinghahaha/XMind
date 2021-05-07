@@ -4,6 +4,9 @@ import com.google.code.kaptcha.Producer;
 import com.nowcoder.community.entity.User;
 import com.nowcoder.community.service.UserService;
 import com.nowcoder.community.util.CommunityConstant;
+import com.nowcoder.community.util.RsaKey;
+import com.nowcoder.community.util.RsaUtil;
+import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -29,6 +32,9 @@ import java.util.Map;
 @Controller
 public class LoginController {
     private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
+
+    @Autowired
+    private RsaKey rsaKey;
 
     @Autowired
     private UserService userService;
@@ -95,7 +101,8 @@ public class LoginController {
     }
 
     @RequestMapping(path = "/login", method = RequestMethod.GET)
-    public String getLoginPage() {
+    public String getLoginPage(Model model) {
+        model.addAttribute("publicKey", rsaKey.getPublicKey());
         return "/site/login";
     }
 
@@ -110,6 +117,10 @@ public class LoginController {
 
         // 检查账号，密码
         int expiredSeconds = rememberMe ? CommunityConstant.REMEMBER_EXPIRED_SECONDS : CommunityConstant.DEFAULT_EXPIRED_SECONDS;
+        // 用私钥解密用户名，密码
+        username = RsaUtil.privateDecrypt(username, rsaKey.getPrivateKey());
+        password = RsaUtil.privateDecrypt(password, rsaKey.getPrivateKey());
+
         Map<String, Object> map = userService.login(username, password, expiredSeconds);
         if (map.containsKey("ticket")) {
             Cookie cookie = new Cookie("ticket", map.get("ticket").toString());
