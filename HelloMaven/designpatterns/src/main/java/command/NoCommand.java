@@ -1,5 +1,8 @@
 package command;
 
+/**
+ * 空对象
+ */
 public class NoCommand implements Command {
     @Override
     public void execute() {
