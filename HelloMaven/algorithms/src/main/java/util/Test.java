@@ -8,9 +8,8 @@ package util;
  */
 public class Test {
     public static void main(String[] args) {
-        for (;;) {
-            System.out.println("for");
-        }
+        int[] a = new int[0];
+        System.out.println(a.length);
         // method(null);
 //        InnerClass ic = new InnerClass();
 //        ic.a = 0;
