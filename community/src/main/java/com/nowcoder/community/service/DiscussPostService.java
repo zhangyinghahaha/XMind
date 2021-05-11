@@ -20,6 +20,10 @@ public class DiscussPostService {
         return discussPostMapper.selectDiscussPosts(userId, offset, limit);
     }
 
+    public DiscussPost findDiscussPostById(int id) {
+        return discussPostMapper.selectDiscussPostById(id);
+    }
+
     public int findDiscussPostRows(int userId) {
         return discussPostMapper.selectDiscussPostRows(userId);
     }
