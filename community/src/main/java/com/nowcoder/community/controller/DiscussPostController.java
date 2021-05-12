@@ -88,10 +88,21 @@ public class DiscussPostController {
                         Map<String, Object> replyVo = new HashMap<>();
                         replyVo.put("reply", reply);
                         replyVo.put("user", userService.findUserById(reply.getUserId()));
+                        User target = reply.getTargetId() == 0 ? null : userService.findUserById(reply.getUserId());
+                        replyVo.put("target", target);
+                        replyVoList.add(replyVo);
                     }
                 }
+                commentVo.put("replys", replyVoList);
+
+                int replyCount = commentService.findtCommentCountByEntity(CommunityConstant.ENTITY_TYPE_COMMENT, comment.getId());
+                commentVo.put("replyCount", replyCount);
+
+                commentVoList.add(commentVo);
             }
         }
+
+        model.addAttribute("comments", commentVoList);
 
         return "/site/discuss-detail";
     }
