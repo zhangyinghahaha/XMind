@@ -1,4 +1,4 @@
-package unit2.module1;
+package unit2.module2;
 
 import util.In;
 
@@ -32,6 +32,7 @@ public class Merge {
     }
 
     /**
+     * 原地归并
      * 将a[lo.. mid] 和 a[mid+1.. hi]合并
      * @param a
      * @param lo
@@ -42,10 +43,12 @@ public class Merge {
         int i = lo;
         int j = mid + 1;
 
+        // 将a[lo.. hi]复制到aux[lo.. hi]
         for (int k = lo; k <= hi; k++) {
             aux[k] = a[k];
         }
 
+        // 归并到a[lo.. hi]
         for (int k = lo; k <= hi; k++) {
             if (i > mid) {
                 a[k] = aux[j++];
