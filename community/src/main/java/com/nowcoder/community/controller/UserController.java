@@ -2,7 +2,10 @@ package com.nowcoder.community.controller;
 
 import com.nowcoder.community.annotation.LoginRequired;
 import com.nowcoder.community.entity.User;
+import com.nowcoder.community.service.FollowService;
+import com.nowcoder.community.service.LikeService;
 import com.nowcoder.community.service.UserService;
+import com.nowcoder.community.util.CommunityConstant;
 import com.nowcoder.community.util.CommunityUtil;
 import com.nowcoder.community.util.HostHolder;
 import org.slf4j.Logger;
@@ -39,7 +42,10 @@ public class UserController {
 
     @Autowired
     private UserService userService;
-
+    @Autowired
+    private LikeService likeService;
+    @Autowired
+    private FollowService followService;
     @Autowired
     private HostHolder hostHolder;
 
@@ -47,6 +53,35 @@ public class UserController {
     @RequestMapping(path = "/setting", method = RequestMethod.GET)
     public String getSettingPage() {
         return "/site/setting";
+    }
+
+    @RequestMapping(path = "/profile/{userId}", method = RequestMethod.GET)
+    public String getProfilePage(@PathVariable int userId, Model model) {
+        User user = userService.findUserById(userId);
+        if (user == null) {
+            throw new RuntimeException("用户不存在");
+        }
+
+        model.addAttribute("user", user);
+        int likeCount = likeService.findUserLikeCount(userId);
+        model.addAttribute("likeCount", likeCount);
+
+        // 关注用户数量
+        long followeeCount = followService.findFolloweeCount(user.getId(), CommunityConstant.ENTITY_TYPE_USER);
+        model.addAttribute("followeeCount", followeeCount);
+
+        // 粉丝数量
+        long followerCount = followService.findFollowerCount(CommunityConstant.ENTITY_TYPE_USER, userId);
+        model.addAttribute("followerCount", followerCount);
+
+        // 是否已关注
+        boolean hasFollowed = false;
+        if (hostHolder.getUser() != null) {
+            hasFollowed = followService.hasFollowed(hostHolder.getUser().getId(), CommunityConstant.ENTITY_TYPE_USER, user.getId());
+        }
+        model.addAttribute("hasFollowed", hasFollowed);
+
+        return "/site/profile";
     }
 
     @LoginRequired
