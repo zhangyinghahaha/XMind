@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Scope;
 
 @Configuration
 public class RsaConfig {
-    @Bean
-    public RsaKey rsaKey() {
-        return RsaUtil.createKeys();
-    }
+//    @Bean
+//    public RsaKey rsaKey() {
+//        return RsaUtil.createKeys();
+//    }
 }

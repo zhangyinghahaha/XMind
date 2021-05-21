@@ -2,22 +2,19 @@ package com.nowcoder.community.controller;
 
 import com.google.code.kaptcha.Producer;
 import com.nowcoder.community.entity.User;
+import com.nowcoder.community.service.RsaKeyService;
 import com.nowcoder.community.service.UserService;
-import com.nowcoder.community.util.CommunityConstant;
-import com.nowcoder.community.util.RsaKey;
-import com.nowcoder.community.util.RsaUtil;
+import com.nowcoder.community.util.*;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.CookieValue;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 
 import javax.imageio.ImageIO;
 import javax.servlet.http.Cookie;
@@ -26,7 +23,9 @@ import javax.servlet.http.HttpSession;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 
 @Controller
@@ -34,16 +33,18 @@ public class LoginController {
     private static final Logger logger = LoggerFactory.getLogger(LoginController.class);
 
     @Autowired
-    private RsaKey rsaKey;
-
-    @Autowired
     private UserService userService;
+    @Autowired
+    private RsaKeyService rsaKeyService;
 
     @Autowired
     private Producer kapcha;
 
     @Value("${server.servlet.context-path}")
     private String contextPath;
+
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @RequestMapping(path = "/register", method = RequestMethod.GET)
     public String getRegisterPage() {
@@ -86,11 +87,21 @@ public class LoginController {
     }
 
     @RequestMapping(path = "/kaptcha", method = RequestMethod.GET)
-    public void getKaptcha(HttpServletResponse response, HttpSession session) {
+    public void getKaptcha(HttpServletResponse response) {
         String text = kapcha.createText();
         BufferedImage bufferedImage = kapcha.createImage(text);
 
-        session.setAttribute("kaptcha", text);
+        // 验证码归属
+        String kaptchaOwner = CommunityUtil.generateUUID();
+        Cookie cookie = new Cookie("kaptchaOwner", kaptchaOwner);
+        cookie.setMaxAge(60);
+        cookie.setPath(contextPath);
+        response.addCookie(cookie);
+
+        // 将验证码存入redis
+        String kaptchaKey = RedisKeyUtil.getKaptchaKey(kaptchaOwner);
+        redisTemplate.opsForValue().set(kaptchaKey, text, 60, TimeUnit.SECONDS);
+
         response.setContentType("image/png");
         try{
             OutputStream os = response.getOutputStream();
@@ -101,28 +112,33 @@ public class LoginController {
     }
 
     @RequestMapping(path = "/login", method = RequestMethod.GET)
-    public String getLoginPage(Model model) {
-        model.addAttribute("publicKey", rsaKey.getPublicKey());
+    public String getLoginPage() {
         return "/site/login";
     }
 
     @RequestMapping(path = "/login", method = RequestMethod.POST)
-    public String login(String username, String password, String code, boolean rememberMe, Model model, HttpSession session, HttpServletResponse response) {
+    public String login(String username, String password, String code, boolean rememberMe,
+                        Model model, HttpServletResponse response, @CookieValue(value = "kaptchaOwner", required = false) String kaptchaOwner) {
         // 检查验证码
-        String kaptcha = (String) session.getAttribute("kaptcha");
+        String kaptcha = null;
+        if (StringUtils.isNotBlank(kaptchaOwner)) {
+            String kaptchaKey = RedisKeyUtil.getKaptchaKey(kaptchaOwner);
+            kaptcha = (String) redisTemplate.opsForValue().get(kaptchaKey);
+        }
         if (StringUtils.isBlank(kaptcha) || StringUtils.isBlank(code) || !kaptcha.equalsIgnoreCase(code)) {
-            model.addAttribute("codeMsg", "验证码不正确");
+            model.addAttribute("codeMsg", "验证码超时或不正确");
             return "/site/login";
         }
 
         // 检查账号，密码
-        int expiredSeconds = rememberMe ? CommunityConstant.REMEMBER_EXPIRED_SECONDS : CommunityConstant.DEFAULT_EXPIRED_SECONDS;
         // 用私钥解密用户名，密码
-        username = RsaUtil.privateDecrypt(username, rsaKey.getPrivateKey());
-        password = RsaUtil.privateDecrypt(password, rsaKey.getPrivateKey());
+        String privateKey = rsaKeyService.getPrivateKey(username);
+        password = RsaUtil.privateDecrypt(password, privateKey);
+        int expiredSeconds = rememberMe ? CommunityConstant.REMEMBER_EXPIRED_SECONDS : CommunityConstant.DEFAULT_EXPIRED_SECONDS;
 
         Map<String, Object> map = userService.login(username, password, expiredSeconds);
         if (map.containsKey("ticket")) {
+            rsaKeyService.deleteKeyPair(username);
             Cookie cookie = new Cookie("ticket", map.get("ticket").toString());
             cookie.setPath(contextPath);
             cookie.setMaxAge(expiredSeconds);
@@ -139,5 +155,14 @@ public class LoginController {
     public String logout(@CookieValue("ticket") String ticket) {
         userService.logout(ticket);
         return "redirect:/login";
+    }
+
+    @RequestMapping(path = "/rsa/publicKey/{username}", method = RequestMethod.GET)
+    @ResponseBody
+    public String getRsaPublicKey(@PathVariable(required = true) String username) {
+        String publicKey = rsaKeyService.getPublicKey(username);
+        Map<String, Object> map = new HashMap<>();
+        map.put("publicKey", publicKey);
+        return CommunityUtil.getJsonString(0, "ok", map);
     }
 }

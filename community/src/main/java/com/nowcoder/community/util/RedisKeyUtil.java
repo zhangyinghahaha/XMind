@@ -10,9 +10,13 @@ public class RedisKeyUtil {
     private static final String PREFIX_USER_LIKE = "like:user";
     private static final String PREFIX_FOLLOWEE = "followee";
     private static final String PREFIX_FOLLOWER = "follower";
+    private static final String PREFIX_KAPTCHA = "kaptcha";
+    private static final String PREFIX_TICKET = "ticket";
+    private static final String PREFIX_USER = "user";
+    private static final String PREFIX_RSA_KEYPAIR = "rsa:keypair";
 
     /**
-     * like:entity:entityType:entityId -> set(userId)
+     * like:entity:{entityType}:{entityId} -> set(userId)
      * @param entityType
      * @param entityId
      * @return
@@ -32,7 +36,7 @@ public class RedisKeyUtil {
 
     /**
      * 某个用户关注的实体
-     * followee:userId:entityType -> zset(entityId, now)
+     * followee:{userId}:{entityType} -> zset(entityId, now)
      * @param userId
      * @param entityType
      * @return
@@ -43,12 +47,48 @@ public class RedisKeyUtil {
 
     /**
      * 某个实体拥有的粉丝
-     * follower:entityType:entityId -> zset(userId, now)
+     * follower:{entityType}:{entityId} -> zset(userId, now)
      * @param entityType
      * @param entityId
      * @return
      */
     public static String getFollowerKey(int entityType, int entityId) {
         return PREFIX_FOLLOWER + SPLIT + entityType + SPLIT + entityId;
+    }
+
+    /**
+     * kaptcha:{owner}
+     * @param owner
+     * @return
+     */
+    public static String getKaptchaKey(String owner) {
+        return PREFIX_KAPTCHA + SPLIT + owner;
+    }
+
+    /**
+     * ticket:{ticket}
+     * @param ticket
+     * @return
+     */
+    public static String getTicketKey(String ticket) {
+        return PREFIX_TICKET + SPLIT + ticket;
+    }
+
+    /**
+     * user:{userId}
+     * @param userId
+     * @return
+     */
+    public static String getUserKey(int userId) {
+        return PREFIX_USER + SPLIT + userId;
+    }
+
+    /**
+     *
+     * @param username
+     * @return
+     */
+    public static String getRsaKeyPairKey(String username) {
+        return PREFIX_RSA_KEYPAIR + SPLIT + username;
     }
 }
