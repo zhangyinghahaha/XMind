@@ -4,20 +4,40 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
+import java.util.concurrent.LinkedBlockingQueue;
+import java.util.concurrent.locks.Condition;
+import java.util.concurrent.locks.Lock;
+import java.util.concurrent.locks.ReentrantLock;
+import java.util.stream.Stream;
 
 public class TaskQueue {
+    private final Lock lock = new ReentrantLock();
+    private final Condition condition = lock.newCondition();
     Queue<String> queue = new LinkedList<>();
 
-    public synchronized void addTask(String s) {
-        this.queue.add(s);
-        this.notifyAll();
+    // Queue<String> q = new LinkedBlockingQueue<>();
+    Stream<String> s = Stream.of("a");
+
+    public void addTask(String s) {
+        lock.lock();
+        try {
+            queue.add(s);
+            condition.signalAll();
+        } finally {
+            lock.unlock();
+        }
     }
 
-    public synchronized String getTask() throws InterruptedException {
-        while (queue.isEmpty()) {
-            this.wait();
+    public String getTask() throws InterruptedException {
+        lock.lock();
+        try {
+            while (queue.isEmpty()) {
+                condition.await();
+            }
+            return queue.remove();
+        } finally {
+            lock.unlock();
         }
-        return queue.remove();
     }
 
     public static void main(String[] args) throws InterruptedException {
