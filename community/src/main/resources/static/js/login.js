@@ -4,7 +4,6 @@ $(function () {
         var publicKey;
         $.ajaxSettings.async = false;
         $.get("/community/rsa/publicKey/"+username, function (data) {
-            console.log("1");
             data = $.parseJSON(data);
             if(data.code == 0) {
                 publicKey = data.publicKey;
@@ -20,7 +19,7 @@ $(function () {
             }
         });
         $.ajaxSettings.async = true;
-        console.log("2");
+
         return true;
     });
 });
