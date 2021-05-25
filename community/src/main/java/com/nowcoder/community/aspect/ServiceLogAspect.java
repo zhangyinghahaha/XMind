@@ -27,8 +27,13 @@ public class ServiceLogAspect {
     public void before(JoinPoint joinPoint) {
         // 用户[10.0.0.1], 在[yyyy-MM-dd hh:mm:ss],访问了[xxx.method()].
         ServletRequestAttributes requestAttributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
-        HttpServletRequest request = requestAttributes.getRequest();
-        String ipAddress = request.getRemoteHost();
+
+        String ipAddress = "not controller";
+        if (requestAttributes != null) {
+            HttpServletRequest request = requestAttributes.getRequest();
+            ipAddress = request.getRemoteHost();
+        }
+
         String now = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date());
         String target = joinPoint.getSignature().getDeclaringTypeName() + "." + joinPoint.getSignature().getName();
         logger.info(String.format("用户[%s],在[%s],访问了[%s]", ipAddress, now, target));
