@@ -17,6 +17,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.Pbkdf2PasswordEncoder;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.authentication.rememberme.InMemoryTokenRepositoryImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -87,5 +89,39 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     httpServletResponse.sendRedirect("");
                 })
                 .failureHandler((httpServletRequest, httpServletResponse, authentication) -> {});
+
+        // 退出相关配置
+        http.logout()
+                .logoutUrl("/logout")
+                .logoutSuccessHandler((httpServletRequest, httpServletResponse, authentication) -> {
+
+                });
+
+        // 授权配置
+        http.authorizeRequests()
+                .antMatchers("/letter").hasAnyAuthority("user", "admin")
+                .antMatchers("/admin").hasAnyAuthority("admin")
+                .and().exceptionHandling().accessDeniedPage("/denied");
+
+        http.addFilterBefore((servletRequest, servletResponse, filterChain) -> {
+            HttpServletRequest request = (HttpServletRequest) servletRequest;
+            HttpServletResponse response = (HttpServletResponse) servletResponse;
+            if (request.getServletPath().equals("/login")) {
+                String verifyCode = request.getParameter("verifyCode");
+                if (verifyCode == null) {
+                    request.setAttribute("error", "验证码错误");
+                    request.getRequestDispatcher("/loginPage").forward(request, response);
+                    return;
+                }
+            }
+            // 让请求继续向下执行
+            filterChain.doFilter(request, response);
+        }, UsernamePasswordAuthenticationFilter.class);
+
+        // 记住我
+        http.rememberMe()
+                .tokenRepository(new InMemoryTokenRepositoryImpl())
+                .tokenValiditySeconds(3600*24)
+                .userDetailsService(userService);
     }
 }
