@@ -1,8 +1,14 @@
 package com.nowcoder.community.entity;
 
-import java.util.Date;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.userdetails.UserDetails;
 
-public class User {
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
+import java.util.List;
+
+public class User implements UserDetails {
     private int id;
     private String username;
     private String password;
@@ -22,14 +28,66 @@ public class User {
         this.id = id;
     }
 
+    @Override
     public String getUsername() {
         return username;
+    }
+
+    /**
+     * 账号未过期
+     * @return
+     */
+    @Override
+    public boolean isAccountNonExpired() {
+        return true;
+    }
+
+    /**
+     * 账号未锁定
+     * @return
+     */
+    @Override
+    public boolean isAccountNonLocked() {
+        return false;
+    }
+
+    /**
+     * 凭证未过期
+     * @return
+     */
+    @Override
+    public boolean isCredentialsNonExpired() {
+        return false;
+    }
+
+    /**
+     * 账号是否启用
+     * @return
+     */
+    @Override
+    public boolean isEnabled() {
+        return false;
     }
 
     public void setUsername(String username) {
         this.username = username;
     }
 
+    @Override
+    public Collection<? extends GrantedAuthority> getAuthorities() {
+        List<GrantedAuthority> grantedAuthorityList = new ArrayList<>();
+        grantedAuthorityList.add(() -> {
+            switch (type) {
+                case 1:
+                    return "admin";
+                default:
+                    return "user";
+            }
+        });
+        return grantedAuthorityList;
+    }
+
+    @Override
     public String getPassword() {
         return password;
     }
