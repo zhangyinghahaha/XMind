@@ -164,4 +164,11 @@ public class AlphaController {
         System.out.println(age);
         return CommunityUtil.getJsonString(0, "操作成功");
     }
+
+    @RequestMapping(path = "/workitem/add")
+    @ResponseBody
+    public String test(String json) {
+
+        return "OK";
+    }
 }
