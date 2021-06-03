@@ -1,0 +1,10 @@
+spring:
+  profiles:
+    active: prod
+  jpa:
+    show:
+      sql: true
+  application:
+    name: zhang-ying
+greeting:
+  welcome: ${spring.application.name}
