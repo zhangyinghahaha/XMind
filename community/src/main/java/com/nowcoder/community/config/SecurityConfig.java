@@ -115,6 +115,20 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         CommunityConstant.AUTHORITY_ADMIN,
                         CommunityConstant.AUTHORITY_MODERATOR
                 )
+                .antMatchers(
+                        "/discuss/top",
+                        "/discuss/wonderful"
+                )
+                .hasAnyAuthority(
+                        CommunityConstant.AUTHORITY_ADMIN,
+                        CommunityConstant.AUTHORITY_MODERATOR
+                )
+                .antMatchers(
+                        "/discuss/delete"
+                )
+                .hasAnyAuthority(
+                        CommunityConstant.AUTHORITY_ADMIN
+                )
                 .anyRequest().permitAll()
                 .and().csrf().disable();
 
@@ -124,7 +138,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                    // 没有登录
                     String xRequestedWith = httpServletRequest.getHeader("x-requested-with");
                     if ("XMLHttpRequest".equals(xRequestedWith)) {
-                        httpServletResponse.setContentType("application/plain;charset=uft-8");
+                        httpServletResponse.setContentType("application/text;charset=utf-8");
                         PrintWriter writer = httpServletResponse.getWriter();
                         writer.write(CommunityUtil.getJsonString(403, "你还没有登录!"));
                     } else {
@@ -135,7 +149,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                     // 权限不足
                     String xRequestedWith = httpServletRequest.getHeader("x-requested-with");
                     if ("XMLHttpRequest".equals(xRequestedWith)) {
-                        httpServletResponse.setContentType("application/plain;charset=uft-8");
+                        httpServletResponse.setContentType("application/text;charset=utf-8");
                         PrintWriter writer = httpServletResponse.getWriter();
                         writer.write(CommunityUtil.getJsonString(403, "访问权限不足!"));
                     } else {
