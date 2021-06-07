@@ -32,8 +32,6 @@ import java.io.PrintWriter;
  */
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
-    @Autowired
-    private UserService userService;
 
     @Override
     public void configure(WebSecurity web) throws Exception {
@@ -111,11 +109,14 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                         "/like",
                         "/follow",
                         "/unfollow"
-                ).hasAnyAuthority(
+                )
+                .hasAnyAuthority(
                         CommunityConstant.AUTHORITY_USER,
                         CommunityConstant.AUTHORITY_ADMIN,
                         CommunityConstant.AUTHORITY_MODERATOR
-                ).anyRequest().permitAll();
+                )
+                .anyRequest().permitAll()
+                .and().csrf().disable();
 
         // 权限不够时
         http.exceptionHandling()

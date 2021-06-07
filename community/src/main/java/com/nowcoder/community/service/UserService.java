@@ -24,7 +24,7 @@ import java.util.*;
 import java.util.concurrent.TimeUnit;
 
 @Service
-public class UserService implements UserDetailsService {
+public class UserService {
     @Autowired
     private UserMapper userMapper;
 
@@ -197,11 +197,6 @@ public class UserService implements UserDetailsService {
     private void clearUserCache(int userId) {
         String userKey = RedisKeyUtil.getUserKey(userId);
         redisTemplate.delete(userKey);
-    }
-
-    @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return this.findUserByName(username);
     }
 
     public Collection<? extends GrantedAuthority> getAuthorities(int userId) {
