@@ -44,7 +44,7 @@ public class DataService {
 
         // 合并
         String redisKey = RedisKeyUtil.getUVKey(dateFormat.format(startDate), dateFormat.format(endDate));
-        redisTemplate.opsForHyperLogLog().union(redisKey, keys);
+        redisTemplate.opsForHyperLogLog().union(redisKey, keys.toArray());
 
         return  redisTemplate.opsForHyperLogLog().size(redisKey);
     }
