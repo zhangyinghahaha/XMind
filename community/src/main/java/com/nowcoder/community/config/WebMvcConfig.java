@@ -1,6 +1,7 @@
 package com.nowcoder.community.config;
 
 import com.nowcoder.community.controller.AlphaInterceptor;
+import com.nowcoder.community.controller.interceptor.DataInterceptor;
 import com.nowcoder.community.controller.interceptor.LoginRequiredInterceptor;
 import com.nowcoder.community.controller.interceptor.LoginTicketIntercepor;
 import com.nowcoder.community.controller.interceptor.MessageInterceptor;
@@ -24,6 +25,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
     @Autowired
     private MessageInterceptor messageInterceptor;
 
+    @Autowired
+    private DataInterceptor dataInterceptor;
+
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
         registry.addInterceptor(loginTicketIntercepor)
@@ -33,6 +37,9 @@ public class WebMvcConfig implements WebMvcConfigurer {
 //                .excludePathPatterns("/*/*.css", "/*/*.js", "/*/*.png", "/*/*.jpg", "/*/*.jpeg");
 
         registry.addInterceptor(messageInterceptor)
+                .excludePathPatterns("/*/*.css", "/*/*.js", "/*/*.png", "/*/*.jpg", "/*/*.jpeg");
+
+        registry.addInterceptor(dataInterceptor)
                 .excludePathPatterns("/*/*.css", "/*/*.js", "/*/*.png", "/*/*.jpg", "/*/*.jpeg");
     }
 }
