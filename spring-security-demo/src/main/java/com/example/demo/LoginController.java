@@ -23,4 +23,10 @@ public class LoginController {
         SecurityContextHolder.getContext().setAuthentication(authentication);
         return "登录成功";
     }
+
+    @GetMapping(path = "/logout")
+    public String logout() {
+        SecurityContextHolder.clearContext();
+        return "退出成功";
+    }
 }
