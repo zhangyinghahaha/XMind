@@ -1,11 +1,16 @@
 package com.nowcoder.community.config;
 
+import com.nowcoder.community.controller.filter.LoginTicketFilter;
 import com.nowcoder.community.util.CommunityConstant;
 import com.nowcoder.community.util.CommunityUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+
 import java.io.PrintWriter;
 
 /**
@@ -13,6 +18,9 @@ import java.io.PrintWriter;
  */
 @Configuration
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Autowired
+    private LoginTicketFilter loginTicketFilter;
 
     @Override
     public void configure(WebSecurity web) throws Exception {
@@ -74,6 +82,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 //                    httpServletResponse.sendRedirect("");
 //                })
 //                .failureHandler((httpServletRequest, httpServletResponse, authentication) -> {});
+
+        // 禁用security session
+        http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+
+        // 登录凭证校验
+        http.addFilterBefore(loginTicketFilter, UsernamePasswordAuthenticationFilter.class);
 
         // 退出相关配置,覆盖默认的退出
         http.logout().logoutUrl("/security/logout");

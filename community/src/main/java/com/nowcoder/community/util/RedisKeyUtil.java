@@ -16,6 +16,7 @@ public class RedisKeyUtil {
     private static final String PREFIX_RSA_KEYPAIR = "rsa:keypair";
     private static final String PREFIX_UV = "uv";
     private static final String PREFIX_DAV = "dau";
+    private static final String PREFIX_POST = "post";
 
     /**
      * like:entity:{entityType}:{entityId} -> set(userId)
@@ -120,5 +121,9 @@ public class RedisKeyUtil {
      */
     public static String getDAUKey(String startDate, String endDate) {
         return PREFIX_DAV + SPLIT + startDate + SPLIT + endDate;
+    }
+
+    public static String getPostScoreKey() {
+        return PREFIX_POST + SPLIT + "score";
     }
 }

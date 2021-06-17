@@ -1,8 +1,8 @@
 package com.nowcoder.community.config;
 
 import com.nowcoder.community.quartz.AlphaJob;
-import org.quartz.JobDataMap;
-import org.quartz.JobDetail;
+import com.nowcoder.community.quartz.PostScoreRefreshJob;
+import org.quartz.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.quartz.JobDetailFactoryBean;
@@ -35,5 +35,26 @@ public class QuartzConfig {
         factoryBean.setRepeatInterval(3000);
         factoryBean.setJobDataMap(new JobDataMap());
         return factoryBean;
+    }
+
+    @Bean
+    public JobDetail postScoreRefreshJob() {
+        return JobBuilder.newJob(PostScoreRefreshJob.class)
+                .withIdentity("postScoreRefreshJob", "communityGroup")
+                .storeDurably()
+                .build();
+    }
+
+    @Bean
+    public Trigger postScoreRefreshTrigger() {
+        return TriggerBuilder.newTrigger()
+                .withIdentity("postScoreRefreshTrigger", "communityGroup")
+                .withSchedule(
+                        SimpleScheduleBuilder.simpleSchedule()
+                        .withIntervalInMinutes(5)
+                        .repeatForever()
+                )
+                .forJob(postScoreRefreshJob())
+                .build();
     }
 }

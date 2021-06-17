@@ -6,9 +6,12 @@ import com.nowcoder.community.entity.User;
 import com.nowcoder.community.event.EventProducer;
 import com.nowcoder.community.event.EventTopicConstants;
 import com.nowcoder.community.service.LikeService;
+import com.nowcoder.community.util.CommunityConstant;
 import com.nowcoder.community.util.CommunityUtil;
 import com.nowcoder.community.util.HostHolder;
+import com.nowcoder.community.util.RedisKeyUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -28,6 +31,8 @@ public class LikeController {
     private HostHolder hostHolder;
     @Autowired
     private EventProducer eventProducer;
+    @Autowired
+    private RedisTemplate redisTemplate;
 
     @RequestMapping(path="/like", method = RequestMethod.POST)
     @LoginRequired
@@ -55,6 +60,12 @@ public class LikeController {
                     .setEntityUserId(entityUserId)
                     .setData("postId", postId);
             eventProducer.fireEvent(event);
+        }
+
+        // 计算帖子分数
+        if (entityType == CommunityConstant.ENTITY_TYPE_POST) {
+            String redisKey = RedisKeyUtil.getPostScoreKey();
+            redisTemplate.opsForSet().add(redisKey, postId);
         }
 
         return CommunityUtil.getJsonString(0, null, map);
