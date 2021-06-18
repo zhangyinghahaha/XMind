@@ -1,6 +1,7 @@
 package com.nowcoder.community.event;
 
 import com.alibaba.fastjson.JSONObject;
+import com.nowcoder.community.config.WKProperties;
 import com.nowcoder.community.entity.DiscussPost;
 import com.nowcoder.community.entity.Event;
 import com.nowcoder.community.entity.Message;
@@ -14,6 +15,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
+import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -28,6 +30,8 @@ public class EventConsumer {
     private DiscussPostService discussPostService;
     @Autowired
     private ElasticSearchService elasticSearchService;
+    @Autowired
+    private WKProperties wkProperties;
 
     @KafkaListener(topics = {EventTopicConstants.TOPIC_COMMENT, EventTopicConstants.TOPIC_FOLLOW, EventTopicConstants.TOPIC_LIKE})
     public void handleCommentMessage(ConsumerRecord record) {
@@ -96,5 +100,30 @@ public class EventConsumer {
         }
 
         elasticSearchService.deleteDiscussPost(event.getEntityId());
+    }
+
+    @KafkaListener(topics = {EventTopicConstants.TOPIC_SHARE})
+    public void handleShareMessage(ConsumerRecord record) {
+        if (record == null || record.value() == null) {
+            logger.error("消息内容为空");
+            return;
+        }
+
+        Event event = JSONObject.parseObject(record.value().toString(), Event.class);
+        if (event == null) {
+            logger.error("消息格式错误");
+            return;
+        }
+
+        String url = (String)event.getData().get("url");
+        String fileName = (String)event.getData().get("fileName");
+
+        String cmd = wkProperties.getCommand() + " --quality 75 " + url + " " + wkProperties.getStorage() + "/" + fileName;
+        try {
+            Runtime.getRuntime().exec(cmd);
+            logger.info("生成长图成功：" + cmd);
+        } catch (IOException exception) {
+            logger.error("生成长图失败:" + exception.getMessage());
+        }
     }
 }

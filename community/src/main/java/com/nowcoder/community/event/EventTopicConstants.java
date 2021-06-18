@@ -10,4 +10,5 @@ public interface EventTopicConstants {
 
     String TOPIC_PUBLISH = "publish";
     String TOPIC_DELETE = "delete";
+    String TOPIC_SHARE = "share";
 }
