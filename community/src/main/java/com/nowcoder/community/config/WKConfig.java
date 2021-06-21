@@ -13,6 +13,9 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
+/**
+ * @author ying.zhang01
+ */
 @Configuration
 @EnableConfigurationProperties(WKProperties.class)
 public class WKConfig {
