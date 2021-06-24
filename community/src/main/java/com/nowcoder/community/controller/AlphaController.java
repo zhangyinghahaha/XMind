@@ -1,5 +1,7 @@
 package com.nowcoder.community.controller;
 
+import com.nowcoder.community.mapper.TestMapper;
+import com.nowcoder.community.entity.Test;
 import com.nowcoder.community.service.AlphaService;
 import com.nowcoder.community.util.CommunityUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,9 @@ public class AlphaController {
     @Autowired
     private AlphaService alphaService;
 
+    @Autowired
+    private TestMapper testMapper;
+
     @RequestMapping("/hello")
     @ResponseBody
     public String say() {
@@ -34,6 +39,14 @@ public class AlphaController {
 
     public String getData() {
         return alphaService.find();
+    }
+
+    @RequestMapping("/test")
+    @ResponseBody
+    public String test() {
+        List<Test> tests = testMapper.selectList(null);
+        tests.forEach(System.out::println);
+        return CommunityUtil.getJsonString(0, tests.toString());
     }
 
     @RequestMapping("/http")
