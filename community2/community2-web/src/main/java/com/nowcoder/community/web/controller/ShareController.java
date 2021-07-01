@@ -1,10 +1,10 @@
 package com.nowcoder.community.web.controller;
 
-import com.nowcoder.community.config.WKProperties;
-import com.nowcoder.community.entity.Event;
-import com.nowcoder.community.event.EventProducer;
-import com.nowcoder.community.event.EventTopicConstants;
-import com.nowcoder.community.util.CommunityUtil;
+import com.nowcoder.community.service.config.WKProperties;
+import com.nowcoder.community.domain.entity.Event;
+import com.nowcoder.community.service.event.EventProducer;
+import com.nowcoder.community.service.event.EventTopicConstants;
+import com.nowcoder.community.common.util.CommunityUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

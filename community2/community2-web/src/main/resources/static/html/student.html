@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>增加学生</title>
+</head>
+<body>
+
+    <form method="post" action="/community/alpha/student">
+        <p>
+            姓名: <input type="text" name="name">
+        </p>
+        <p>
+            年龄: <input type="text" name="age">
+        </p>
+        <p>
+            <input type="submit" value="保存">
+        </p>
+    </form>
+
+    <p>
+        <input type="button" value="发送" onclick="send();">
+    </p>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script>
+        function send() {
+            $.post(
+                "/community/alpha/ajax",
+                {"name":"zhang ying", "age":23},
+                function (data) {
+                    console.log(typeof(data));
+                    console.log(data);
+
+                    data = $.parseJSON(data);
+                    console.log(typeof(data));
+                    console.log(data);
+                    console.log(data.code);
+                }
+            );
+        }
+    </script>
+</body>
+</html>

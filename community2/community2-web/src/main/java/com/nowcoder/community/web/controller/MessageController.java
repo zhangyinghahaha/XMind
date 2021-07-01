@@ -1,14 +1,14 @@
 package com.nowcoder.community.web.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.nowcoder.community.entity.Message;
-import com.nowcoder.community.entity.Page;
-import com.nowcoder.community.entity.User;
-import com.nowcoder.community.event.EventTopicConstants;
+import com.nowcoder.community.domain.entity.Message;
+import com.nowcoder.community.domain.entity.Page;
+import com.nowcoder.community.domain.entity.User;
+import com.nowcoder.community.service.event.EventTopicConstants;
 import com.nowcoder.community.service.MessageService;
 import com.nowcoder.community.service.UserService;
-import com.nowcoder.community.util.CommunityUtil;
-import com.nowcoder.community.util.HostHolder;
+import com.nowcoder.community.common.util.CommunityUtil;
+import com.nowcoder.community.common.util.HostHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

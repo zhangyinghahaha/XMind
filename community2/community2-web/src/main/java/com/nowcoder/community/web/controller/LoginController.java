@@ -1,10 +1,10 @@
 package com.nowcoder.community.web.controller;
 
 import com.google.code.kaptcha.Producer;
-import com.nowcoder.community.entity.User;
+import com.nowcoder.community.domain.entity.User;
 import com.nowcoder.community.service.RsaKeyService;
 import com.nowcoder.community.service.UserService;
-import com.nowcoder.community.util.*;
+import com.nowcoder.community.common.util.*;
 import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;

@@ -1,13 +1,13 @@
 package com.nowcoder.community.web.controller;
 
-import com.nowcoder.community.annotation.LoginRequired;
-import com.nowcoder.community.entity.User;
+import com.nowcoder.community.common.annotation.LoginRequired;
+import com.nowcoder.community.domain.entity.User;
 import com.nowcoder.community.service.FollowService;
 import com.nowcoder.community.service.LikeService;
 import com.nowcoder.community.service.UserService;
-import com.nowcoder.community.util.CommunityConstant;
-import com.nowcoder.community.util.CommunityUtil;
-import com.nowcoder.community.util.HostHolder;
+import com.nowcoder.community.common.util.CommunityConstant;
+import com.nowcoder.community.common.util.CommunityUtil;
+import com.nowcoder.community.common.util.HostHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
