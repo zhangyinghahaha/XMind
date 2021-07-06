@@ -2,10 +2,10 @@ package com.nowcoder.community.web.modular.discusspost.service;
 
 import com.github.benmanes.caffeine.cache.Caffeine;
 import com.github.benmanes.caffeine.cache.LoadingCache;
-import com.nowcoder.community.config.CaffeineProperties;
-import com.nowcoder.community.dao.DiscussPostMapper;
-import com.nowcoder.community.entity.DiscussPost;
-import com.nowcoder.community.util.SensitiveFilter;
+import com.nowcoder.community.web.config.CaffeineProperties;
+import com.nowcoder.community.web.modular.discusspost.mapper.DiscussPostMapper;
+import com.nowcoder.community.web.modular.discusspost.entity.DiscussPost;
+import com.nowcoder.community.core.util.SensitiveFilter;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

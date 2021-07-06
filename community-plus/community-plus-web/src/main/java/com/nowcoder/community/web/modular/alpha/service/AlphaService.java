@@ -1,11 +1,11 @@
 package com.nowcoder.community.web.modular.alpha.service;
 
-import com.nowcoder.community.dao.AlphaDao;
-import com.nowcoder.community.dao.DiscussPostMapper;
-import com.nowcoder.community.dao.UserMapper;
-import com.nowcoder.community.entity.DiscussPost;
-import com.nowcoder.community.entity.User;
-import com.nowcoder.community.util.CommunityUtil;
+import com.nowcoder.community.web.modular.alpha.mapper.AlphaDao;
+import com.nowcoder.community.web.modular.discusspost.mapper.DiscussPostMapper;
+import com.nowcoder.community.web.modular.user.mapper.UserMapper;
+import com.nowcoder.community.web.modular.discusspost.entity.DiscussPost;
+import com.nowcoder.community.web.modular.user.entity.User;
+import com.nowcoder.community.core.util.CommunityUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;

@@ -1,8 +1,8 @@
 package com.nowcoder.community.web.core.interceptor;
 
-import com.nowcoder.community.entity.User;
-import com.nowcoder.community.service.MessageService;
-import com.nowcoder.community.util.HostHolder;
+import com.nowcoder.community.web.modular.user.entity.User;
+import com.nowcoder.community.web.modular.message.service.MessageService;
+import com.nowcoder.community.core.util.HostHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletResponse;
 @Component
 public class MessageInterceptor implements HandlerInterceptor {
     @Autowired
-    private HostHolder hostHolder;
+    private HostHolder<User> hostHolder;
     @Autowired
     private MessageService messageService;
 

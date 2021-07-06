@@ -1,9 +1,9 @@
 package com.nowcoder.community.web.modular.alpha.controller;
 
-import com.nowcoder.community.mapper.TestMapper;
-import com.nowcoder.community.entity.Test;
-import com.nowcoder.community.service.AlphaService;
-import com.nowcoder.community.util.CommunityUtil;
+import com.nowcoder.community.web.modular.alpha.mapper.TestMapper;
+import com.nowcoder.community.web.modular.alpha.entity.Test;
+import com.nowcoder.community.web.modular.alpha.service.AlphaService;
+import com.nowcoder.community.core.util.CommunityUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

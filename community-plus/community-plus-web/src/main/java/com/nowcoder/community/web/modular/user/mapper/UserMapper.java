@@ -1,6 +1,6 @@
 package com.nowcoder.community.web.modular.user.mapper;
 
-import com.nowcoder.community.entity.User;
+import com.nowcoder.community.web.modular.user.entity.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 

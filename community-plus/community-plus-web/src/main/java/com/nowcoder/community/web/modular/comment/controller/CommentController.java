@@ -1,16 +1,17 @@
 package com.nowcoder.community.web.modular.comment.controller;
 
-import com.nowcoder.community.annotation.LoginRequired;
-import com.nowcoder.community.entity.Comment;
-import com.nowcoder.community.entity.DiscussPost;
-import com.nowcoder.community.entity.Event;
-import com.nowcoder.community.event.EventProducer;
-import com.nowcoder.community.event.EventTopicConstants;
-import com.nowcoder.community.service.CommentService;
-import com.nowcoder.community.service.DiscussPostService;
-import com.nowcoder.community.util.CommunityConstant;
-import com.nowcoder.community.util.HostHolder;
-import com.nowcoder.community.util.RedisKeyUtil;
+import com.nowcoder.community.core.annotation.LoginRequired;
+import com.nowcoder.community.web.modular.comment.entity.Comment;
+import com.nowcoder.community.web.modular.discusspost.entity.DiscussPost;
+import com.nowcoder.community.web.core.event.Event;
+import com.nowcoder.community.web.core.event.EventProducer;
+import com.nowcoder.community.web.core.constant.EventTopicConstants;
+import com.nowcoder.community.web.modular.comment.service.CommentService;
+import com.nowcoder.community.web.modular.discusspost.service.DiscussPostService;
+import com.nowcoder.community.core.constant.CommunityConstant;
+import com.nowcoder.community.core.util.HostHolder;
+import com.nowcoder.community.core.util.RedisKeyUtil;
+import com.nowcoder.community.web.modular.user.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
@@ -29,7 +30,7 @@ public class CommentController {
     @Autowired
     private CommentService commentService;
     @Autowired
-    private HostHolder hostHolder;
+    private HostHolder<User> hostHolder;
     @Autowired
     private EventProducer eventProducer;
     @Autowired

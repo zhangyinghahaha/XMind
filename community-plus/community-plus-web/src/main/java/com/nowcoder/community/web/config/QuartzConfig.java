@@ -1,7 +1,7 @@
 package com.nowcoder.community.web.config;
 
-import com.nowcoder.community.quartz.AlphaJob;
-import com.nowcoder.community.quartz.PostScoreRefreshJob;
+import com.nowcoder.community.web.core.quartz.AlphaJob;
+import com.nowcoder.community.web.core.quartz.PostScoreRefreshJob;
 import org.quartz.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

@@ -1,8 +1,8 @@
 package com.nowcoder.community.web.modular.auth.service;
 
-import com.nowcoder.community.util.RedisKeyUtil;
-import com.nowcoder.community.util.RsaKey;
-import com.nowcoder.community.util.RsaUtil;
+import com.nowcoder.community.core.util.RedisKeyUtil;
+import com.nowcoder.community.core.pojo.RsaKey;
+import com.nowcoder.community.core.util.RsaUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;

@@ -1,16 +1,20 @@
 package com.nowcoder.community.web.modular.discusspost.controller;
 
-import com.nowcoder.community.entity.*;
-import com.nowcoder.community.event.EventProducer;
-import com.nowcoder.community.event.EventTopicConstants;
-import com.nowcoder.community.service.CommentService;
-import com.nowcoder.community.service.DiscussPostService;
-import com.nowcoder.community.service.LikeService;
-import com.nowcoder.community.service.UserService;
-import com.nowcoder.community.util.CommunityConstant;
-import com.nowcoder.community.util.CommunityUtil;
-import com.nowcoder.community.util.HostHolder;
-import com.nowcoder.community.util.RedisKeyUtil;
+import com.nowcoder.community.core.pojo.Page;
+import com.nowcoder.community.web.core.event.Event;
+import com.nowcoder.community.web.modular.comment.entity.Comment;
+import com.nowcoder.community.web.modular.discusspost.entity.DiscussPost;
+import com.nowcoder.community.web.core.event.EventProducer;
+import com.nowcoder.community.web.core.constant.EventTopicConstants;
+import com.nowcoder.community.web.modular.comment.service.CommentService;
+import com.nowcoder.community.web.modular.discusspost.service.DiscussPostService;
+import com.nowcoder.community.web.modular.like.service.LikeService;
+import com.nowcoder.community.web.modular.user.entity.User;
+import com.nowcoder.community.web.modular.user.service.UserService;
+import com.nowcoder.community.core.constant.CommunityConstant;
+import com.nowcoder.community.core.util.CommunityUtil;
+import com.nowcoder.community.core.util.HostHolder;
+import com.nowcoder.community.core.util.RedisKeyUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;
@@ -31,7 +35,7 @@ public class DiscussPostController {
     @Autowired
     private DiscussPostService discussPostService;
     @Autowired
-    private HostHolder hostHolder;
+    private HostHolder<User> hostHolder;
     @Autowired
     private UserService userService;
     @Autowired

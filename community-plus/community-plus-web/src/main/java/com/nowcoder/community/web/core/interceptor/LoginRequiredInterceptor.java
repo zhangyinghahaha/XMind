@@ -1,8 +1,9 @@
 package com.nowcoder.community.web.core.interceptor;
 
-import com.nowcoder.community.annotation.LoginRequired;
-import com.nowcoder.community.util.CommunityUtil;
-import com.nowcoder.community.util.HostHolder;
+import com.nowcoder.community.core.annotation.LoginRequired;
+import com.nowcoder.community.core.util.CommunityUtil;
+import com.nowcoder.community.core.util.HostHolder;
+import com.nowcoder.community.web.modular.user.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.method.HandlerMethod;
@@ -19,7 +20,7 @@ import java.lang.reflect.Method;
 @Component
 public class LoginRequiredInterceptor implements HandlerInterceptor {
     @Autowired
-    private HostHolder hostHolder;
+    private HostHolder<User> hostHolder;
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {

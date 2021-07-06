@@ -2,7 +2,7 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.nowcoder.community.dao.dao.CommentMapper">
+<mapper namespace="com.nowcoder.community.web.modular.comment.mapper.CommentMapper">
     <sql id="selectFields">
         id, user_id, entity_type, entity_id, target_id, content, status, create_time
     </sql>

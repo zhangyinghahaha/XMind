@@ -1,13 +1,13 @@
 package com.nowcoder.community.web.modular;
 
-import com.nowcoder.community.entity.DiscussPost;
-import com.nowcoder.community.entity.Page;
-import com.nowcoder.community.entity.User;
-import com.nowcoder.community.service.DiscussPostService;
-import com.nowcoder.community.service.LikeService;
-import com.nowcoder.community.service.UserService;
-import com.nowcoder.community.util.CommunityConstant;
-import com.nowcoder.community.util.CommunityUtil;
+import com.nowcoder.community.web.modular.discusspost.entity.DiscussPost;
+import com.nowcoder.community.core.pojo.Page;
+import com.nowcoder.community.web.modular.user.entity.User;
+import com.nowcoder.community.web.modular.discusspost.service.DiscussPostService;
+import com.nowcoder.community.web.modular.like.service.LikeService;
+import com.nowcoder.community.web.modular.user.service.UserService;
+import com.nowcoder.community.core.constant.CommunityConstant;
+import com.nowcoder.community.core.util.CommunityUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

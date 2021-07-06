@@ -1,9 +1,10 @@
 package com.nowcoder.community.web.modular.comment.service;
 
-import com.nowcoder.community.dao.CommentMapper;
-import com.nowcoder.community.entity.Comment;
-import com.nowcoder.community.util.CommunityConstant;
-import com.nowcoder.community.util.SensitiveFilter;
+import com.nowcoder.community.web.modular.comment.mapper.CommentMapper;
+import com.nowcoder.community.web.modular.comment.entity.Comment;
+import com.nowcoder.community.core.constant.CommunityConstant;
+import com.nowcoder.community.core.util.SensitiveFilter;
+import com.nowcoder.community.web.modular.discusspost.service.DiscussPostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Isolation;

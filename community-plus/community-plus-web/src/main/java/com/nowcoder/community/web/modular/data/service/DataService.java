@@ -1,6 +1,6 @@
 package com.nowcoder.community.web.modular.data.service;
 
-import com.nowcoder.community.util.RedisKeyUtil;
+import com.nowcoder.community.core.util.RedisKeyUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.connection.RedisStringCommands;
 import org.springframework.data.redis.core.RedisCallback;

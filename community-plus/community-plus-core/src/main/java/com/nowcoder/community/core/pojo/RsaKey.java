@@ -1,4 +1,4 @@
-package com.nowcoder.community.core.util;
+package com.nowcoder.community.core.pojo;
 
 import org.springframework.stereotype.Component;
 

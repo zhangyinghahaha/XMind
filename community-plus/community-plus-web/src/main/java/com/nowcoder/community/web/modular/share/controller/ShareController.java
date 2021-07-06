@@ -1,10 +1,10 @@
 package com.nowcoder.community.web.modular.share.controller;
 
-import com.nowcoder.community.config.WKProperties;
-import com.nowcoder.community.entity.Event;
-import com.nowcoder.community.event.EventProducer;
-import com.nowcoder.community.event.EventTopicConstants;
-import com.nowcoder.community.util.CommunityUtil;
+import com.nowcoder.community.web.config.WKProperties;
+import com.nowcoder.community.web.core.event.Event;
+import com.nowcoder.community.web.core.event.EventProducer;
+import com.nowcoder.community.web.core.constant.EventTopicConstants;
+import com.nowcoder.community.core.util.CommunityUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,8 +1,8 @@
 package com.nowcoder.community.web.modular.message.service;
 
-import com.nowcoder.community.dao.MessageMapper;
-import com.nowcoder.community.entity.Message;
-import com.nowcoder.community.util.SensitiveFilter;
+import com.nowcoder.community.web.modular.message.mapper.MessageMapper;
+import com.nowcoder.community.web.modular.message.entity.Message;
+import com.nowcoder.community.core.util.SensitiveFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.util.HtmlUtils;

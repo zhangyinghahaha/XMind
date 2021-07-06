@@ -1,13 +1,13 @@
 package com.nowcoder.community.web.modular.user.service;
 
-import com.nowcoder.community.dao.LoginTicketMapper;
-import com.nowcoder.community.dao.UserMapper;
-import com.nowcoder.community.entity.LoginTicket;
-import com.nowcoder.community.entity.User;
-import com.nowcoder.community.util.CommunityConstant;
-import com.nowcoder.community.util.CommunityUtil;
-import com.nowcoder.community.util.MailClient;
-import com.nowcoder.community.util.RedisKeyUtil;
+import com.nowcoder.community.web.modular.auth.mapper.LoginTicketMapper;
+import com.nowcoder.community.web.modular.user.mapper.UserMapper;
+import com.nowcoder.community.web.modular.auth.entity.LoginTicket;
+import com.nowcoder.community.web.modular.user.entity.User;
+import com.nowcoder.community.core.constant.CommunityConstant;
+import com.nowcoder.community.core.util.CommunityUtil;
+import com.nowcoder.community.core.util.MailClient;
+import com.nowcoder.community.core.util.RedisKeyUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;

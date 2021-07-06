@@ -1,14 +1,14 @@
 package com.nowcoder.community.web.modular.message.controller;
 
 import com.alibaba.fastjson.JSONObject;
-import com.nowcoder.community.entity.Message;
-import com.nowcoder.community.entity.Page;
-import com.nowcoder.community.entity.User;
-import com.nowcoder.community.event.EventTopicConstants;
-import com.nowcoder.community.service.MessageService;
-import com.nowcoder.community.service.UserService;
-import com.nowcoder.community.util.CommunityUtil;
-import com.nowcoder.community.util.HostHolder;
+import com.nowcoder.community.web.modular.message.entity.Message;
+import com.nowcoder.community.core.pojo.Page;
+import com.nowcoder.community.web.modular.user.entity.User;
+import com.nowcoder.community.web.core.constant.EventTopicConstants;
+import com.nowcoder.community.web.modular.message.service.MessageService;
+import com.nowcoder.community.web.modular.user.service.UserService;
+import com.nowcoder.community.core.util.CommunityUtil;
+import com.nowcoder.community.core.util.HostHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.util.HtmlUtils;
 
+import javax.jws.soap.SOAPBinding;
 import java.util.*;
 
 @Controller
@@ -27,7 +28,7 @@ public class MessageController {
     private MessageService messageService;
 
     @Autowired
-    private HostHolder hostHolder;
+    private HostHolder<User> hostHolder;
 
     @Autowired
     private UserService userService;

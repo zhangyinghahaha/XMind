@@ -1,15 +1,15 @@
 package com.nowcoder.community.web.modular.follow.controller;
 
-import com.nowcoder.community.entity.Event;
-import com.nowcoder.community.entity.Page;
-import com.nowcoder.community.entity.User;
-import com.nowcoder.community.event.EventProducer;
-import com.nowcoder.community.event.EventTopicConstants;
-import com.nowcoder.community.service.FollowService;
-import com.nowcoder.community.service.UserService;
-import com.nowcoder.community.util.CommunityConstant;
-import com.nowcoder.community.util.CommunityUtil;
-import com.nowcoder.community.util.HostHolder;
+import com.nowcoder.community.web.core.event.Event;
+import com.nowcoder.community.core.pojo.Page;
+import com.nowcoder.community.web.modular.user.entity.User;
+import com.nowcoder.community.web.core.event.EventProducer;
+import com.nowcoder.community.web.core.constant.EventTopicConstants;
+import com.nowcoder.community.web.modular.follow.service.FollowService;
+import com.nowcoder.community.web.modular.user.service.UserService;
+import com.nowcoder.community.core.constant.CommunityConstant;
+import com.nowcoder.community.core.util.CommunityUtil;
+import com.nowcoder.community.core.util.HostHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -29,7 +29,7 @@ public class FollowController {
     @Autowired
     private FollowService followService;
     @Autowired
-    private HostHolder hostHolder;
+    private HostHolder<User> hostHolder;
     @Autowired
     private UserService userService;
     @Autowired

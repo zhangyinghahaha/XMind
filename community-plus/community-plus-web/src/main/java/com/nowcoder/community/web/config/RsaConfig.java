@@ -1,7 +1,7 @@
 package com.nowcoder.community.web.config;
 
-import com.nowcoder.community.util.RsaKey;
-import com.nowcoder.community.util.RsaUtil;
+import com.nowcoder.community.core.pojo.RsaKey;
+import com.nowcoder.community.core.util.RsaUtil;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;

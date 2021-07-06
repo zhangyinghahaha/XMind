@@ -1,11 +1,11 @@
 package com.nowcoder.community.web.modular.search.controller;
 
-import com.nowcoder.community.entity.DiscussPost;
-import com.nowcoder.community.entity.Page;
-import com.nowcoder.community.service.ElasticSearchService;
-import com.nowcoder.community.service.LikeService;
-import com.nowcoder.community.service.UserService;
-import com.nowcoder.community.util.CommunityConstant;
+import com.nowcoder.community.web.modular.discusspost.entity.DiscussPost;
+import com.nowcoder.community.core.pojo.Page;
+import com.nowcoder.community.web.modular.search.service.ElasticSearchService;
+import com.nowcoder.community.web.modular.like.service.LikeService;
+import com.nowcoder.community.web.modular.user.service.UserService;
+import com.nowcoder.community.core.constant.CommunityConstant;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.elasticsearch.core.SearchHit;
 import org.springframework.data.elasticsearch.core.SearchHits;

@@ -1,8 +1,8 @@
 package com.nowcoder.community.web.config;
 
-import com.nowcoder.community.controller.filter.LoginTicketFilter;
-import com.nowcoder.community.util.CommunityConstant;
-import com.nowcoder.community.util.CommunityUtil;
+import com.nowcoder.community.web.core.filter.LoginTicketFilter;
+import com.nowcoder.community.core.constant.CommunityConstant;
+import com.nowcoder.community.core.util.CommunityUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

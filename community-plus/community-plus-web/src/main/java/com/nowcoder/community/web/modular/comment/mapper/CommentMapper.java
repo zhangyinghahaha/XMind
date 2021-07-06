@@ -1,6 +1,6 @@
 package com.nowcoder.community.web.modular.comment.mapper;
 
-import com.nowcoder.community.entity.Comment;
+import com.nowcoder.community.web.modular.comment.entity.Comment;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

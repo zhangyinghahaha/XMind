@@ -1,6 +1,6 @@
 package com.nowcoder.community.web.modular.message.mapper;
 
-import com.nowcoder.community.entity.Message;
+import com.nowcoder.community.web.modular.message.entity.Message;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;

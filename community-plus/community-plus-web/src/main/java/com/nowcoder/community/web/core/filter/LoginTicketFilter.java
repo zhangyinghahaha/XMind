@@ -1,10 +1,10 @@
 package com.nowcoder.community.web.core.filter;
 
-import com.nowcoder.community.entity.LoginTicket;
-import com.nowcoder.community.entity.User;
-import com.nowcoder.community.service.UserService;
-import com.nowcoder.community.util.CookieUtil;
-import com.nowcoder.community.util.HostHolder;
+import com.nowcoder.community.web.modular.auth.entity.LoginTicket;
+import com.nowcoder.community.web.modular.user.entity.User;
+import com.nowcoder.community.web.modular.user.service.UserService;
+import com.nowcoder.community.core.util.CookieUtil;
+import com.nowcoder.community.core.util.HostHolder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -28,7 +28,7 @@ public class LoginTicketFilter extends OncePerRequestFilter {
     @Autowired
     private UserService userService;
     @Autowired
-    private HostHolder hostHolder;
+    private HostHolder<User> hostHolder;
 
     @Override
     protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {

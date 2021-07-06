@@ -1,4 +1,4 @@
-package com.nowcoder.community.core.pojo;
+package com.nowcoder.community.web.modular.alpha.entity;
 
 /**
  * @author zhangying

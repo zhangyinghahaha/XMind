@@ -1,13 +1,13 @@
 package com.nowcoder.community.web.modular.user.controller;
 
-import com.nowcoder.community.annotation.LoginRequired;
-import com.nowcoder.community.entity.User;
-import com.nowcoder.community.service.FollowService;
-import com.nowcoder.community.service.LikeService;
-import com.nowcoder.community.service.UserService;
-import com.nowcoder.community.util.CommunityConstant;
-import com.nowcoder.community.util.CommunityUtil;
-import com.nowcoder.community.util.HostHolder;
+import com.nowcoder.community.core.annotation.LoginRequired;
+import com.nowcoder.community.web.modular.user.entity.User;
+import com.nowcoder.community.web.modular.follow.service.FollowService;
+import com.nowcoder.community.web.modular.like.service.LikeService;
+import com.nowcoder.community.web.modular.user.service.UserService;
+import com.nowcoder.community.core.constant.CommunityConstant;
+import com.nowcoder.community.core.util.CommunityUtil;
+import com.nowcoder.community.core.util.HostHolder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +47,7 @@ public class UserController {
     @Autowired
     private FollowService followService;
     @Autowired
-    private HostHolder hostHolder;
+    private HostHolder<User> hostHolder;
 
     @LoginRequired
     @RequestMapping(path = "/setting", method = RequestMethod.GET)

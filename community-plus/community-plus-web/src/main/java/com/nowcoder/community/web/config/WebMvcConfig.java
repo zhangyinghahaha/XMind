@@ -1,10 +1,10 @@
 package com.nowcoder.community.web.config;
 
-import com.nowcoder.community.controller.AlphaInterceptor;
-import com.nowcoder.community.controller.interceptor.DataInterceptor;
-import com.nowcoder.community.controller.interceptor.LoginRequiredInterceptor;
-import com.nowcoder.community.controller.interceptor.LoginTicketIntercepor;
-import com.nowcoder.community.controller.interceptor.MessageInterceptor;
+import com.nowcoder.community.web.core.interceptor.AlphaInterceptor;
+import com.nowcoder.community.web.core.interceptor.DataInterceptor;
+import com.nowcoder.community.web.core.interceptor.LoginRequiredInterceptor;
+import com.nowcoder.community.web.core.interceptor.LoginTicketIntercepor;
+import com.nowcoder.community.web.core.interceptor.MessageInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

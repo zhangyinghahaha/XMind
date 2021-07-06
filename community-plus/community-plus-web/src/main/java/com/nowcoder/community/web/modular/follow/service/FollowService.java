@@ -1,8 +1,9 @@
 package com.nowcoder.community.web.modular.follow.service;
 
-import com.nowcoder.community.entity.User;
-import com.nowcoder.community.util.CommunityConstant;
-import com.nowcoder.community.util.RedisKeyUtil;
+import com.nowcoder.community.web.modular.user.entity.User;
+import com.nowcoder.community.core.constant.CommunityConstant;
+import com.nowcoder.community.core.util.RedisKeyUtil;
+import com.nowcoder.community.web.modular.user.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.core.RedisOperations;

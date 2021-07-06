@@ -1,7 +1,7 @@
 package com.nowcoder.community.web.modular.search.service;
 
-import com.nowcoder.community.dao.elasticsearch.DiscussPostRepository;
-import com.nowcoder.community.entity.DiscussPost;
+import com.nowcoder.community.web.modular.search.mapper.DiscussPostRepository;
+import com.nowcoder.community.web.modular.discusspost.entity.DiscussPost;
 import org.elasticsearch.index.query.QueryBuilders;
 import org.elasticsearch.search.fetch.subphase.highlight.HighlightBuilder;
 import org.elasticsearch.search.sort.SortBuilders;

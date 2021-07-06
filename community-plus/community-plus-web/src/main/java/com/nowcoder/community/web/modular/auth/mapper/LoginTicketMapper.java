@@ -1,6 +1,6 @@
 package com.nowcoder.community.web.modular.auth.mapper;
 
-import com.nowcoder.community.entity.LoginTicket;
+import com.nowcoder.community.web.modular.auth.entity.LoginTicket;
 import org.apache.ibatis.annotations.*;
 
 /**

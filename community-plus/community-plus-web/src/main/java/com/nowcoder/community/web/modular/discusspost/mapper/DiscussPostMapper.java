@@ -1,6 +1,6 @@
 package com.nowcoder.community.web.modular.discusspost.mapper;
 
-import com.nowcoder.community.entity.DiscussPost;
+import com.nowcoder.community.web.modular.discusspost.entity.DiscussPost;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

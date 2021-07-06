@@ -1,13 +1,13 @@
 package com.nowcoder.community.web.core.event;
 
 import com.alibaba.fastjson.JSONObject;
-import com.nowcoder.community.config.WKProperties;
-import com.nowcoder.community.entity.DiscussPost;
-import com.nowcoder.community.entity.Event;
-import com.nowcoder.community.entity.Message;
-import com.nowcoder.community.service.DiscussPostService;
-import com.nowcoder.community.service.ElasticSearchService;
-import com.nowcoder.community.service.MessageService;
+import com.nowcoder.community.web.config.WKProperties;
+import com.nowcoder.community.web.modular.discusspost.entity.DiscussPost;
+import com.nowcoder.community.web.core.event.Event;
+import com.nowcoder.community.web.modular.message.entity.Message;
+import com.nowcoder.community.web.modular.discusspost.service.DiscussPostService;
+import com.nowcoder.community.web.modular.search.service.ElasticSearchService;
+import com.nowcoder.community.web.modular.message.service.MessageService;
 import com.nowcoder.community.web.core.constant.EventTopicConstants;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.slf4j.Logger;

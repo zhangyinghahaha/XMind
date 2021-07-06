@@ -1,9 +1,9 @@
 package com.nowcoder.community.core.util;
 
+import com.nowcoder.community.core.pojo.RsaKey;
 import org.apache.tomcat.util.codec.binary.Base64;
 
 import javax.crypto.Cipher;
-import java.io.ByteArrayOutputStream;
 import java.nio.charset.StandardCharsets;
 import java.security.*;
 import java.security.interfaces.RSAPrivateKey;
