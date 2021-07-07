@@ -3,11 +3,25 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- mapper:根标签，namespace：命名空间，随便写，一般保证命名空间唯一 -->
-<mapper namespace="com.example">
+<mapper namespace="com.example.UserDao">
     <!-- statement，内容：sql语句。id：唯一标识，随便写，在同一个命名空间下保持唯一
        resultType：sql语句查询结果集的封装类型,tb_user即为数据库中的表
      -->
-    <select id="selectUser" resultType="com.example.User">
-        select * from user where id = #{id}
+    <select id="queryUserById" resultType="com.example.User">
+        SELECT * FROM user WHERE id = #{id}
     </select>
+
+    <select id="queryUserAll" resultType="com.example.User">
+        SELECT * FROM user ORDER BY id LIMIT 10
+    </select>
+
+    <update id="updateUser" parameterType="com.example.User">
+        UPDATE user
+        <trim prefix="set" suffixOverrides=",">
+            <if test="email!=null">email = #{email},</if>
+            <if test="username!=null">username = #{username},</if>
+        </trim>
+        WHERE
+        (id = #{id});
+    </update>
 </mapper>

@@ -3,6 +3,7 @@ package com.example;
 public class User {
     private int id;
     private String username;
+    private String email;
 
     public int getId() {
         return id;
@@ -20,11 +21,20 @@ public class User {
         this.username = username;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
+                ", email='" + email + '\'' +
                 '}';
     }
 }
