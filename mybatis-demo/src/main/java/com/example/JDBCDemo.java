@@ -5,11 +5,16 @@ import java.sql.*;
 
 public class JDBCDemo {
     public static void main(String[] args) throws ClassNotFoundException, SQLException {
+
         Connection connection = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            // Loading class `com.mysql.jdbc.Driver'. This is deprecated.
+            // The new driver class is `com.mysql.cj.jdbc.Driver'.
+            // The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+
+            //Class.forName("com.mysql.cj.jdbc.Driver");
             connection = DriverManager.getConnection(
                     "jdbc:mysql://localhost:3306/community?useUnicode=true&characterEncoding=utf-8&useSSL=false",
                     "root",
@@ -33,9 +38,6 @@ public class JDBCDemo {
                 connection.close();
             }
         }
-
-
-
 
     }
 }

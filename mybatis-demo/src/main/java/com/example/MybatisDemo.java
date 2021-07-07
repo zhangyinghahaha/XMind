@@ -10,10 +10,18 @@ import java.io.InputStream;
 
 public class MybatisDemo {
     public static void main(String[] args) throws IOException {
+        // 指定全局配置文件
         String resource = "mybatis-config.xml";
+        // 读取配置文件
         InputStream inputStream = Resources.getResourceAsStream(resource);
+        // 构建SqlSessionFactory
         SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
-        SqlSession session = sqlSessionFactory.openSession();
-        //session.getMapper()
+
+        // 获取SqlSession
+        SqlSession sqlSession = sqlSessionFactory.openSession();
+
+        // 执行数据库操作
+        User user = sqlSession.selectOne("com.example.selectUser", 1);
+        System.out.println(user);
     }
 }
