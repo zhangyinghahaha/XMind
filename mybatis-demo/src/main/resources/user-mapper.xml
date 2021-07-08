@@ -8,11 +8,11 @@
        resultType：sql语句查询结果集的封装类型,tb_user即为数据库中的表
      -->
     <select id="queryUserById" resultType="com.example.User">
-        SELECT * FROM user WHERE id = #{id}
+        SELECT id, username, email, header_url FROM user WHERE id = #{id}
     </select>
 
     <select id="queryUserAll" resultType="com.example.User">
-        SELECT * FROM user ORDER BY id LIMIT 10
+        SELECT id, username, email, header_url AS headerUrl FROM user ORDER BY id LIMIT 10
     </select>
 
     <update id="updateUser" parameterType="com.example.User">

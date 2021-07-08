@@ -10,6 +10,10 @@
         <property name="username" value="root"/>
         <property name="password" value="123456"/>
     </properties>
+    
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
 
     <!-- 环境，可以配置多个，default：指定采用哪个环境 -->
     <environments default="test">
