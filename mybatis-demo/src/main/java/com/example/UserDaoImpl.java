@@ -50,6 +50,9 @@ public class UserDaoImpl implements UserDao{
         User user = userDao.queryUserById(1);
         user.setEmail("zhangying111@hh.com");
         userDao.updateUser(user);
+        sqlSession.commit();
+        System.out.println(userDao.queryUserById(1));
+
         System.out.println(userDao.queryUserById(1));
     }
 }
