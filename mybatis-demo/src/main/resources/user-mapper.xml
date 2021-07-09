@@ -7,7 +7,11 @@
     <!-- statement，内容：sql语句。id：唯一标识，随便写，在同一个命名空间下保持唯一
        resultType：sql语句查询结果集的封装类型,tb_user即为数据库中的表
      -->
-    <select id="queryUserById" resultType="com.example.User">
+    <resultMap id="userResultMap" type="com.example.User">
+<!--        <id column="id" property="id"></id>-->
+        <result column="header_url" property="headerUrl"></result>
+    </resultMap>
+    <select id="queryUserById" resultMap="userResultMap">
         SELECT id, username, email, header_url FROM user WHERE id = #{id}
     </select>
 
