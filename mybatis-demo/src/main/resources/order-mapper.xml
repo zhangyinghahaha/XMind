@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- mapper:根标签，namespace：命名空间，随便写，一般保证命名空间唯一 -->
+<mapper namespace="com.example.OrderDao">
+    <!-- statement，内容：sql语句。id：唯一标识，随便写，在同一个命名空间下保持唯一
+       resultType：sql语句查询结果集的封装类型,tb_user即为数据库中的表
+     -->
+
+    <resultMap id="OrderCustomerRM" type="com.example.Order" autoMapping="true">
+        <id column="order_num" property="orderNum"></id>
+        <association property="customer" javaType="com.example.Customer" autoMapping="true">
+            <id column="cust_id" property="custId"></id>
+        </association>
+        <collection property="orderItems" javaType="List" ofType="com.example.OrderItem" autoMapping="true">
+            <id column="order_item" property="orderItem"></id>
+        </collection>
+    </resultMap>
+
+    <select id="queryOrderByNumber" resultMap="OrderCustomerRM">
+        SELECT
+               o.order_num, order_date, c.cust_id, cust_name, cust_email, order_item, item_price, prod_id
+        FROM orders AS o
+            LEFT JOIN customers AS c ON o.cust_id = c.cust_id
+            LEFT JOIN orderitems AS oi ON o.order_num = oi.order_num
+        WHERE o.order_num = #{orderNum}
+    </select>
+
+</mapper>

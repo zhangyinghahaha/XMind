@@ -21,7 +21,8 @@ public class MybatisDemo {
         SqlSession sqlSession = sqlSessionFactory.openSession();
 
         // 执行数据库操作
-        User user = sqlSession.selectOne("com.example.selectUser", 1);
-        System.out.println(user);
+        //User user = sqlSession.selectOne("com.example.selectUser", 1);
+        Order order = sqlSession.selectOne("com.example.OrderDao.queryOrderByNumber", 20005);
+        System.out.println(order);
     }
 }
