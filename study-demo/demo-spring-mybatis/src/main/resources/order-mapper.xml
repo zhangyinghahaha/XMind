@@ -3,17 +3,14 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- mapper:根标签，namespace：命名空间，随便写，一般保证命名空间唯一 -->
-<mapper namespace="com.example.OrderDao">
-    <!-- statement，内容：sql语句。id：唯一标识，随便写，在同一个命名空间下保持唯一
-       resultType：sql语句查询结果集的封装类型,tb_user即为数据库中的表
-     -->
+<mapper namespace="com.demo.OrderDao">
 
-    <resultMap id="OrderCustomerRM" type="com.example.Order" autoMapping="true">
+    <resultMap id="OrderCustomerRM" type="com.demo.Order" autoMapping="true">
         <id column="order_num" property="orderNum"></id>
-        <association property="customer" javaType="com.example.Customer" autoMapping="true">
+        <association property="customer" javaType="com.demo.Customer" autoMapping="true">
             <id column="cust_id" property="custId"></id>
         </association>
-        <collection property="orderItems" javaType="List" ofType="com.example.OrderItem" autoMapping="true">
+        <collection property="orderItems" javaType="List" ofType="com.demo.OrderItem" autoMapping="true">
             <id column="order_item" property="orderItem"></id>
         </collection>
     </resultMap>
