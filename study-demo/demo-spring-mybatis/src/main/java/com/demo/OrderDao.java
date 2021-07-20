@@ -18,7 +18,7 @@ public class OrderDao extends SqlSessionDaoSupport {
     }
 
     public Order queryOrderByNumber(int number) {
-        Order order = getSqlSession().selectOne("com.demo.OrderDao.queryOrderByNumber", number);
+        Order order = getSqlSession().selectOne("com.demo.OrderMapper.queryOrderByNumber", number);
         return order;
     }
 }

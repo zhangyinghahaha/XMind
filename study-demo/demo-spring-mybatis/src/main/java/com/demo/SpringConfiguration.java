@@ -3,12 +3,16 @@ package com.demo;
 import com.alibaba.druid.pool.DruidDataSource;
 import org.mybatis.spring.SqlSessionFactoryBean;
 import org.mybatis.spring.SqlSessionTemplate;
+import org.mybatis.spring.annotation.MapperScan;
+import org.mybatis.spring.mapper.MapperFactoryBean;
+import org.mybatis.spring.mapper.MapperScannerConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.Resource;
 import org.springframework.core.io.support.PathMatchingResourcePatternResolver;
 import org.springframework.core.io.support.ResourcePatternResolver;
+import org.springframework.jdbc.datasource.DataSourceTransactionManager;
 
 import javax.sql.DataSource;
 import java.io.IOException;
@@ -18,6 +22,7 @@ import java.io.IOException;
  */
 @Configuration
 @ComponentScan
+@MapperScan
 public class SpringConfiguration {
     @Bean
     public DataSource getDataSource() {
@@ -49,5 +54,26 @@ public class SpringConfiguration {
     public SqlSessionTemplate getSqlSessionTemplate(SqlSessionFactoryBean sqlSessionFactoryBean) throws Exception {
         SqlSessionTemplate sqlSessionTemplate = new SqlSessionTemplate(sqlSessionFactoryBean.getObject());
         return sqlSessionTemplate;
+    }
+
+//    @Bean
+//    public OrderMapper getOrderMapper(SqlSessionTemplate sqlSessionTemplate) throws Exception {
+//        MapperFactoryBean<OrderMapper> orderMapperMapperFactoryBean = new MapperFactoryBean<>(OrderMapper.class);
+//        orderMapperMapperFactoryBean.setSqlSessionTemplate(sqlSessionTemplate);
+//        return orderMapperMapperFactoryBean.getObject();
+//    }
+
+//    @Bean
+//    public MapperScannerConfigurer getMapperScannerConfigurer() {
+//        MapperScannerConfigurer mapperScannerConfigurer = new MapperScannerConfigurer();
+//        mapperScannerConfigurer.setBasePackage("com.demo");
+//        return mapperScannerConfigurer;
+//    }
+
+    @Bean
+    public DataSourceTransactionManager getDataSourceTransactionManager(DataSource dataSource) {
+        DataSourceTransactionManager dataSourceTransactionManager = new DataSourceTransactionManager();
+        dataSourceTransactionManager.setDataSource(dataSource);
+        return dataSourceTransactionManager;
     }
 }
