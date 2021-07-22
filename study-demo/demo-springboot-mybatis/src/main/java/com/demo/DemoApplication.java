@@ -1,5 +1,6 @@
 package com.demo;
 
+import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
@@ -15,9 +16,10 @@ public class DemoApplication {
 		ConfigurableApplicationContext context = SpringApplication.run(DemoApplication.class, args);
 		OrderMapper orderMapper = context.getBean(OrderMapper.class);
 
-		PageHelper.startPage(5, 3);
-		List<Order> orders = orderMapper.queryOrder();
+
+		Page<Order> orders = PageHelper.startPage(1, 2).doSelectPage(() -> orderMapper.queryOrder());
 		System.out.println(orders.size());
+		System.out.println(orders);
 		for (Order o : orders) {
 			System.out.println(o);
 		}

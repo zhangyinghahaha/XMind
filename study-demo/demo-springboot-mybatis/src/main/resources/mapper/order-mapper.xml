@@ -26,10 +26,8 @@
 
     <select id="queryOrder" resultMap="OrderCustomerRM">
         SELECT
-            o.order_num, order_date, c.cust_id, cust_name, cust_email, order_item, item_price, prod_id
+            o.order_num, order_date, cust_id
         FROM orders AS o
-                 LEFT JOIN customers AS c ON o.cust_id = c.cust_id
-                 LEFT JOIN orderitems AS oi ON o.order_num = oi.order_num
         ORDER BY o.order_num DESC
     </select>
 
