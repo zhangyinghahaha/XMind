@@ -2,6 +2,7 @@ package com.demo.controller;
 
 import com.demo.core.JwtUtil;
 import com.demo.entity.User;
+import com.demo.service.HelloService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,12 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 public class JwtController {
+    private HelloService helloService;
+
+    public JwtController(HelloService helloService) {
+        this.helloService = helloService;
+    }
+
     @PostMapping("/login")
     public String login(@RequestBody User user) {
         if ("admin".equals(user.getUsername()) && "admin".equals(user.getPassword())) {
@@ -24,10 +31,7 @@ public class JwtController {
 
     @GetMapping("hello")
     public String hello(HttpServletRequest request) {
-        String jwt = request.getHeader("Authorization");
-        if (JwtUtil.parse(jwt) == null) {
-            return "JWT请先登录";
-        }
+        helloService.doSomething();
         return "hello, jwt";
     }
 }
