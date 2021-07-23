@@ -1,17 +1,19 @@
 package com.demo.core;
 
-public class UserContext {
-    private static final ThreadLocal<String> user = new ThreadLocal<>();
+import com.demo.entity.User;
 
-    public static void add(String username) {
-        user.set(username);
+public class UserContext {
+    private static final ThreadLocal<User> curUser = new ThreadLocal<>();
+
+    public static void add(User user) {
+        curUser.set(user);
     }
 
     public static void remove() {
-        user.remove();
+        curUser.remove();
     }
 
-    public static String getCurrentUsername() {
-        return user.get();
+    public static User getCurrentUser() {
+        return curUser.get();
     }
 }

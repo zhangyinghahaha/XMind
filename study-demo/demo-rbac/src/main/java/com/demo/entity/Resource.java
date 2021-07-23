@@ -5,7 +5,7 @@ package com.demo.entity;
  */
 public class Resource {
     private int resourceId;
-    private int userId;
+    private String name;
     private String path;
 
     public int getResourceId() {
@@ -16,12 +16,12 @@ public class Resource {
         this.resourceId = resourceId;
     }
 
-    public int getUserId() {
-        return userId;
+    public String getName() {
+        return name;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPath() {
@@ -36,7 +36,7 @@ public class Resource {
     public String toString() {
         return "Resource{" +
                 "resourceId=" + resourceId +
-                ", userId=" + userId +
+                ", name=" + name +
                 ", path='" + path + '\'' +
                 '}';
     }

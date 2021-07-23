@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.demo.mapper.ResourceMapper">
+
+    <select id="getResourceByUserId" resultType="Resource">
+        SELECT
+            resource_id, name, path
+        FROM resource
+        WHERE user_id = #{userId}
+        ORDER BY resource_id
+    </select>
+
+    <select id="selectResourceById" resultType="Resource">
+        SELECT
+            resource_id, name, path
+        FROM resource
+        WHERE resource_id = #{resourceId}
+    </select>
+    
+    <insert id="insertResource" parameterType="Resource">
+        INSERT INTO resource (name, path)
+        VALUES (#{name}, #{path})
+    </insert>
+
+    <update id="updateResource" parameterType="Resource">
+        UPDATE resource
+        SET name = #{name}, path = #{path}
+        WHERE resource_id = #{resourceId}
+    </update>
+
+    <delete id="deleteResourceById">
+        DELETE FROM resource
+        WHERE resource_id = #{resourceId}
+    </delete>
+
+</mapper>

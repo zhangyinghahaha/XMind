@@ -2,7 +2,11 @@ package com.demo.interceptor;
 
 import com.demo.core.JwtUtil;
 import com.demo.core.UserContext;
+import com.demo.entity.User;
+import com.demo.mapper.UserMapper;
 import io.jsonwebtoken.Claims;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
@@ -12,16 +16,28 @@ import java.io.PrintWriter;
 /**
  * @author zhangying
  */
+@Component
 public class LoginInterceptor implements HandlerInterceptor {
+    @Autowired
+    private UserMapper userMapper;
+
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         if ("/login".equals(request.getRequestURI())) {
             return true;
         }
-        Claims claims = JwtUtil.parse(request.getHeader("Authorization"));
+
+        String token = request.getHeader("Authorization");
+        token = token.replace("Bearer", "").trim();
+        Claims claims = JwtUtil.parse(token);
         if (claims != null) {
-            UserContext.add(claims.getSubject());
-            return true;
+            User user = userMapper.selectUserByUserId(Integer.valueOf(claims.getSubject()));
+
+            if (user != null) {
+                System.out.println(user);
+                UserContext.add(user);
+                return true;
+            }
         }
         response.setContentType("application/json;charset=utf-8");
         PrintWriter out = response.getWriter();

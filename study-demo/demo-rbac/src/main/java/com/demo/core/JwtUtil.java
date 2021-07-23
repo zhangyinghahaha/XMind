@@ -11,7 +11,7 @@ import java.util.Date;
  */
 public class JwtUtil {
     private final static String secretKey = "hello";
-    private final static Duration expiration = Duration.ofMinutes(1);
+    private final static Duration expiration = Duration.ofMinutes(30);
 
     public static String generate(String username) {
         Date expireDate = new Date(System.currentTimeMillis() + expiration.toMillis());

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 public class HelloService {
     public void doSomething() {
         // User user = RequestContext.getCurrentUser();
-        String user = UserContext.getCurrentUsername();
-        System.out.println("[Service 当前登录用户]: " + user);
+//        String user = UserContext.getCurrentUsername();
+//        System.out.println("[Service 当前登录用户]: " + user);
     }
 }

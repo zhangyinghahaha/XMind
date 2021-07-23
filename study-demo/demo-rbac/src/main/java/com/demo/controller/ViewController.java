@@ -11,13 +11,13 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-@Controller
+@RestController
 public class ViewController {
     @Autowired
     private ResourceService resourceService;
 
     @GetMapping("/")
-    public String index(HttpServletRequest request) {
+    public Set<String> index(HttpServletRequest request) {
         Map<String, String> menuMap = new HashMap<>();
         menuMap.put("/user/account", "用户管理");
         menuMap.put("/user/role", "权限管理");
@@ -26,6 +26,6 @@ public class ViewController {
 
         Set<String> menus = resourceService.getCurrentUserMenus();
         request.setAttribute("menus", menus);
-        return "index";
+        return menus;
     }
 }
