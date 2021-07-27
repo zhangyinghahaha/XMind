@@ -32,7 +32,7 @@ public class JwtController {
     public String login(@RequestBody User user) {
         User loginUser = userService.login(user.getUsername(), user.getPassword());
         if (loginUser != null) {
-            log.debug("Login User: {}", loginUser);
+            log.debug("Login User: [{}]", loginUser);
             int userId = loginUser.getUserId();
             return JwtUtil.generate(String.valueOf(userId));
         }

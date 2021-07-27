@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- 配置文件热加载: 每分钟扫描一次-->
-<configuration scan="true" scanPeriod="60 seconds">
+<configuration scan="true" scanPeriod="600 seconds">
     <!--  应用名称  -->
     <property name="APP_NAME" value="demo-rbac" />
     <!-- 日志存放路径 -->
     <property name="LOG_DIR" value="${user.home}/admin/${APP_NAME}/logs"/>
     <!-- 日志输出格式 -->
     <property name="LOG_PATTERN" value="%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n" />
+
     <!--  WARN and ERROR  -->
     <appender name="FILE_EXCEPTION" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>${LOG_DIR}/${APP_NAME}_monitor_exception.log</file>
