@@ -8,15 +8,17 @@ public class Main {
     private static final Logger log = LoggerFactory.getLogger(Main.class);
 
     private static void loginfo() {
-        log.trace("trace");
-        log.debug("debug");
-        log.info("info");
-        log.warn("warn");
-        log.error("error");
+        log.trace("Hello, [{}]", "trace");
+        log.debug("Hello, [{}]", "debug");
+        log.info("Hello, [{}]", "info");
+        log.warn("Hello, [{}]", "warn");
+        log.error("Hello, [{}]", "error");
     }
 
     public static void main(String[] args) {
-        loginfo();
-        Util.loginfo();
+        for (int i = 0; i < 1000; i++) {
+            loginfo();
+            Util.loginfo();
+        }
     }
 }
