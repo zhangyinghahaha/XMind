@@ -4,6 +4,7 @@ import com.demo.core.UserContext;
 import com.demo.entity.Resource;
 import com.demo.entity.User;
 import com.demo.mapper.ResourceMapper;
+import com.github.pagehelper.PageHelper;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -28,6 +29,10 @@ public class ResourceService {
         User user = UserContext.getCurrentUser();
         List<Resource> resources = resourceMapper.getResourceByUserId(user.getUserId());
         return resources;
+    }
+
+    public List<Resource> getAllResources(int pageNum, int pageSize) {
+        return PageHelper.startPage(pageNum, pageSize).doSelectPage(() -> resourceMapper.selectAllResources());
     }
 
     public Resource getResourceById(int resourceId) {

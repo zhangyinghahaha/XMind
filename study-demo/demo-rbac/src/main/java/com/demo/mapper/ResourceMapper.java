@@ -10,10 +10,12 @@ import java.util.List;
  */
 @Mapper
 public interface ResourceMapper {
-    List<Resource> getResourceByUserId(int userId);
-
-    Resource selectResourceById(int resourceId);
     int insertResource(Resource resource);
     int updateResource(Resource resource);
     int deleteResourceById(int resourceId);
+
+    List<Resource> selectAllResources();
+    //List<Resource> getResourceByUserId(int userId);
+    Resource selectResourceById(int resourceId);
+
 }
