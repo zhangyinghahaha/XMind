@@ -5,6 +5,8 @@ import com.demo.core.UserContext;
 import com.demo.entity.User;
 import com.demo.mapper.UserMapper;
 import io.jsonwebtoken.Claims;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
@@ -18,6 +20,8 @@ import java.io.PrintWriter;
  */
 @Component
 public class LoginInterceptor implements HandlerInterceptor {
+    private final static Logger log = LoggerFactory.getLogger(LoginInterceptor.class);
+
     @Autowired
     private UserMapper userMapper;
 
@@ -34,7 +38,7 @@ public class LoginInterceptor implements HandlerInterceptor {
             User user = userMapper.selectUserByUserId(Integer.valueOf(claims.getSubject()));
 
             if (user != null) {
-                System.out.println(user);
+                log.info("Current User: {}", user);
                 UserContext.add(user);
                 return true;
             }
@@ -45,6 +49,8 @@ public class LoginInterceptor implements HandlerInterceptor {
         out.write("Interceptor请先登录");
         out.flush();
         out.close();
+
+        log.warn("为授权访问, IP");
         return false;
     }
 
