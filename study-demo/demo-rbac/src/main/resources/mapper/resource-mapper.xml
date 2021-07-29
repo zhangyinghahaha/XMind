@@ -4,9 +4,12 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.demo.mapper.ResourceMapper">
 
+    <sql id="selectColumns">resource_id, name, path, type</sql>
+    <sql id="upsertColumns">name, path, type</sql>
+
     <insert id="insertResource" parameterType="Resource">
-        INSERT INTO resource (name, path)
-        VALUES (#{name}, #{path})
+        INSERT INTO resource (<include refid="upsertColumns"></include>)
+        VALUES (#{name}, #{path}, #{type})
     </insert>
 
     <update id="updateResource" parameterType="Resource">
@@ -14,6 +17,7 @@
         <set>
             <if test="name != null and name != ''">name = #{name},</if>
             <if test="path != null and path != ''">path = #{path}</if>
+            <if test="type != null and type != ''">type = #{type}</if>
         </set>
         WHERE resource_id = #{resourceId}
     </update>
@@ -24,17 +28,44 @@
     </delete>
 
     <select id="selectAllResources" resultType="Resource">
-        SELECT
-            resource_id, name, path
+        SELECT <include refid="selectColumns"></include>
         FROM resource
         ORDER BY resource_id
     </select>
 
     <select id="selectResourceById" resultType="Resource">
-        SELECT
-            resource_id, name, path
+        SELECT <include refid="selectColumns"></include>
         FROM resource
         WHERE resource_id = #{resourceId}
     </select>
 
+    <select id="selectResourceIdsByUserId" resultType="java.lang.Integer">
+        SELECT rr.resource_id
+        FROM user_role AS ur INNER JOIN role_resource AS rr ON ur.role_id = rr.role_id
+        WHERE ur.user_id = #{userId}
+    </select>
+
+    <select id="selectResourceIdsByRoleId">
+        SELECT resource_id
+        FROM role_resource
+        WHERE role_id = #{roleId}
+    </select>
+
+    <insert id="insertResourcesByRoleId">
+        INSERT INTO role_resource(role_id, resource_id)
+        VALUES
+            <foreach collection="resourceIds" separator="," item="resourceId">
+                (#{roleId}, #{resourceId})
+            </foreach>
+    </insert>
+
+    <delete id="deleteResourceIdsByRoleId">
+        DELETE FROM role_resource
+        WHERE role_id = #{roleId}
+    </delete>
+
+    <delete id="deleteResourcesByType">
+        DELETE FROM resource
+        WHERE type = #{type}
+    </delete>
 </mapper>

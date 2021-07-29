@@ -13,9 +13,12 @@ public interface ResourceMapper {
     int insertResource(Resource resource);
     int updateResource(Resource resource);
     int deleteResourceById(int resourceId);
-
     List<Resource> selectAllResources();
-    //List<Resource> getResourceByUserId(int userId);
     Resource selectResourceById(int resourceId);
 
+    List<Integer> selectResourceIdsByUserId(int userId);
+    int insertResourcesByRoleId(int roleId, List<Integer> resourceIds);
+    int deleteResourceIdsByRoleId(int roleId);
+    List<Integer> selectResourceIdsByRoleId(int roleId);
+    int deleteResourcesByType(String type);
 }

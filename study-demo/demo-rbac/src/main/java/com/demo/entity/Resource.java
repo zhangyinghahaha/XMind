@@ -7,6 +7,7 @@ public class Resource {
     private int resourceId;
     private String name;
     private String path;
+    private String type;
 
     public int getResourceId() {
         return resourceId;
@@ -32,12 +33,21 @@ public class Resource {
         this.path = path;
     }
 
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "Resource{" +
                 "resourceId=" + resourceId +
-                ", name=" + name +
+                ", name='" + name + '\'' +
                 ", path='" + path + '\'' +
+                ", type='" + type + '\'' +
                 '}';
     }
 }

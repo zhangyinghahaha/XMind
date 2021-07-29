@@ -14,28 +14,37 @@ public class ResourceController {
         this.resourceService = resourceService;
     }
 
-    @GetMapping("/resources")
-    public List<Resource> resources() {
-        return resourceService.getCurrentUserResources();
+//    @GetMapping("/resources/current_user")
+//    public List<Integer> getCurrentUserResourceIds() {
+//        return resourceService.getCurrentUserResourceIds();
+//    }
+
+    @GetMapping("/data/v1/resources")
+    public List<Resource> resources(
+            @RequestParam(value = "pageNum", defaultValue = "1")int pageNum,
+            @RequestParam(value = "pageSize", defaultValue = "10")int pageSize
+    ) {
+        return resourceService.getAllResources(pageNum, pageSize);
     }
 
-    @GetMapping("/resources/{resourceId}")
+    @GetMapping("/data/v1/resources/{resourceId}")
     public Resource resourceOne(@PathVariable int resourceId) {
         return resourceService.getResourceById(resourceId);
     }
 
-    @PostMapping("/resources")
+    @PostMapping("/data/v1/resources")
     public int addResource(@RequestBody Resource resource) {
-        return resourceService.addResource(resource);
+        resourceService.addResource(resource);
+        return resource.getResourceId();
     }
 
-    @PutMapping("/resources/{resourceId}")
+    @PutMapping("/data/v1/resources/{resourceId}")
     public int updateResource(@PathVariable int resourceId, @RequestBody Resource resource) {
         resource.setResourceId(resourceId);
         return resourceService.updateResource(resource);
     }
 
-    @DeleteMapping("/resources/{resourceId}")
+    @DeleteMapping("/data/v1/resources/{resourceId}")
     public int deleteResource(@PathVariable int resourceId) {
         return resourceService.deleteResourceById(resourceId);
     }

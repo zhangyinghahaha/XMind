@@ -27,9 +27,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        if ("/login".equals(request.getRequestURI())) {
-            return true;
-        }
+        log.debug(request.getRequestURI());
 
         String token = request.getHeader("Authorization");
         token = token.replace("Bearer", "").trim();
@@ -50,7 +48,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         out.flush();
         out.close();
 
-        log.warn("为授权访问, IP");
+        log.warn("用户没有登录访问: {}", request.getRequestURI());
         return false;
     }
 

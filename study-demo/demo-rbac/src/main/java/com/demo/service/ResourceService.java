@@ -18,17 +18,18 @@ public class ResourceService {
     }
 
     public Set<String> getCurrentUserMenus() {
-        User user = UserContext.getCurrentUser();
-        List<Resource> resources = resourceMapper.getResourceByUserId(user.getUserId());
         Set<String> menus = new HashSet<>();
-        resources.forEach( resource -> menus.add(resource.getPath()));
+        List<Integer> resourceIds = getCurrentUserResourceIds();
+        for (Integer resourceId : resourceIds) {
+            Resource resource = getResourceById(resourceId);
+            menus.add(resource.getPath());
+        }
         return menus;
     }
 
-    public List<Resource> getCurrentUserResources() {
+    public List<Integer> getCurrentUserResourceIds() {
         User user = UserContext.getCurrentUser();
-        List<Resource> resources = resourceMapper.getResourceByUserId(user.getUserId());
-        return resources;
+        return getResourceIdsByUserId(user.getUserId());
     }
 
     public List<Resource> getAllResources(int pageNum, int pageSize) {
@@ -49,5 +50,13 @@ public class ResourceService {
 
     public int deleteResourceById(int resourceId) {
         return resourceMapper.deleteResourceById(resourceId);
+    }
+
+    public List<Integer> getResourceIdsByUserId(int userId) {
+        return resourceMapper.selectResourceIdsByUserId(userId);
+    }
+
+    public int deleteResourcesByType(String type) {
+        return resourceMapper.deleteResourcesByType(type);
     }
 }
