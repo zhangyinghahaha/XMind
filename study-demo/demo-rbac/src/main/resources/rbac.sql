@@ -36,15 +36,16 @@ CREATE TABLE `resource` (
                             `resource_id` BIGINT(20) NOT NULL AUTO_INCREMENT COMMENT '主键',
                             `name` VARCHAR(255) NOT NULL COMMENT '名称',
                             `path` VARCHAR(255) NOT NULL COMMENT '路径',
+                            `type` CHAR(1) NOT NULL COMMENT '类型(0菜单 1按钮)',
                             PRIMARY KEY (`resource_id`)
 ) ENGINE=INNODB;
 
-INSERT INTO `resource` (`name`, `path`) VALUES ('/user', '查看用户');
-INSERT INTO `resource` (`name`, `path`) VALUES ('/user/add', '添加用户');
-INSERT INTO `resource` (`name`, `path`) VALUES ('/user/update', '修改用户');
-INSERT INTO `resource` (`name`, `path`) VALUES ('/user/delete', '删除用户');
-INSERT INTO `resource` (`name`, `path`) VALUES ('/data', '查看数据');
-INSERT INTO `resource` (`name`, `path`) VALUES ('/data/add', '添加数据');
+INSERT INTO `resource` (`name`, `path`, `type`) VALUES ('/user', '查看用户', '0');
+INSERT INTO `resource` (`name`, `path`, `type`) VALUES ('/user/add', '添加用户', '0');
+INSERT INTO `resource` (`name`, `path`, `type`) VALUES ('/user/update', '修改用户', '0');
+INSERT INTO `resource` (`name`, `path`, `type`) VALUES ('/user/delete', '删除用户', '0');
+INSERT INTO `resource` (`name`, `path`, `type`) VALUES ('/data', '查看数据', '0');
+INSERT INTO `resource` (`name`, `path`, `type`) VALUES ('/data/add', '添加数据', '0');
 
 -- 用户角色表
 DROP TABLE IF EXISTS `user_role`;
@@ -71,10 +72,3 @@ INSERT INTO `role_resource` (role_id, resource_id) VALUES (1, 3);
 INSERT INTO `role_resource` (role_id, resource_id) VALUES (1, 4);
 INSERT INTO `role_resource` (role_id, resource_id) VALUES (2, 5);
 INSERT INTO `role_resource` (role_id, resource_id) VALUES (2, 6);
-
-
-
-
-
-
-
