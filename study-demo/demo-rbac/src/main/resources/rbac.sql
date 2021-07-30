@@ -40,12 +40,12 @@ CREATE TABLE `resource` (
                             PRIMARY KEY (`resource_id`)
 ) ENGINE=INNODB;
 
-INSERT INTO `resource` (`name`, `path`, `type`) VALUES ('/user', '查看用户', '0');
-INSERT INTO `resource` (`name`, `path`, `type`) VALUES ('/user/add', '添加用户', '0');
-INSERT INTO `resource` (`name`, `path`, `type`) VALUES ('/user/update', '修改用户', '0');
-INSERT INTO `resource` (`name`, `path`, `type`) VALUES ('/user/delete', '删除用户', '0');
-INSERT INTO `resource` (`name`, `path`, `type`) VALUES ('/data', '查看数据', '0');
-INSERT INTO `resource` (`name`, `path`, `type`) VALUES ('/data/add', '添加数据', '0');
+INSERT INTO `resource` (`path`, `name`, `type`) VALUES ('/user', '查看用户', '0');
+INSERT INTO `resource` (`path`, `name`, `type`) VALUES ('/user/add', '添加用户', '0');
+INSERT INTO `resource` (`path`, `name`, `type`) VALUES ('/user/update', '修改用户', '0');
+INSERT INTO `resource` (`path`, `name`, `type`) VALUES ('/user/delete', '删除用户', '0');
+INSERT INTO `resource` (`path`, `name`, `type`) VALUES ('/data', '查看数据', '0');
+INSERT INTO `resource` (`path`, `name`, `type`) VALUES ('/data/add', '添加数据', '0');
 
 -- 用户角色表
 DROP TABLE IF EXISTS `user_role`;

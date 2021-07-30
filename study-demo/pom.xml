@@ -19,6 +19,7 @@
         <module>demo-springboot-mybatis</module>
         <module>demo-rbac</module>
         <module>demo-logback</module>
+        <module>demo-springsecurity</module>
     </modules>
 
     <packaging>pom</packaging>
