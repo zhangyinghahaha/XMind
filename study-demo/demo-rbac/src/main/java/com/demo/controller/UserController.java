@@ -1,10 +1,12 @@
 package com.demo.controller;
 
 import com.demo.annotation.Auth;
+import com.demo.core.ResultData;
 import com.demo.entity.User;
 import com.demo.service.UserService;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.util.List;
 
 /**
@@ -36,7 +38,7 @@ public class UserController {
 
     @PostMapping("/data/v1/users")
     @Auth(id = 3, name = "创建用户")
-    public int createUser(@RequestBody User user) {
+    public int createUser(@RequestBody @Valid User user) {
         userService.insertUser(user);
         return user.getUserId();
     }

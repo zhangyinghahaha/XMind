@@ -38,10 +38,4 @@ public class JwtController {
         }
         return "JWT登录失败";
     }
-
-    @GetMapping("hello")
-    public String hello(HttpServletRequest request) {
-        helloService.doSomething();
-        return "hello, jwt";
-    }
 }

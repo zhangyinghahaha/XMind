@@ -8,8 +8,13 @@
     <sql id="upsertColumns">name, path, type</sql>
 
     <insert id="insertResource" parameterType="Resource">
-        INSERT INTO resource (<include refid="upsertColumns"></include>)
-        VALUES (#{name}, #{path}, #{type})
+        INSERT INTO resource (
+            <if test="resourceId != null and resourceId != 0">resource_id,</if>
+            <include refid="upsertColumns"></include>
+        ) VALUES (
+            <if test="resourceId != null and resourceId != 0">#{resourceId},</if>
+            #{name}, #{path}, #{type}
+        )
     </insert>
 
     <update id="updateResource" parameterType="Resource">

@@ -29,7 +29,7 @@ public class AuthorityInterceptor implements HandlerInterceptor {
             return true;
         }
 
-        String pattern = (String)request.getAttribute(HandlerMapping.BEST_MATCHING_HANDLER_ATTRIBUTE);
+        String pattern = (String)request.getAttribute(HandlerMapping.BEST_MATCHING_PATTERN_ATTRIBUTE);
         String path = request.getMethod() + ":" + pattern;
 
         Set<String> userPaths = resourceService.getCurrentUserMenus();

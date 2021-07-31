@@ -19,9 +19,9 @@ public class WebConfig implements WebMvcConfigurer {
         this.authorityInterceptor = authorityInterceptor;
     }
 
-    @Override
-    public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(loginInterceptor).excludePathPatterns("/login");
-        registry.addInterceptor(authorityInterceptor).excludePathPatterns("/login", "/index");
-    }
+//    @Override
+//    public void addInterceptors(InterceptorRegistry registry) {
+//        registry.addInterceptor(loginInterceptor).excludePathPatterns("/login", "/hello", "/error");
+//        registry.addInterceptor(authorityInterceptor).excludePathPatterns("/login", "/index", "/hello", "/error");
+//    }
 }
