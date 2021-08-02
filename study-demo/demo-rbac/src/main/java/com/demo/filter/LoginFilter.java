@@ -1,6 +1,15 @@
 package com.demo.filter;
 
+import com.demo.core.JwtUtil;
 import com.demo.entity.User;
+import com.demo.mapper.UserMapper;
+import io.jsonwebtoken.Claims;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
@@ -9,30 +18,36 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.io.PrintWriter;
+import java.util.Collections;
 
-// @Component
+@Component
 public class LoginFilter extends OncePerRequestFilter {
+    private static final Logger log = LoggerFactory.getLogger(LoginFilter.class);
+
+    @Autowired
+    private UserMapper userMapper;
+
     @Override
-    protected void doFilterInternal(HttpServletRequest httpServletRequest, HttpServletResponse httpServletResponse, FilterChain filterChain) throws ServletException, IOException {
-        // 简单的白名单
-        if ("/login".equals(httpServletRequest.getRequestURI())) {
-            filterChain.doFilter(httpServletRequest, httpServletResponse);
-            return;
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws IOException, ServletException {
+        log.debug(request.getRequestURI());
+        String token = request.getHeader("Authorization");
+        if (token != null) {
+            token = token.replace("Bearer", "").trim();
         }
 
-        // 已登录放行
-        User user = (User) httpServletRequest.getSession().getAttribute("user");
-        if (user != null) {
-            filterChain.doFilter(httpServletRequest, httpServletResponse);
-            return;
-        }
+        // 解析token
+        Claims claims = JwtUtil.parse(token);
+        if (claims != null) {
+            User user = userMapper.selectUserByUserId(Integer.valueOf(claims.getSubject()));
+            log.info("Current User: {}", user);
 
-        // 没有登录，直接拦截请求，返回异常响应
-        httpServletResponse.setContentType("application/json;charset=utf-8");
-        PrintWriter out = httpServletResponse.getWriter();
-        out.write("Filter: 请先登录");
-        out.flush();
-        out.close();
+            Authentication authentication = new UsernamePasswordAuthenticationToken(
+                    user,
+                    user.getPassword(),
+                    Collections.emptyList()
+            );
+            SecurityContextHolder.getContext().setAuthentication(authentication);
+        }
+        filterChain.doFilter(request, response);
     }
 }

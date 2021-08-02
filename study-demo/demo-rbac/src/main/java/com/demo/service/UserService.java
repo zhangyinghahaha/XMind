@@ -1,10 +1,16 @@
 package com.demo.service;
 
 import com.demo.entity.User;
+import com.demo.entity.UserDetail;
 import com.demo.mapper.UserMapper;
 import com.github.pagehelper.PageHelper;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -12,11 +18,13 @@ import java.util.Set;
  * @author ying.zhang01
  */
 @Service
-public class UserService {
+public class UserService implements UserDetailsService {
     private UserMapper userMapper;
+    private PasswordEncoder passwordEncoder;
 
-    public UserService(UserMapper userMapper) {
+    public UserService(UserMapper userMapper, PasswordEncoder passwordEncoder) {
         this.userMapper = userMapper;
+        this.passwordEncoder = passwordEncoder;
     }
 
     public User login(String username, String password) {
@@ -53,5 +61,15 @@ public class UserService {
 
     public User getUserById(int userId) {
         return userMapper.selectUserByUserId(userId);
+    }
+
+    @Override
+    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+        User user = this.userMapper.selectUserByUsername(username);
+        if (user == null) {
+            throw new UsernameNotFoundException("没有找到改用户");
+        }
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        return new UserDetail(user, Collections.emptyList());
     }
 }

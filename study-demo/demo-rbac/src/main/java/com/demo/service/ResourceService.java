@@ -5,6 +5,7 @@ import com.demo.entity.Resource;
 import com.demo.entity.User;
 import com.demo.mapper.ResourceMapper;
 import com.github.pagehelper.PageHelper;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
@@ -28,7 +29,8 @@ public class ResourceService {
     }
 
     public List<Integer> getCurrentUserResourceIds() {
-        User user = UserContext.getCurrentUser();
+        // User user = UserContext.getCurrentUser();
+        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         return getResourceIdsByUserId(user.getUserId());
     }
 
