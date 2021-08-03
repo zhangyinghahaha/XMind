@@ -1,5 +1,6 @@
 package com.demo.controller;
 
+import com.demo.annotation.Auth;
 import com.demo.entity.Resource;
 import com.demo.service.ResourceService;
 import org.springframework.web.bind.annotation.*;
@@ -7,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@Auth(id = 2000, name = "资源管理")
 public class ResourceController {
     private ResourceService resourceService;
 
@@ -19,6 +21,7 @@ public class ResourceController {
 //        return resourceService.getCurrentUserResourceIds();
 //    }
 
+    @Auth(id = 1, name = "查询资源")
     @GetMapping("/data/v1/resources")
     public List<Resource> resources(
             @RequestParam(value = "pageNum", defaultValue = "1")int pageNum,

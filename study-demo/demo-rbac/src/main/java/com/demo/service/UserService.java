@@ -31,11 +31,8 @@ public class UserService implements UserDetailsService {
         this.resourceService = resourceService;
     }
 
-    public User login(String username, String password) {
-        User user = userMapper.selectUserByUsername(username);
-        if (user == null) {
-            throw new IllegalArgumentException("用户名不存在!");
-        }
+    public UserDetail login(String username, String password) {
+        UserDetail user = (UserDetail) loadUserByUsername(username);
         if (!user.getPassword().equals(password)) {
             throw new IllegalArgumentException("密码不正确!");
         }
@@ -71,9 +68,9 @@ public class UserService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
         User user = this.userMapper.selectUserByUsername(username);
         if (user == null) {
-            throw new UsernameNotFoundException("没有找到改用户");
+            throw new UsernameNotFoundException("该用户不存在");
         }
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        // user.setPassword(passwordEncoder.encode(user.getPassword()));
 
         // 查询用户权限
         Set<SimpleGrantedAuthority> authorities = resourceService.getResourceIdsByUserId(user.getUserId())

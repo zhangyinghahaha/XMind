@@ -12,7 +12,11 @@ public class UserDetail extends User {
     private com.demo.entity.User user;
 
     public UserDetail(com.demo.entity.User user, Collection<? extends GrantedAuthority> authorities) {
-        super(user.getUsername(), user.getPassword(),authorities);
+        super(user.getUsername(), user.getPassword(), authorities);
         this.user = user;
+    }
+
+    public com.demo.entity.User getUser() {
+        return this.user;
     }
 }

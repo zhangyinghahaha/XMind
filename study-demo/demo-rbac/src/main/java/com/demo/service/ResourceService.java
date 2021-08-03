@@ -3,6 +3,7 @@ package com.demo.service;
 import com.demo.core.UserContext;
 import com.demo.entity.Resource;
 import com.demo.entity.User;
+import com.demo.entity.UserDetail;
 import com.demo.mapper.ResourceMapper;
 import com.github.pagehelper.PageHelper;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -30,8 +31,8 @@ public class ResourceService {
 
     public List<Integer> getCurrentUserResourceIds() {
         // User user = UserContext.getCurrentUser();
-        User user = (User) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
-        return getResourceIdsByUserId(user.getUserId());
+        UserDetail user = (UserDetail) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+        return getResourceIdsByUserId(user.getUser().getUserId());
     }
 
     public List<Resource> getAllResources(int pageNum, int pageSize) {
