@@ -4,6 +4,7 @@ import com.demo.entity.User;
 import com.demo.entity.UserDetail;
 import com.demo.mapper.UserMapper;
 import com.github.pagehelper.PageHelper;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -13,6 +14,7 @@ import org.springframework.stereotype.Service;
 import java.util.Collections;
 import java.util.List;
 import java.util.Set;
+import java.util.stream.Collectors;
 
 /**
  * @author ying.zhang01
@@ -21,10 +23,12 @@ import java.util.Set;
 public class UserService implements UserDetailsService {
     private UserMapper userMapper;
     private PasswordEncoder passwordEncoder;
+    private ResourceService resourceService;
 
-    public UserService(UserMapper userMapper, PasswordEncoder passwordEncoder) {
+    public UserService(UserMapper userMapper, PasswordEncoder passwordEncoder, ResourceService resourceService) {
         this.userMapper = userMapper;
         this.passwordEncoder = passwordEncoder;
+        this.resourceService = resourceService;
     }
 
     public User login(String username, String password) {
@@ -70,6 +74,13 @@ public class UserService implements UserDetailsService {
             throw new UsernameNotFoundException("没有找到改用户");
         }
         user.setPassword(passwordEncoder.encode(user.getPassword()));
-        return new UserDetail(user, Collections.emptyList());
+
+        // 查询用户权限
+        Set<SimpleGrantedAuthority> authorities = resourceService.getResourceIdsByUserId(user.getUserId())
+                .stream()
+                .map(String::valueOf)
+                .map(SimpleGrantedAuthority::new)
+                .collect(Collectors.toSet());
+        return new UserDetail(user, authorities);
     }
 }
