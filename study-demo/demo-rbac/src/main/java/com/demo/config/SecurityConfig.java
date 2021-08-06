@@ -74,19 +74,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         http.headers().frameOptions().disable();
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
 
+//        http.authorizeRequests()
+//                .antMatchers("/login", "/error").permitAll()
+//                .anyRequest().authenticated()
+//                .withObjectPostProcessor(
+//                        new ObjectPostProcessor<FilterSecurityInterceptor>() {
+//                            @Override
+//                            public <O extends FilterSecurityInterceptor> O postProcess(O object) {
+//                                object.setAccessDecisionManager(accessDecisionManager);
+//                                object.setSecurityMetadataSource(filterInvocationSecurityMetadataSource);
+//                                return object;
+//                            }
+//                        }
+//                )
+//                .and()
+//                .exceptionHandling()
+//                .authenticationEntryPoint(authenticationExceptionHandler)
+//                .accessDeniedHandler(accessDeniedExceptionHandler);
+
         http.authorizeRequests()
                 .antMatchers("/login", "/error").permitAll()
                 .anyRequest().authenticated()
-                .withObjectPostProcessor(
-                        new ObjectPostProcessor<FilterSecurityInterceptor>() {
-                            @Override
-                            public <O extends FilterSecurityInterceptor> O postProcess(O object) {
-                                object.setAccessDecisionManager(accessDecisionManager);
-                                object.setSecurityMetadataSource(filterInvocationSecurityMetadataSource);
-                                return object;
-                            }
-                        }
-                )
                 .and()
                 .exceptionHandling()
                 .authenticationEntryPoint(authenticationExceptionHandler)
