@@ -6,17 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3bcc1141-7b85-4586-84f1-f184c2ef9b8a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Cheese.dat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Cheese.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Hello.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bag/foo/bar/baz/727247998171703948.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bag/foo/bar/baz/File.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bar/baz/bag/foo/8511196603202873130.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/bar/baz/bag/foo/File.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/baz/bag/foo/bar/5570192674979473117.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/baz/bag/foo/bar/File.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/foo/bar/baz/bag/4851953318538078403.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/foo/bar/baz/bag/File.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/src/main/java/unit2/module1/Example.java" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/src/main/java/unit2/module1/Example.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/algorithms/src/main/java/util/Stopwatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/algorithms/src/main/java/util/Stopwatch.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../思维导图/算法.xmind" beforeDir="false" afterPath="$PROJECT_DIR$/../思维导图/算法.xmind" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +26,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -132,13 +132,13 @@
     <property name="project.structure.side.proportion" value="0.29310346" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
-  <component name="RunManager" selected="Application.Selection">
-    <configuration name="CarWash" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="enums.CarWash" />
-      <module name="thinking-in-java" />
+  <component name="RunManager" selected="Application.Example">
+    <configuration name="Example" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="unit2.module1.Example" />
+      <module name="algorithms" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="enums.*" />
+          <option name="PATTERN" value="unit2.module1.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -172,6 +172,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Stopwatch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="util.Stopwatch" />
+      <module name="algorithms" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UseCaseTracker" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="annotations.UseCaseTracker" />
       <module name="thinking-in-java" />
@@ -185,26 +198,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="VendingMachine" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="enums.VendingMachine" />
-      <module name="thinking-in-java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="enums.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Example" />
+        <item itemvalue="Application.Stopwatch" />
         <item itemvalue="Application.Selection" />
         <item itemvalue="Application.UseCaseTracker" />
         <item itemvalue="Application.SimpleTest" />
-        <item itemvalue="Application.VendingMachine" />
-        <item itemvalue="Application.CarWash" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +244,7 @@
       <workItem from="1619702783924" duration="680000" />
       <workItem from="1621862675605" duration="5143000" />
       <workItem from="1628083643624" duration="6837000" />
-      <workItem from="1628605525601" duration="2834000" />
+      <workItem from="1628605525601" duration="5280000" />
     </task>
     <servers />
   </component>
