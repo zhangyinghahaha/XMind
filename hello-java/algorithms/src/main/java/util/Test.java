@@ -1,5 +1,9 @@
 package util;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
+
 /**
  * Test class
  *
@@ -8,16 +12,17 @@ package util;
  */
 public class Test {
     public static void main(String[] args) {
-        int[] a = new int[0];
-        System.out.println(a.length);
-        // method(null);
-//        InnerClass ic = new InnerClass();
-//        ic.a = 0;
-//        System.out.println(ic.a);
-//
-//        InnerClass2 ic2 = new InnerClass2();
-//        ic2.b = 0;
-//        System.out.println(ic2.b);
+        String test = "a=123&b=12+4";
+        try {
+            String encodeTest = URLEncoder.encode(test, "UTF-8");
+            String decodeTest = URLDecoder.decode(encodeTest, "UTF-8");
+
+            System.out.println(test);
+            System.out.println(encodeTest);
+            System.out.println(decodeTest);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
     }
 
     static class InnerClass {
