@@ -1,20 +1,16 @@
 package unit1.module4;
 
-import unit2.module1.Insertion;
-import unit2.module1.Selection;
-import util.StdOut;
-import util.StdRandom;
-import util.Stopwatch;
+import utils.StdRandom;
+import utils.Stopwatch;
 
 public class SortCompare {
     public static double time(String alg, Comparable[] a) {
         Stopwatch timer = new Stopwatch();
         switch (alg) {
             case "Insertion":
-                Insertion.sort(a);
+                // Insertion.sort(a);
                 break;
             case "Selection":
-                Selection.sort(a);
                 break;
             default:
                 break;

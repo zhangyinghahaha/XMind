@@ -1,6 +1,6 @@
 package unit2.module2;
 
-import util.In;
+import utils.In;
 
 /**
  * @author ying.zhang01

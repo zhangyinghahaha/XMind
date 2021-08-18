@@ -1,8 +1,7 @@
 package unit1.module1;
 
-import util.In;
-import util.StdIn;
-import util.StdOut;
+import utils.StdIn;
+import utils.StdOut;
 
 import java.util.Arrays;
 

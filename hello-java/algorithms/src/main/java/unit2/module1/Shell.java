@@ -1,6 +1,6 @@
 package unit2.module1;
 
-import util.In;
+import utils.In;
 
 public class Shell {
     private static int compareCount = 0;

@@ -1,8 +1,8 @@
 package unit1.module1;
 
-import util.StdIn;
-import util.StdOut;
-import util.StdRandom;
+import utils.StdIn;
+import utils.StdOut;
+import utils.StdRandom;
 
 
 public class Accumulator {

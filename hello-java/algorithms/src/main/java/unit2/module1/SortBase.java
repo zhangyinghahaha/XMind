@@ -1,16 +1,21 @@
 package unit2.module1;
 
-import util.In;
+import utils.In;
 
-public class Example {
-    private static int compareCount = 0;
-    private static int exchangeCount = 0;
+import java.text.MessageFormat;
+
+/**
+ * @author zhangying
+ */
+public class SortBase {
+    protected int compareCount = 0;
+    protected int exchangeCount = 0;
 
     /**
      * 升序排列
      * @param a
      */
-    public static void sort(Comparable[] a) {
+    public void sort(Comparable[] a) {
 
     }
 
@@ -20,7 +25,7 @@ public class Example {
      * @param w
      * @return
      */
-    private static boolean less(Comparable v, Comparable w) {
+    protected boolean less(Comparable v, Comparable w) {
         compareCount++;
         return v.compareTo(w) < 0;
     }
@@ -31,7 +36,7 @@ public class Example {
      * @param i
      * @param j
      */
-    private static void exch(Comparable[] a, int i, int j) {
+    protected void exch(Comparable[] a, int i, int j) {
         Comparable t = a[i];
         a[i] = a[j];
         a[j] = t;
@@ -42,7 +47,7 @@ public class Example {
      * 打印数组内容
      * @param a
      */
-    private static void show(Comparable[] a) {
+    protected void show(Comparable[] a) {
         for (int i = 0; i < a.length; i++) {
             System.out.print(a[i] + " ");
         }
@@ -54,7 +59,7 @@ public class Example {
      * @param a
      * @return
      */
-    public static boolean isSorted(Comparable[] a) {
+    public boolean isSorted(Comparable[] a) {
         for (int i = 1; i < a.length; i++) {
             if (less(a[i], a[i - 1])) {
                 return false;
@@ -64,14 +69,19 @@ public class Example {
     }
 
     public static void main(String[] args) {
-        String[] a = In.readStrings();
-        System.out.println("排序前:");
-        show(a);
-        sort(a);
+        SortBase sortBase = new SortBase();
+        // String[] a = In.readStrings();
+        String[] a = new String[]{"1", "3", "2"};
+
+        System.out.println("排序前: ");
+        sortBase.show(a);
+
+        sortBase.sort(a);
+        System.out.println("是否排序:" + sortBase.isSorted(a));
+        System.out.println("Compare Count: " + sortBase.compareCount);
+        System.out.println("Exchange Count: " + sortBase.exchangeCount);
+
         System.out.println("排序后:");
-        show(a);
-        System.out.println("是否排序:" + isSorted(a));
-        System.out.println("Compare Count: " + compareCount);
-        System.out.println("Exchange Count: " + exchangeCount);
+        sortBase.show(a);
     }
 }

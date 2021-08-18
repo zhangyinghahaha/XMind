@@ -1,6 +1,6 @@
 package unit1.module1;
 
-import util.StdOut;
+import utils.StdOut;
 
 /**
  * Counter class

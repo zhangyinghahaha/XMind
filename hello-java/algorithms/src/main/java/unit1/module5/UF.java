@@ -1,7 +1,7 @@
 package unit1.module5;
 
-import util.StdIn;
-import util.StdOut;
+import utils.StdIn;
+import utils.StdOut;
 
 public class UF {
     // 分量id(以触电作为索引)

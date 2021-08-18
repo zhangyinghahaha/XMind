@@ -1,8 +1,8 @@
 package unit1.module4;
 
-import util.StdOut;
-import util.StdRandom;
-import util.Stopwatch;
+import utils.StdOut;
+import utils.StdRandom;
+import utils.Stopwatch;
 
 public class DoublingRatio {
     private static final int MAXIMUM_INTEGER = 1000000;

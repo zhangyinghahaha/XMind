@@ -1,7 +1,7 @@
 package unit1.module4;
 
-import util.In;
-import util.StdOut;
+import utils.In;
+import utils.StdOut;
 
 public class ThreeSum {
     public static int count(int[] a) {

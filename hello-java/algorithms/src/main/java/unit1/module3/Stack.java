@@ -1,7 +1,7 @@
 package unit1.module3;
 
-import util.StdIn;
-import util.StdOut;
+import utils.StdIn;
+import utils.StdOut;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;

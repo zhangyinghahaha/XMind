@@ -1,7 +1,7 @@
 package unit1.module3;
 
-import util.StdIn;
-import util.StdOut;
+import utils.StdIn;
+import utils.StdOut;
 
 import java.util.Iterator;
 import java.util.NoSuchElementException;
@@ -134,7 +134,7 @@ public class Queue<Item> implements Iterable<Item> {
     public static void main(String[] args) {
         Queue<String> q = new Queue<>();
 
-        while (!StdIn.isEmpty()) {
+        while (!utils.StdIn.isEmpty()) {
             String item = StdIn.readString();
             if (!item.equals("-")) {
                 q.enqueue(item);

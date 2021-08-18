@@ -1,4 +1,4 @@
-package util;
+package utils;
 
 /******************************************************************************
  *  Compilation:  javac In.java
