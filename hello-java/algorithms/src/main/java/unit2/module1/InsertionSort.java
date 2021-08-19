@@ -2,9 +2,10 @@ package unit2.module1;
 
 import utils.In;
 
+/**
+ * @author zhangying
+ */
 public class InsertionSort extends SortBase {
-    private static int compareCount = 0;
-    private static int exchangeCount = 0;
     /**
      * 升序排列
      * @param a
