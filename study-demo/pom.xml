@@ -20,6 +20,7 @@
         <module>demo-rbac</module>
         <module>demo-logback</module>
         <module>demo-springsecurity</module>
+        <module>demo-quartz</module>
     </modules>
 
     <packaging>pom</packaging>
