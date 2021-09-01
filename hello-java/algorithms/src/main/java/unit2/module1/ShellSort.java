@@ -5,8 +5,9 @@ import utils.In;
 /**
  * @author zhangying
  */
-public class InsertionSort extends SortBase {
-
+public class ShellSort extends SortBase {
+    private static int compareCount = 0;
+    private static int exchangeCount = 0;
 
     /**
      * 升序排列
@@ -15,18 +16,24 @@ public class InsertionSort extends SortBase {
     @Override
     public void sort(Comparable[] a) {
         int n = a.length;
-        for (int i = 1; i < n; i++) {
-            // 将a[i]插入到a[i-1]、a[i-2]、a[i-3]...a[0]之中
-            // 基于交换操作
-            for (int j = i; j > 0 && less(a[j], a[j-1]) ; j--) {
-                exch(a, j, j-1);
+        int h = 1;
+        while (h < n/3) {
+            h = 3*h + 1;
+        }
+
+        while (h >= 1) {
+            for (int i = h; i < n; i++) {
+                for(int j = i; j >= h && less(a[j], a[j-h]); j -= h) {
+                    exch(a, j, j-h);
+                }
             }
+            h = h/3;
         }
     }
 
 
     public static void main(String[] args) {
-        SortBase sortBase = new InsertionSort();
+        SortBase sortBase = new ShellSort();
         String[] a = In.readStrings();
 
         System.out.println("排序前: ");
