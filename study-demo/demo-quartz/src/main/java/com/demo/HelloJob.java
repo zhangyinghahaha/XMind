@@ -16,10 +16,11 @@ public class HelloJob implements Job {
     @Override
     public void execute(JobExecutionContext context) throws JobExecutionException {
         JobKey jobKey = context.getJobDetail().getKey();
+        TriggerKey triggerKey = context.getTrigger().getKey();
 
         JobDataMap jobDataMap = context.getJobDetail().getJobDataMap();
 
-        System.out.println("Hello Quartz: " + jobKey);
+        System.out.println("Hello Quartz: " + jobKey + " " + triggerKey);
         System.out.println("JobDetail: " + context.getJobDetail());
         System.out.println("name: " + getName());
         System.out.println("age: " + getAge());
