@@ -1,9 +1,9 @@
 package utils;
 
 
-import unit2.module1.InsertionSort;
-import unit2.module1.SelectionSort;
-import unit2.module1.ShellSort;
+import sort.module1.InsertionSort;
+import sort.module1.SelectionSort;
+import sort.module1.ShellSort;
 
 /**
  * @author zhangying
