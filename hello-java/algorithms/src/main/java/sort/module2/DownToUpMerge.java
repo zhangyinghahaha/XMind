@@ -13,12 +13,13 @@ public class DownToUpMerge extends SortBase {
         // 一次性分配空间
         aux = new Comparable[a.length];
 
-        int i = 1;
-        while (i < a.length) {
-            for (int j=1; j) {
-                merge(a, j, j+i/2,j+i);
+        int length = a.length;
+        for (int subSize = 1; subSize < length; subSize = 2*subSize) {
+            for (int lo = 0; lo < length - 2*subSize; lo = lo + 2*subSize) {
+                int mid = lo + subSize - 1;
+                int hi = Math.min(lo+2*subSize-1, length-1);
+                merge(a, lo, mid, hi);
             }
-
         }
     }
 
