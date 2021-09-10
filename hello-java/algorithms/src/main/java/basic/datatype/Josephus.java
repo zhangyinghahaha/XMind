@@ -1,4 +1,4 @@
-package basic.module3;
+package basic.datatype;
 
 public class Josephus {
 

@@ -1,4 +1,4 @@
-package basic.module3;
+package basic.datatype;
 
 /**
  * @author ying.zhang01

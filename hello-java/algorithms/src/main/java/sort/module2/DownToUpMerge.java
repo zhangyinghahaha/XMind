@@ -2,6 +2,8 @@ package sort.module2;
 
 import sort.module1.SortBase;
 
+import java.util.List;
+
 /**
  * @author zhangying
  */
@@ -15,7 +17,7 @@ public class DownToUpMerge extends SortBase {
 
         int length = a.length;
         for (int subSize = 1; subSize < length; subSize = 2*subSize) {
-            for (int lo = 0; lo < length - 2*subSize; lo = lo + 2*subSize) {
+            for (int lo = 0; lo < length - subSize; lo = lo + 2*subSize) {
                 int mid = lo + subSize - 1;
                 int hi = Math.min(lo+2*subSize-1, length-1);
                 merge(a, lo, mid, hi);
@@ -56,5 +58,22 @@ public class DownToUpMerge extends SortBase {
                 a[k] = aux[j++];
             }
         }
+    }
+
+    public static void main(String[] args) {
+        SortBase sortBase = new DownToUpMerge();
+        // String[] a = In.readStrings();
+        String[] a = new String[]{"1", "3", "2", "5", "2"};
+
+        System.out.println("排序前: ");
+        sortBase.show(a);
+
+        sortBase.sort(a);
+        System.out.println("是否排序:" + sortBase.isSorted(a));
+        System.out.println("Compare Count: " + sortBase.compareCount);
+        System.out.println("Exchange Count: " + sortBase.exchangeCount);
+
+        System.out.println("排序后:");
+        sortBase.show(a);
     }
 }
