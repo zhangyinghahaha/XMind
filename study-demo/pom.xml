@@ -21,6 +21,10 @@
         <module>demo-logback</module>
         <module>demo-springsecurity</module>
         <module>demo-quartz</module>
+        <module>demo-kafka</module>
+        <module>demo-springboot-starter</module>
+        <module>demo-springboot-starter-test</module>
+        <module>demo-springboot-quartz</module>
     </modules>
 
     <packaging>pom</packaging>
