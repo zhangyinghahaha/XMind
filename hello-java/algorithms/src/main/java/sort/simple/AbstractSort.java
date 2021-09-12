@@ -1,9 +1,9 @@
-package sort.module1;
+package sort.simple;
 
 /**
  * @author zhangying
  */
-public class SortBase {
+public abstract class AbstractSort {
     public int compareCount = 0;
     public int exchangeCount = 0;
 
@@ -11,9 +11,7 @@ public class SortBase {
      * 升序排列
      * @param a
      */
-    public void sort(Comparable[] a) {
-
-    }
+    public abstract void sort(Comparable[] a);
 
     /**
      * 比较两个元素大小
@@ -62,22 +60,5 @@ public class SortBase {
             }
         }
         return true;
-    }
-
-    public static void main(String[] args) {
-        SortBase sortBase = new SortBase();
-        // String[] a = In.readStrings();
-        String[] a = new String[]{"1", "3", "2"};
-
-        System.out.println("排序前: ");
-        sortBase.show(a);
-
-        sortBase.sort(a);
-        System.out.println("是否排序:" + sortBase.isSorted(a));
-        System.out.println("Compare Count: " + sortBase.compareCount);
-        System.out.println("Exchange Count: " + sortBase.exchangeCount);
-
-        System.out.println("排序后:");
-        sortBase.show(a);
     }
 }

@@ -12,11 +12,11 @@ import java.util.Iterator;
  */
 public class ResizingArrayStack<Item> implements Stack<Item> {
     /**
-     * 栈元素
+     * 栈元素存储数组
      */
     private Item[] items = (Item[]) new Object[1];
     /**
-     * 元素数量
+     * 栈元素数量 && 栈顶指针
      */
     private int size = 0;
 
@@ -31,7 +31,16 @@ public class ResizingArrayStack<Item> implements Stack<Item> {
 
     @Override
     public Item pop() {
-        
+        // 从栈顶删除元素
+        Item item = items[--size];
+        // 避免对象游离
+        items[size] = null;
+
+        if (size >0 && size == items.length/4) {
+            resize(items.length/2);
+        }
+
+        return item;
     }
 
     @Override
@@ -56,6 +65,23 @@ public class ResizingArrayStack<Item> implements Stack<Item> {
 
     @Override
     public Iterator<Item> iterator() {
-        return null;
+        return new ReverseArrayIterator();
+    }
+
+    /**
+     * 支持后进先出的迭代
+     */
+    private class ReverseArrayIterator implements Iterator<Item> {
+        private int i = size;
+
+        @Override
+        public boolean hasNext() {
+            return i > 0;
+        }
+
+        @Override
+        public Item next() {
+            return items[--i];
+        }
     }
 }

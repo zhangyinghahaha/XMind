@@ -1,11 +1,11 @@
-package sort.module2;
+package sort.merge;
 
-import sort.module1.SortBase;
+import sort.simple.AbstractSort;
 
 /**
  * @author ying.zhang01
  */
-public class UpToDownMerge extends SortBase {
+public class UpToDownMerge extends AbstractSort {
 
     // 归并所需的辅助数组
     private Comparable[] aux;
@@ -63,19 +63,19 @@ public class UpToDownMerge extends SortBase {
     }
 
     public static void main(String[] args) {
-        SortBase sortBase = new UpToDownMerge();
+        AbstractSort abstractSort = new UpToDownMerge();
         // String[] a = In.readStrings();
         String[] a = new String[]{"1", "3", "2", "5", "2"};
 
         System.out.println("排序前: ");
-        sortBase.show(a);
+        abstractSort.show(a);
 
-        sortBase.sort(a);
-        System.out.println("是否排序:" + sortBase.isSorted(a));
-        System.out.println("Compare Count: " + sortBase.compareCount);
-        System.out.println("Exchange Count: " + sortBase.exchangeCount);
+        abstractSort.sort(a);
+        System.out.println("是否排序:" + abstractSort.isSorted(a));
+        System.out.println("Compare Count: " + abstractSort.compareCount);
+        System.out.println("Exchange Count: " + abstractSort.exchangeCount);
 
         System.out.println("排序后:");
-        sortBase.show(a);
+        abstractSort.show(a);
     }
 }

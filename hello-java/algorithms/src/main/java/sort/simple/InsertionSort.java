@@ -1,13 +1,11 @@
-package sort.module1;
+package sort.simple;
 
 import utils.In;
 
 /**
  * @author zhangying
  */
-public class InsertionSort extends SortBase {
-
-
+public class InsertionSort extends AbstractSort {
     /**
      * 升序排列
      * @param a
@@ -26,18 +24,18 @@ public class InsertionSort extends SortBase {
 
 
     public static void main(String[] args) {
-        SortBase sortBase = new InsertionSort();
+        AbstractSort abstractSort = new InsertionSort();
         String[] a = In.readStrings();
 
         System.out.println("排序前: ");
-        sortBase.show(a);
+        abstractSort.show(a);
 
-        sortBase.sort(a);
-        System.out.println("是否排序:" + sortBase.isSorted(a));
-        System.out.println("Compare Count: " + sortBase.compareCount);
-        System.out.println("Exchange Count: " + sortBase.exchangeCount);
+        abstractSort.sort(a);
+        System.out.println("是否排序:" + abstractSort.isSorted(a));
+        System.out.println("Compare Count: " + abstractSort.compareCount);
+        System.out.println("Exchange Count: " + abstractSort.exchangeCount);
 
         System.out.println("排序后:");
-        sortBase.show(a);
+        abstractSort.show(a);
     }
 }
