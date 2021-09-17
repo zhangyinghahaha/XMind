@@ -14,7 +14,7 @@ public class InsertionSort extends AbstractSort {
     public void sort(Comparable[] a) {
         int n = a.length;
         for (int i = 1; i < n; i++) {
-            // 将a[i]插入到a[i-1]、a[i-2]、a[i-3]...a[0]之中
+            // 将a[i]插入到已经有序的a[i-1]、a[i-2]、a[i-3]...a[0]之中
             // 基于交换操作
             for (int j = i; j > 0 && less(a[j], a[j-1]) ; j--) {
                 exch(a, j, j-1);

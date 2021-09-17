@@ -38,28 +38,34 @@ public class QuickSort extends AbstractSort {
      */
     private int partition(Comparable[] a, int lo, int hi) {
         // 左右扫描指针
-        int i = lo + 1;
-        int j = hi;
+        int i = lo;
+        int j = hi + 1;
         // 切分元素
-        Comparable key = a[lo];
+        Comparable v = a[lo];
 
-        for (;i < j;i++) {
-            if (less(key, a[i])) {
-                for (;j > i; j--) {
-                    if (less(a[j], key)) {
-                        exch(a, i, j);
-                        break;
-                    }
+        while (true) {
+            // 扫描左右，检查扫描是否结束并交换元素
+            while (less(a[++i], v)) {
+                if (i == hi) {
+                    break;
                 }
             }
-            if (i == j) {
+            while (less(v, a[--j])) {
+                if (j == lo) {
+                    break;
+                }
+            }
+
+            //
+            if (i >= j) {
                 break;
             }
+            exch(a, i, j);
         }
+        // 将v = a[j]放入正确的位置, a[lo..j-1] <= a[j] <= a[j+1..hi]
+        exch(a, lo, j);
 
-        exch(a, lo, i - 1);
-
-        return i - 1;
+        return j;
     }
 
     public static void main(String[] args) {

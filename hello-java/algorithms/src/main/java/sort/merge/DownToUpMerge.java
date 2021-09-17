@@ -23,10 +23,6 @@ public class DownToUpMerge extends AbstractSort {
         }
     }
 
-    private void sort(Comparable[] a,int lo, int hi) {
-
-    }
-
     /**
      * 原地归并
      * 将a[lo.. mid] 和 a[mid+1.. hi]合并
