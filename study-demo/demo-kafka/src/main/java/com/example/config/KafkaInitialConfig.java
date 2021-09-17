@@ -13,7 +13,6 @@ import java.util.Map;
 /**
  * @author ying.zhang01
  */
-@Configuration
 public class KafkaInitialConfig {
     @Bean
     public KafkaAdmin kafkaAdmin() {

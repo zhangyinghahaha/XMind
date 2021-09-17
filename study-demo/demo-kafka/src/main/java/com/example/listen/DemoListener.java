@@ -8,7 +8,6 @@ import org.springframework.stereotype.Component;
 /**
  * @author ying.zhang01
  */
-@Component
 public class DemoListener {
     private static final Logger log = LoggerFactory.getLogger(DemoListener.class);
 

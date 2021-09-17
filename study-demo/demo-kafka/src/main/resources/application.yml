@@ -2,4 +2,13 @@ spring:
   kafka:
     producer:
       value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      #bootstrap-servers: 10.6.110.190:9093
+    consumer:
+      #bootstrap-servers: 10.6.110.190:9093
+      auto-offset-reset: earliest
     bootstrap-servers: 10.6.110.190:9093
+
+example:
+  topic:
+    example-topic1: example.topic1
+    example-topic2: example.topic2

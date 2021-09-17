@@ -9,6 +9,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.kafka.core.KafkaTemplate;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.Arrays;
 import java.util.concurrent.ExecutionException;
@@ -49,6 +50,18 @@ class SpringbootKafkaApplicationTests {
         kafkaTemplate.setProducerListener(new KafkaProducerListener());
         kafkaTemplate.send("topic.quick.demo", "test producer listener");
         Thread.sleep(1000);
+    }
+
+    @Test
+    public void testSyncSend() throws ExecutionException, InterruptedException {
+        kafkaTemplate.send("topic.quick.demo", "test send sync!").get();
+    }
+
+    @Test
+    @Transactional
+    public void testTransaction() {
+        kafkaTemplate.send("topic.quick.demo", "test send transaction!");
+        throw new RuntimeException("fail");
     }
 
 }

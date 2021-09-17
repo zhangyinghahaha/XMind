@@ -10,6 +10,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.config.ConcurrentKafkaListenerContainerFactory;
 import org.springframework.kafka.core.*;
+import org.springframework.kafka.transaction.KafkaTransactionManager;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -17,7 +18,6 @@ import java.util.Map;
 /**
  * @author ying.zhang01
  */
-@Configuration
 public class KafkaConfig {
 
     /**
@@ -67,7 +67,16 @@ public class KafkaConfig {
      */
     @Bean
     public ProducerFactory<Integer, String> producerFactory() {
-        return new DefaultKafkaProducerFactory<>(producerProps());
+        DefaultKafkaProducerFactory factory = new DefaultKafkaProducerFactory<>(producerProps());
+        factory.transactionCapable();
+        factory.setTransactionIdPrefix("tran-");
+        return factory;
+    }
+
+    @Bean
+    public KafkaTransactionManager kafkaTransactionManager(ProducerFactory producerFactory) {
+        KafkaTransactionManager manager = new KafkaTransactionManager(producerFactory);
+        return manager;
     }
 
     private Map<String, Object> producerProps() {
@@ -87,4 +96,6 @@ public class KafkaConfig {
         KafkaTemplate<Integer, String> template = new KafkaTemplate<>(producerFactory);
         return template;
     }
+
+
 }
