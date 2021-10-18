@@ -1,6 +1,9 @@
 package utils;
 
 
+import sort.merge.DownToUpMerge;
+import sort.merge.UpToDownMerge;
+import sort.quick.QuickSort;
 import sort.simple.InsertionSort;
 import sort.simple.SelectionSort;
 import sort.simple.ShellSort;
@@ -23,6 +26,17 @@ public class SortCompare {
             case "Shell":
                 ShellSort shellSort = new ShellSort();
                 shellSort.sort(a);
+                break;
+            case "Merge":
+                //DownToUpMerge downToUpMerge = new DownToUpMerge();
+                //downToUpMerge.sort(a);
+                UpToDownMerge upToDownMerge = new UpToDownMerge();
+                upToDownMerge.sort(a);
+                break;
+            case "Quick":
+                QuickSort quickSort = new QuickSort();
+                quickSort.sort(a);
+                break;
             default:
                 break;
         }
@@ -50,15 +64,19 @@ public class SortCompare {
     }
 
     public static void main(String[] args) {
-        int arraySize = 100;
+        int arraySize = 1000;
         int arrayNum = 1000;
-        double t1 = timeRandomInput("Select", arraySize, arrayNum);
+        // double t1 = timeRandomInput("Select", arraySize, arrayNum);
         double t2 = timeRandomInput("Insert", arraySize, arrayNum);
-        double t3 = timeRandomInput("Shell", arraySize, arrayNum);
-        System.out.println("Select: " + t1);
+        // double t3 = timeRandomInput("Shell", arraySize, arrayNum);
+        double t4 = timeRandomInput("Merge", arraySize, arrayNum);
+        double t5 = timeRandomInput("Quick", arraySize, arrayNum);
+        // System.out.println("Select: " + t1);
         System.out.println("Insert: " + t2);
-        System.out.println("Shell: " + t3);
-        System.out.println("Select/Insert: " + t1/t2);
-        System.out.println("Inset/Shell: " + t2/t3);
+        // System.out.println("Shell: " + t3);
+        System.out.println("Merge: " + t4);
+        System.out.println("Quick: " + t5);
+        System.out.println("Insert/Merge: " + t2/t4);
+        System.out.println("Merge/Quick: " + t4/t5);
     }
 }
