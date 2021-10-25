@@ -1,5 +1,7 @@
 package utils;
 
+import edu.princeton.cs.algs4.StdOut;
+
 import java.io.UnsupportedEncodingException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
@@ -12,17 +14,7 @@ import java.net.URLEncoder;
  */
 public class Test {
     public static void main(String[] args) {
-        String test = "a=123&b=12+4";
-        try {
-            String encodeTest = URLEncoder.encode(test, "UTF-8");
-            String decodeTest = URLDecoder.decode(encodeTest, "UTF-8");
-
-            System.out.println(test);
-            System.out.println(encodeTest);
-            System.out.println(decodeTest);
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        }
+        StdOut.println("hello world!");
     }
 
     static class InnerClass {

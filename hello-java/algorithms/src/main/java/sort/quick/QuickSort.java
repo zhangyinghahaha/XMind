@@ -14,7 +14,7 @@ public class QuickSort extends AbstractSort {
     @Override
     public void sort(Comparable[] a) {
         // 打乱数组，消除对输入的依赖
-        // StdRandom.shuffle(a);
+        StdRandom.shuffle(a);
         sort(a, 0, a.length - 1);
     }
 
@@ -30,7 +30,7 @@ public class QuickSort extends AbstractSort {
     }
 
     /**
-     * 将数组切分为a[lo..i-1], a[i], a[i+1..hi]
+     * 将数组原地切分为a[lo..i-1], a[i], a[i+1..hi]
      * @param a
      * @param lo
      * @param hi
