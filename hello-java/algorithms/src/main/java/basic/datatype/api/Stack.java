@@ -2,6 +2,7 @@ package basic.datatype.api;
 
 /**
  * 下压栈(后进先出, LIFO)
+ *
  * @author zhangying
  */
 public interface Stack<E> extends Iterable<E> {
