@@ -31,7 +31,9 @@ public interface ST<Key, Value> {
      * @param key
      * @return
      */
-    boolean contains(Key key);
+    default boolean contains(Key key) {
+        return get(key) != null;
+    }
 
     /**
      * 表是否为空
