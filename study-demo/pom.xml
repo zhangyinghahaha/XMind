@@ -25,7 +25,7 @@
         <module>demo-springboot-starter</module>
         <module>demo-springboot-starter-test</module>
         <module>demo-springboot-quartz</module>
-        <module>demo-fx</module>
+        <module>demo-spi</module>
     </modules>
 
     <packaging>pom</packaging>
