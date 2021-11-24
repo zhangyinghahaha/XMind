@@ -83,7 +83,7 @@ public interface OrderedST<Key extends Comparable<Key>, Value> {
      * @param k
      * @return
      */
-    int select(int k);
+    Key select(int k);
 
     /**
      * 删除表中最小的键
