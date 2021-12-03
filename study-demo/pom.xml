@@ -26,6 +26,7 @@
         <module>demo-springboot-starter-test</module>
         <module>demo-springboot-quartz</module>
         <module>demo-spi</module>
+        <module>demo-java11</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -35,7 +36,7 @@
 
     <properties>
         <study-demo.version>1.0-SNAPSHOT</study-demo.version>
-        <java.version>1.8</java.version>
+        <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <spring-context-version>5.3.9</spring-context-version>
@@ -127,7 +128,6 @@
 
         </dependencies>
     </dependencyManagement>
-
 
     <build>
         <plugins>
