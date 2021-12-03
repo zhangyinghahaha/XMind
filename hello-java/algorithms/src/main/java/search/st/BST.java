@@ -183,6 +183,26 @@ public class BST<Key extends Comparable<Key>, Value> implements OrderedST<Key, V
         return null;
     }
 
+    @Override
+    public void deleteMin() {
+        root = deleteMin(root);
+    }
+
+    private Node deleteMin(Node x) {
+        if (x.left == null) {
+            return x.right;
+        }
+
+        x.left = deleteMin(x.left);
+        x.n = size(x.left) + size(x.right) + 1;
+        return x;
+    }
+
+    @Override
+    public void deleteMax() {
+
+    }
+
     private class Node {
         private Key key;
         private Value value;
