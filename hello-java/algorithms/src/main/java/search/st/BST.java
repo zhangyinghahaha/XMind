@@ -1,5 +1,8 @@
 package search.st;
 
+import basic.datatype.api.Queue;
+import basic.datatype.impl.LinkedQueue;
+
 /**
  * 基于二叉查找树的符号表
  * @author zhangying
@@ -69,7 +72,34 @@ public class BST<Key extends Comparable<Key>, Value> implements OrderedST<Key, V
 
     @Override
     public void delete(Key key) {
+        root = delete(root, key);
+    }
 
+    private Node delete(Node x, Key key) {
+        if (x == null) {
+            return null;
+        }
+
+        int cmp = key.compareTo(x.key);
+        if (cmp > 0) {
+            x.right = delete(x.right, key);
+        } else if (cmp < 0) {
+            x.left = delete(x.left, key);
+        } else {
+            if (x.right == null) {
+                return x.left;
+            }
+            if (x.left == null) {
+                return x.right;
+            }
+            Node temp = x;
+            x = min(x.right);
+            x.right = deleteMin(temp.right);
+            x.left = temp.left;
+        }
+
+        x.n = size(x.left) + size(x.right) + 1;
+        return x;
     }
 
     @Override
@@ -180,7 +210,27 @@ public class BST<Key extends Comparable<Key>, Value> implements OrderedST<Key, V
 
     @Override
     public Iterable<Key> keys(Key lo, Key hi) {
-        return null;
+        Queue<Key> queue = new LinkedQueue<>();
+        keys(root, queue, lo, hi);
+        return queue;
+    }
+
+    private void keys(Node x, Queue<Key> queue, Key lo, Key hi) {
+        if (x == null) {
+            return;
+        }
+        int cmpLo = lo.compareTo(x.key);
+        int cmpHi = hi.compareTo(x.key);
+
+        if (cmpLo < 0) {
+            keys(x.left, queue, lo, hi);
+        }
+        if (cmpLo <= 0 && cmpHi >= 0) {
+            queue.enqueue(x.key);
+        }
+        if (cmpHi > 0) {
+            keys(x.right, queue, lo, hi);
+        }
     }
 
     @Override
@@ -200,7 +250,17 @@ public class BST<Key extends Comparable<Key>, Value> implements OrderedST<Key, V
 
     @Override
     public void deleteMax() {
+        root = deleteMax(root);
+    }
 
+    private Node deleteMax(Node x) {
+        if (x.right == null) {
+            return x.left;
+        }
+
+        x.right = deleteMax(x.right);
+        x.n = size(x.left) + size(x.right) + 1;
+        return x;
     }
 
     private class Node {
