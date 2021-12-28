@@ -13,7 +13,7 @@ public class BST<Key extends Comparable<Key>, Value> implements OrderedST<Key, V
 
     @Override
     public void put(Key key, Value value) {
-
+        this.put(root, key, value);
     }
 
     /**
