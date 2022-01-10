@@ -9,9 +9,39 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> implements OrderedS
     private static final boolean RED = true;
     private static final boolean BLACK = false;
 
+    private Node root;
+
     @Override
     public void put(Key key, Value value) {
 
+    }
+
+    private Node put(Node h, Key key, Value value) {
+        if (h == null) {
+            return new Node(key, value, 1, RED);
+        }
+
+        int cmp = key.compareTo(h.key);
+        if (cmp < 0) {
+            h.left = put(h.left, key, value);
+        } else if (cmp > 0) {
+            h.right = put(h.right, key, value);
+        } else {
+            h.value = value;
+        }
+
+        if (isRed(h.right) && !isRed(h.left)) {
+            h = rotateLeft(h);
+        }
+        if (isRed(h.left) && isRed(h.left.left)) {
+            h = rotateRight(h);
+        }
+        if (isRed(h.left) && isRed(h.right)) {
+            flipColors(h);
+        }
+
+        h.nums = size(h.left) + size(h.right) + 1;
+        return h;
     }
 
     @Override
@@ -124,6 +154,11 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> implements OrderedS
         return x;
     }
 
+    /**
+     * 右旋转
+     * @param h
+     * @return
+     */
     private Node rotateRight(Node h) {
         Node x = h.left;
         h.left = x.right;
@@ -135,6 +170,10 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> implements OrderedS
         return x;
     }
 
+    /**
+     * 颜色转换
+     * @param h
+     */
     private void flipColors(Node h) {
         h.color = RED;
         h.left.color = BLACK;
