@@ -13,7 +13,8 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> implements OrderedS
 
     @Override
     public void put(Key key, Value value) {
-
+        root = put(root, key, value);
+        root.color = BLACK;
     }
 
     private Node put(Node h, Key key, Value value) {
