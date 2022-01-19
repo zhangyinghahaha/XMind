@@ -1,7 +1,8 @@
-package search.st;
+package search.basic;
 
 import basic.datatype.api.Queue;
 import basic.datatype.impl.LinkedQueue;
+import search.api.ST;
 
 /**
  * 基于无序链表实现的顺序查找符号表

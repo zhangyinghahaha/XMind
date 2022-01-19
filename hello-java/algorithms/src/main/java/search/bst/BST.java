@@ -1,19 +1,22 @@
-package search.st;
+package search.bst;
 
 import basic.datatype.api.Queue;
 import basic.datatype.impl.LinkedQueue;
+import search.api.OrderedST;
+import search.api.ST;
+import search.basic.SequentialSearchST;
 
 /**
  * 基于二叉查找树的符号表
  * @author zhangying
  */
-public class BST<Key extends Comparable<Key>, Value> implements OrderedST<Key, Value>{
+public class BST<Key extends Comparable<Key>, Value> implements OrderedST<Key, Value> {
 
     private Node root;
 
     @Override
     public void put(Key key, Value value) {
-        this.put(root, key, value);
+        root = this.put(root, key, value);
     }
 
     /**
@@ -153,7 +156,7 @@ public class BST<Key extends Comparable<Key>, Value> implements OrderedST<Key, V
         if (x.right == null) {
             return x;
         }
-        return max(x);
+        return max(x.right);
     }
 
     @Override
@@ -277,6 +280,14 @@ public class BST<Key extends Comparable<Key>, Value> implements OrderedST<Key, V
     }
 
     public static void main(String[] args) {
-        String
+        String input = "searchexample";
+        OrderedST<Character, Integer> st = new BST<>();
+        for (int i = 0; i < input.length(); i++) {
+            st.put(input.charAt(i), i);
+        }
+
+        for (Character c : st.keys()) {
+            System.out.println(c + " " + st.get(c));
+        }
     }
 }

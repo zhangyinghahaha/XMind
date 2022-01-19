@@ -1,5 +1,8 @@
-package search.st;
+package search.balance;
 
+
+import search.api.OrderedST;
+import search.bst.BST;
 
 /**
  * 基于红黑树的符号表
@@ -179,5 +182,17 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> implements OrderedS
         h.color = RED;
         h.left.color = BLACK;
         h.right.color = BLACK;
+    }
+
+    public static void main(String[] args) {
+        String input = "searchexample";
+        OrderedST<Character, Integer> st = new RedBlackBST<>();
+        for (int i = 0; i < input.length(); i++) {
+            st.put(input.charAt(i), i);
+        }
+
+        for (Character c : st.keys()) {
+            System.out.println(c + " " + st.get(c));
+        }
     }
 }

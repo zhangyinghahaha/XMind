@@ -1,13 +1,14 @@
-package search.st;
+package search.basic;
 
 import basic.datatype.api.Queue;
 import basic.datatype.impl.LinkedQueue;
+import search.api.OrderedST;
 
 /**
  * 基于一对平行数组的二分查找符号表
  * @author zhangying
  */
-public class BinarySearchSt<Key extends Comparable<Key>, Value> implements OrderedST<Key, Value>{
+public class BinarySearchSt<Key extends Comparable<Key>, Value> implements OrderedST<Key, Value> {
     private Key[] keys;
     private Value[] values;
     private int size;
