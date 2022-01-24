@@ -1,5 +1,7 @@
 package search.hash;
 
+import basic.datatype.api.Queue;
+import basic.datatype.impl.LinkedQueue;
 import search.api.OrderedST;
 import search.basic.SequentialSearchST;
 import search.bst.BST;
@@ -10,6 +12,8 @@ import utils.In;
  * @author zhangying
  */
 public class SeparateChainingHashST <Key, Value>{
+    private static final int INIT_CAPACITY = 4;
+
     /**
      * 键值对总数
      */
@@ -24,7 +28,7 @@ public class SeparateChainingHashST <Key, Value>{
     private SequentialSearchST<Key, Value>[] st;
 
     public SeparateChainingHashST() {
-        this(16);
+        this(INIT_CAPACITY);
     }
 
     public SeparateChainingHashST(int m) {
@@ -35,16 +39,68 @@ public class SeparateChainingHashST <Key, Value>{
         }
     }
 
+    private void resize(int chains) {
+        SeparateChainingHashST<Key, Value> temp = new SeparateChainingHashST<>(chains);
+        for (int i = 0; i < m; i++) {
+            for (Key key : st[i].keys()) {
+                temp.put(key, st[i].get(key));
+            }
+        }
+        this.m = temp.m;
+        this.n = temp.n;
+        this.st = temp.st;
+    }
+
+    public int size() {
+        return this.n;
+    }
+
+    public boolean isEmpty() {
+        return size() == 0;
+    }
+
+    public boolean contains(Key key) {
+        if (key == null) {
+            throw new IllegalArgumentException("key为空");
+        }
+        return get(key) != null;
+    }
+
     public Value get(Key key) {
         return this.st[hash(key)].get(key);
     }
 
     public void put(Key key, Value value) {
-        st[hash(key)].put(key, value);
+        if (n > 8*m) {
+            resize(2*m);
+        }
+        int hashCode = hash(key);
+        if (!st[hashCode].contains(key)) {
+            n++;
+        }
+        st[hashCode].put(key, value);
+    }
+
+    public void delete(Key key) {
+        int hashCode = hash(key);
+        if (st[hashCode].contains(key)) {
+            n--;
+            st[hashCode].delete(key);
+        }
+
+        if (size() <= m*2) {
+            resize(m/2);
+        }
     }
 
     public Iterable<Key> keys() {
-        return null;
+        Queue<Key> queue = new LinkedQueue<>();
+        for (int i = 0; i < m; i++) {
+            for (Key key : st[i].keys()) {
+                queue.enqueue(key);
+            }
+        }
+        return queue;
     }
 
     private int hash(Key key) {
