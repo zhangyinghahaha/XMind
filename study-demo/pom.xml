@@ -27,6 +27,9 @@
         <module>demo-springboot-quartz</module>
         <module>demo-spi</module>
         <module>demo-java11</module>
+        <module>demo-sqlserver</module>
+        <module>demo-mapstruct</module>
+        <module>demo-beetl</module>
     </modules>
 
     <packaging>pom</packaging>
@@ -134,19 +137,13 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>3.8.1</version>
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
                     <encoding>${project.build.sourceEncoding}</encoding>
                 </configuration>
             </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-resources-plugin</artifactId>
-                <version>3.1.0</version>
-            </plugin>
         </plugins>
     </build>
-
 </project>
