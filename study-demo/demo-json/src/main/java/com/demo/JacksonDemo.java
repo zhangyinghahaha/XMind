@@ -20,7 +20,7 @@ import java.util.Map;
 public class JacksonDemo {
 
     public static void main(String[] args) throws IOException {
-        testContainerNode();
+        testJsonMapper();
     }
 
     public static void test() throws IOException {
@@ -99,9 +99,13 @@ public class JacksonDemo {
         JsonMapper jsonMapper = JsonMapper.builder()
                 .configure(JsonReadFeature.ALLOW_SINGLE_QUOTES, true)
                 .build();
-
-        User user = jsonMapper.readValue("{'name':  'YourBatman', 'age': 118}", User.class);
+        String jsonString = "{'name':  'YourBatman', 'age': 118}";
+        String jsonString2 = "[1,2,3]";
+        User user = jsonMapper.readValue(jsonString, User.class);
         System.out.println(user);
+        Object object = jsonMapper.readValue(jsonString, new TypeReference<Map<String, String>>() {
+        });
+        System.out.println(object.getClass().getSimpleName());
     }
 
     public static void testJsonNode() {
@@ -122,8 +126,9 @@ public class JacksonDemo {
         System.out.println(node.isPojo() + ":" + node.asText());
     }
 
-    public static void testContainerNode() {
+    public static void testContainerNode() throws JsonProcessingException {
         JsonNodeFactory factory = JsonNodeFactory.instance;
+        JsonMapper jsonMapper = JsonMapper.builder().build();
         ObjectNode root = factory.objectNode();
         root.put("name", "zhang ying");
 
@@ -135,22 +140,22 @@ public class JacksonDemo {
         dog.put("name", "小白").put("age", 3);
         root.set("dog", dog);
 
+        System.out.println("----root----");
         System.out.println(root);
+        System.out.println(jsonMapper.writerWithDefaultPrettyPrinter().writeValueAsString(root));
         System.out.println(root.get("dog").get("name"));
         for (JsonNode node : root) {
             System.out.println(node.getNodeType() + ": " + node);
         }
         System.out.println(root.at("/dog/dog/sex"));
 
-        JsonMapper jsonMapper = JsonMapper.builder().build();
+
         User user = new User();
         JsonNode userNode = jsonMapper.valueToTree(user);
         System.out.println(userNode);
         for (JsonNode node : userNode) {
             System.out.println(node.getNodeType() + ": " + node);
         }
-
-
 
     }
 }
