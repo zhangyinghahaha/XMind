@@ -30,6 +30,7 @@
         <module>demo-sqlserver</module>
         <module>demo-mapstruct</module>
         <module>demo-beetl</module>
+        <module>demo-json</module>
     </modules>
 
     <packaging>pom</packaging>
