@@ -1,4 +1,4 @@
-package sort.pq;
+package sort.api;
 
 /**
  * 优先队列

@@ -1,5 +1,10 @@
 package search.hash;
 
+import basic.datatype.api.Queue;
+import basic.datatype.impl.LinkedQueue;
+import search.api.ST;
+import search.basic.SequentialSearchST;
+
 /**
  * 基于线性探测的符号表
  *
@@ -97,6 +102,16 @@ public class LinearProbingHashSt<Key, Value> {
         }
     }
 
+    public Iterable<Key> keys() {
+        Queue<Key> queue = new LinkedQueue<>();
+        for (int i = 0; i < m; i++) {
+            if (keys[i] != null) {
+                queue.enqueue(keys[i]);
+            }
+        }
+        return queue;
+    }
+
     private void resize(int capacity) {
         LinearProbingHashSt<Key, Value> tmp = new LinearProbingHashSt<>(capacity);
         for (int i = 0; i < m; i++) {
@@ -108,5 +123,17 @@ public class LinearProbingHashSt<Key, Value> {
         keys = tmp.keys;
         values = tmp.values;
         this.m = tmp.m;
+    }
+
+    public static void main(String[] args) {
+        String input = "abcdefghijkak";
+        LinearProbingHashSt<Character, Integer> st = new LinearProbingHashSt<>();
+        for (int i = 0; i < input.length(); i++) {
+            st.put(input.charAt(i), i);
+        }
+
+        for (Character c : st.keys()) {
+            System.out.println(c + " " + st.get(c));
+        }
     }
 }

@@ -1,11 +1,13 @@
 package sort.pq;
 
+import sort.api.MaxPQ;
+
 /**
  * 基于数组实现的优先队列
  *
  * @author zhangying
  */
-public class ArrayMaxPQ<Item extends Comparable<Item>> implements MaxPQ<Item>{
+public class ArrayMaxPQ<Item extends Comparable<Item>> implements MaxPQ<Item> {
     /**
      * 元素存储数组
      */

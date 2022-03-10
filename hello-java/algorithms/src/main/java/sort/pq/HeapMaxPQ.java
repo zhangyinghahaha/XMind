@@ -1,11 +1,13 @@
 package sort.pq;
 
+import sort.api.MaxPQ;
+
 /**
  * 基于二叉堆实现的优先队列
  *
  * @author zhangying
  */
-public class HeapMaxPQ<Item extends Comparable<Item>> implements MaxPQ<Item>{
+public class HeapMaxPQ<Item extends Comparable<Item>> implements MaxPQ<Item> {
     /**
      * 元素存储数组
      */

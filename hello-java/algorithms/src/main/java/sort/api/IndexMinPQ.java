@@ -1,4 +1,4 @@
-package sort.pq;
+package sort.api;
 
 /**
  * 关联索引的优先队列
