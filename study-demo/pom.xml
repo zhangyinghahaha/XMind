@@ -31,6 +31,8 @@
         <module>demo-mapstruct</module>
         <module>demo-beetl</module>
         <module>demo-json</module>
+        <module>demo-justauth</module>
+        <module>demo-justauth-springboot-starter</module>
     </modules>
 
     <packaging>pom</packaging>
