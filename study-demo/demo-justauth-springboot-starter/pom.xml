@@ -57,12 +57,6 @@
             <artifactId>justauth-spring-boot-starter</artifactId>
             <version>${justauth-spring-boot-starter.version}</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
-        </dependency>
     </dependencies>
 
     <build>
