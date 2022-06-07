@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h2 class="counter">0</h2>
+	<button class="increment">+1</button>
+	<button class="decrement">-1</button>
+
+	<script>
+		// 获取所有dom元素
+		const counterEl = document.querySelector(".counter");
+		const increment = document.querySelector(".increment");
+		const decrement = document.querySelector(".decrement");
+
+		// 定义变量
+		let counter = 0;
+		counterEl.innerHTML = counter;
+
+		// 监听事件
+		increment.addEventListener('click', () => {
+			counter = counter + 1;
+			counterEl.innerHTML = counter;
+		})
+		decrement.addEventListener('click', () => {
+			counter = counter - 1;
+			counterEl.innerHTML = counter;
+		})
+	</script>
+</body>
+
+</html>

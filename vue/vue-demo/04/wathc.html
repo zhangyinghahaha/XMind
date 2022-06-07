@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <template id="demo">
+        <h2>您的问题:</h2>
+        <input type="text" v-model="question">
+        <button @click="queryAnswer">查找答案</button>
+        <p>{{this.answer}}</p>
+
+        <h2>{{ this.info }}</h2>
+        <button @click="changeInfo">改变info</button>
+        <button @click="changeInfoName">改变info name</button>
+    </template>
+
+    <script src="../js/vue.js"></script>
+    <script>
+        Vue.createApp({
+            template: '#demo',
+            data: function () {
+                return {
+                    // 侦听question变化, 进行一些逻辑处理
+                    question: "Hello World",
+                    answer: "",
+                    info: {
+                        name: "zhang ying",
+                        age: 26
+                    },
+                }
+            },
+            methods: {
+                queryAnswer() {
+                    this.answer = `你的问题${this.question}: 哈哈哈`;
+                },
+                changeInfo() {
+                    this.info = { name: 'aa', age: 18 };
+                },
+                changeInfoName() {
+                    this.info.name = 'kobe';
+                },
+            },
+            watch: {
+                // 侦听data中的question属性
+                question(newValue, oldValue) {
+                    console.log("new value: ", newValue);
+                    console.log("old value: ", oldValue);
+                    this.queryAnswer();
+                },
+                // 侦听器默认只会侦听数据本身的变化(内部发生的改变不会侦听)
+                // info(newValue, oldValue) {
+                //     console.log("new value: ", newValue);
+                //     console.log("old value: ", oldValue);
+                // },
+                // 侦听器的配置
+                info: {
+                    handler(newValue, oldValue) {
+                        console.log("new value: ", newValue);
+                        console.log("old value: ", oldValue);
+                    },
+                    // 深度侦听
+                    deep: true,
+                    // 立即执行(第一次)
+                    immediate: true,
+                },
+                // 侦听对象某个具体属性
+                "info.name": {
+                    handler(newValue, oldValue) {
+                        console.log("new value: ", newValue);
+                        console.log("old value: ", oldValue);
+                    },
+                },
+            },
+            created() {
+                // 侦听器的其他使用方式
+                const unwatch = this.$watch("info", (newValue, oldValue) => {
+                    console.log("new value: ", newValue);
+                    console.log("old value: ", oldValue);
+                });
+                // 取消侦听器
+                // unwatch();
+            },
+        }).mount('#app');
+    </script>
+</body>
+
+</html>
