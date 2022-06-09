@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+    <script>
+        const info = {name: 'zhang ying', age: 15, list: [1,2]};
+        const shallowClone = _.clone(info);
+        const deepClone = _.cloneDeep(info);
+        info.list.push(3);
+        console.log(shallowClone);
+        console.log(deepClone);
+    </script>
+    
+</body>
+</html>
