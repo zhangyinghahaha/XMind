@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo</title>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <template id="demo">
+        <!-- v-model本质不过是语法糖，他负责监听用户的输入事件并更新对应的数据，v-model在不同的元素上使用不同的属性和事件 -->
+        <input type="text" v-model="message">
+        <h2>{{message}}</h2>
+        <!-- 等同于下面 -->
+        <input type="text" :value="searchText" @input="searchText = $event.target.value">
+        <h2>{{searchText}}</h2>
+
+        <!-- v-model绑定其他元素 -->
+        <label for="intro">
+            <textarea name="intro" id="intro" cols="30" rows="10" v-model="intro"></textarea>
+            <h3>{{intro}}</h3>
+        </label>
+
+        <label for="agree">
+            <input type="checkbox" name="agree" id="agree" v-model="isAgreed">同意协议
+            <h3>{{isAgreed}}</h3>
+        </label>
+
+        <span>性别</span>
+        <label for="male">
+            <input type="radio" id="male" value="male" v-model="gender">男
+        </label>
+        <label for="female">
+            <input type="radio" id="female" value="female" v-model="gender">女
+        </label>
+        <h3>{{gender}}</h3>
+
+        <!-- lazy修饰符 -->
+        <input type="text" v-model.lazy="message">
+        <h2>{{message}}</h2>
+        
+    </template>
+
+    <script src="../js/vue.js"></script>
+    <script>
+        Vue.createApp({
+            template: '#demo',
+            data: function () {
+                return {
+                    message: 'Hello World',
+                    searchText: 'zhang ying',
+                    intro: 'ni hao',
+                    isAgreed: false,
+                    gender: ''
+                }
+            },
+            methods: {
+                inputChange(event) {
+                    this.message = event.target.value;
+                }
+            }
+        }).mount('#app');
+    </script>
+</body>
+
+</html>
