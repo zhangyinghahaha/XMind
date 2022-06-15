@@ -14,6 +14,7 @@
     <template id="demo">
         <component-a></component-a>
         <component-a></component-a>
+        <component-c></component-c>
     </template>
 
     <template id="component-a">
@@ -25,6 +26,12 @@
         <div>
             <input type="text" v-model="message">
             <h3>{{message}}</h3>
+        </div>
+    </template>
+
+    <template id="component-c">
+        <div>
+            <h2>component c</h2>
         </div>
     </template>
 
@@ -51,6 +58,9 @@
                 }
             },
         });
+        app.component('ComponentC', {
+            template: "#component-c"
+        })
         app.mount('#app');
     </script>
 </body>
