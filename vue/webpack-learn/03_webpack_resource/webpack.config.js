@@ -33,9 +33,28 @@ module.exports = {
                     'less-loader',
                 ]
             },
+            // {
+            //     test: /\.(jpg|jpeg|png|gif|svg)$/,
+            //     use: {
+            //         loader: 'url-loader',
+            //         options: {
+            //             // outputPath: 'img',
+            //             name: 'img/[name]_[hash:6].[ext]',
+            //             limit: 100*1024
+            //         }
+            //     },
+            // },
             {
-                test: /\.(jpg|jpeg|png|gif|svg)$/i,
-                use: 'file-loader',
+                test: /\.(jpg|jpeg|png|gif|svg)$/,
+                type: 'asset',
+                generator: {
+                    filename: 'image/[name]_[hash:6][ext]',
+                },
+                parser: {
+                    dataUrlCondition: {
+                        maxSize: 100*1024
+                    }
+                },
             }
         ],
     }
