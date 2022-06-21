@@ -21,3 +21,5 @@ document.body.appendChild(divEl);
 document.body.appendChild(bgPic);
 document.body.appendChild(imgEl);
 document.body.appendChild(fontEl);
+
+console.log(cont.length);
