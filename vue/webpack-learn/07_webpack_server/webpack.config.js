@@ -23,6 +23,22 @@ module.exports = {
             directory: path.join(__dirname, 'public')
         },
         hot: true,
+        port: 3000,
+        // 代理，解决跨域问题
+        proxy: {
+            '/mock': {
+                target: 'https://fd82673c-ccc9-45d9-95b5-4a6105acd1c4.mock.pstmn.io',
+                pathRewrite: { '^/mock': '' },
+                secure: false,
+                changeOrigin: true
+            },
+        }
+    },
+    resolve: {
+        alias: {
+            // 路径别名
+            '@': path.resolve(__dirname, './src'),
+        }
     },
     module: {
         rules: [
