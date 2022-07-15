@@ -4,6 +4,8 @@ import _ from 'lodash-es';
 // import moduleName from './css/style.css';
 import './css/title.less';
 import multi from './ts/multi';
+import {createApp} from 'vue';
+import App from './vue/App.vue';
 
 console.log('Hello World!');
 console.log(add(1, 10));
@@ -17,3 +19,4 @@ document.body.appendChild(titleEl);
 
 console.log(multi(2, 8));
 
+createApp(App).mount('#app');
