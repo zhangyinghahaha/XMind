@@ -13,8 +13,6 @@
         <div class="addition">
             <slot :name="name"></slot>
         </div>
-
-        
     </div>
 </template>
 

@@ -5,14 +5,16 @@
                 <button>左按钮</button>
             </template>
 
-            <template v-slot:center>
+            <template #center>
                 <h2>我是标题</h2>
             </template>
             
-            <template v-slot:right>
+            <template #right>
                 <button>右按钮</button>
             </template>
         </NavBar>
+
+        <p></p>
 
         <NavBar></NavBar>
     </div>
