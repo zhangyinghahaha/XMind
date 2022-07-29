@@ -21,7 +21,10 @@
         </template> -->
 
         <!-- 动态组件 -->
-        <component :is="currentTab" name="zhang ying"></component>
+        <keep-alive include="about">
+            <component :is="currentTab" name="zhang ying"></component>
+        </keep-alive>
+        
     </div>
 </template>
 

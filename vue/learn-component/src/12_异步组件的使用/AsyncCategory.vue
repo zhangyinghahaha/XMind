@@ -1,7 +1,6 @@
 <template>
     <div>
-        Category组件
-        <button @click="counter++">{{counter}}</button>
+        {{message}}
     </div>
 </template>
 
@@ -9,7 +8,7 @@
     export default {
         data() {
             return {
-                counter: 0
+                message: 'hello category'
             }
         },
     }
