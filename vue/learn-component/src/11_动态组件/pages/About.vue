@@ -13,6 +13,18 @@
                 counter: 0
             }
         },
+        created() {
+            console.log('about created');
+        },
+        unmounted() {
+            console.log('about unmounted');
+        },
+        activated() {
+            console.log('about activated');
+        },
+        deactivated() {
+            console.log('about deactivated');
+        }
     }
 </script>
 

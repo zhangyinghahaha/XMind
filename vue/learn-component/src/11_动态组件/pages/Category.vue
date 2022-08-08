@@ -7,6 +7,7 @@
 
 <script>
     export default {
+        name: 'category',
         data() {
             return {
                 counter: 0
