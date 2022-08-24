@@ -1,4 +1,4 @@
-export const demoMixin = {
+const demoMixin = {
     data() {
         return {
             message: "hello mixin"
@@ -12,4 +12,5 @@ export const demoMixin = {
     created () {
         console.log('mixin created.');;
     },
-}
+};
+export {demoMixin};

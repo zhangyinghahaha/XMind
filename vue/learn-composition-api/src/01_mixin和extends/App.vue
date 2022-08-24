@@ -1,6 +1,7 @@
 <template>
     <div>
         <h2>{{ title }}</h2>
+        <h2>Mixin data(): {{message}}</h2>
         <button @click="foo">Mixin测试</button>
     </div>
 </template>
@@ -13,6 +14,9 @@ export default {
         return {
             title: "App",
         };
+    },
+    created() {
+        console.log('App created()');
     },
 };
 </script>
