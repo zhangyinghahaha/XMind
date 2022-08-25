@@ -1,32 +1,18 @@
 <template>
     <div>
-        <h2>{{counter}}</h2>
-        <h2>Counter * 2: {{doubleCounter}}</h2>
-        <button>+1</button>
-        <button>-1</button>
+        <h2>APP</h2>
+        <Home message="hahaha" id="home"></Home>
     </div>
 </template>
 
 <script>
-    export default {
-        data() {
-            return {
-                counter: 0,
-            }
-        },
-        methods: {
-            increment() {
-                
-            }
-        },
-        computed: {
-            doubleCounter() {
-                return this.counter * 2 
-            }
-        },
-    }
+import Home from "./Home.vue";
+export default {
+    components: {
+        Home,
+    },
+    setup() {},
+};
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>
