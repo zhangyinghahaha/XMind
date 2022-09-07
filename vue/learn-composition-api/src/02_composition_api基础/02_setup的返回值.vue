@@ -35,6 +35,7 @@
             let counter = ref(100);
             
             const increment = () => {
+                // ref api具体之存储在value属性中
                 counter.value++;
             };
 

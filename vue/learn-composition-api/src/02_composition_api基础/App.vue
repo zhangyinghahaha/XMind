@@ -8,7 +8,7 @@
 
 <script>
 import Home from "./Home.vue";
-import Test from "./02_setup的返回值.vue"
+import Test from "./07_readonly.vue"
 export default {
     components: {
         Home,
