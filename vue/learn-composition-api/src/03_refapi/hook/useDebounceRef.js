@@ -1,6 +1,6 @@
 import {customRef} from 'vue';
 
-export default function(value) {
+export default function(value, delay=200) {
     let timer = null;
 
     return customRef((track, trigger) => {
@@ -14,7 +14,7 @@ export default function(value) {
                 timer = setTimeout(() => {
                     value = newValue;
                     trigger();
-                }, 1000);
+                }, delay);
                 
             }
         }
