@@ -13,9 +13,8 @@
                 name: 'why',
                 age: 18
             });
-            const name = ref('zhang ying');
 
-            watch([info, name], (newValue, oldValue) => {
+            watch(info, (newValue, oldValue) => {
               console.log('new: ', newValue);
               console.log('old: ', oldValue);
               console.log(newValue === oldValue);
