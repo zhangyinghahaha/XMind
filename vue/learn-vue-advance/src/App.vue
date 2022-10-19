@@ -5,6 +5,8 @@
 
         <h2 v-test>当前计数: {{counter}}</h2>
         <button @click="increment">+1</button>
+
+        <h2 v-format-time>1666192443848</h2>
     </div>
 </template>
 
