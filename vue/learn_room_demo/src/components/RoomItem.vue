@@ -1,8 +1,26 @@
 <script setup>
-defineProps({
+import { computed } from 'vue';
+const props = defineProps({
     item: {
         type: Object,
         default: () => ({})
+    }
+});
+
+const titleText = computed(() => {
+    return props.item.verify_info.messages.join(' ');
+});
+const titleColor = computed(() => {
+    return props.item.verify_info.text_color;
+});
+
+const bottomInfo = computed(() => {
+    return {
+        content: props.item.bottom_info.content,
+        style: {
+            color: props.item.bottom_info.content_color,
+            fontSize: props.item.bottom_info.font_size + 'px'
+        }
     }
 });
 </script>
@@ -14,8 +32,8 @@ defineProps({
                 <img :src="item.picture_url" alt="" />
             </div>
             <div class="info">
-                <div class="title">
-                    {{ "TODO" }}
+                <div class="title" :style="{color: titleColor}">
+                    {{ titleText }}
                 </div>
                 <div class="name">
                     {{ item.name }}
@@ -23,8 +41,8 @@ defineProps({
                 <div class="price">
                     {{ item.price_format + "/晚" }}
                 </div>
-                <div class="bottom-info">
-                    {{ item.bottom_info.content }}
+                <div class="bottom-info" :style="bottomInfo.style">
+                    {{ bottomInfo.content }}
                 </div>
             </div>
         </div>

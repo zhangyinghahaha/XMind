@@ -1,8 +1,13 @@
 <script setup>
+import { ref } from 'vue';
 import RoomArea from './components/RoomArea.vue';
 // 获取数据
-import highScore from './data/high_score.json';
-console.log(highScore);
+// import highScore from './data/high_score.json';
+const highScore = ref({});
+
+setTimeout(() => {
+    import('./data/high_score.json').then(data => highScore.value = data)
+}, 1000);
 </script>
 
 <template>
