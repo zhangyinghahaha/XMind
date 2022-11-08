@@ -8,11 +8,30 @@ const Home = () => import('../views/Home.vue');
 const About = () => import('../views/About.vue');
 const User = () => import('../views/User.vue');
 const NotFound = () => import('../views/NotFound.vue');
+const HomeMessage = () => import('../views/HomeMessage.vue');
+const HomeProduct = () => import('../views/HomeProduct.vue');
 
 // 配置映射关系
 const routes = [
-    {name:'index', path: '/', redirect: '/home'},
-    {path: '/home', component: Home},
+    {name:'index', path: '/', redirect: '/home/'},
+    {
+        path: '/home', 
+        component: Home,
+        children: [
+            {
+                path: '',
+                redirect: '/home/product'
+            },
+            {
+                path: 'message',
+                component: HomeMessage
+            },
+            {
+                path: 'product',
+                component: HomeProduct
+            }
+        ]
+    },
     {path: '/about', component: About},
     {path: '/user/:username', component: User},
     {path: '/:pathMatch(.*)', component: NotFound}

@@ -3,7 +3,11 @@
 </script>
 
 <template>
-    <RouterLink to="/home">首页</RouterLink>
+    <RouterLink to="/home" custom>
+        <template #="{ navigate, href, route }">
+            <button @click="navigate">首页</button>
+        </template>
+    </RouterLink>
     <RouterLink to="/about">关于</RouterLink>
     <RouterLink to="/user/zhang-ying">用户</RouterLink>
 
