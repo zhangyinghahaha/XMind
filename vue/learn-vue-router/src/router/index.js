@@ -32,7 +32,6 @@ const routes = [
             }
         ]
     },
-    {path: '/about', component: About},
     {path: '/user/:username', component: User},
     {path: '/:pathMatch(.*)', component: NotFound}
 ];
@@ -42,5 +41,9 @@ const router = createRouter({
     routes,
     history: createWebHistory()
 });
+
+// 动态添加路由
+const aboutRoute = {path: '/about', component: About};
+router.addRoute(aboutRoute);
 
 export default router;

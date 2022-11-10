@@ -8,7 +8,6 @@
             <button @click="navigate">首页</button>
         </template>
     </RouterLink>
-    <RouterLink to="/about">关于</RouterLink>
     <RouterLink to="/user/zhang-ying">用户</RouterLink>
 
     <RouterView></RouterView>
