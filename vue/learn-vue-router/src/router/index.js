@@ -46,4 +46,9 @@ const router = createRouter({
 const aboutRoute = {path: '/about', component: About};
 router.addRoute(aboutRoute);
 
+// 导航守卫
+router.beforeEach((to, from) => {
+    console.log(`路由跳转: ${from.path} -> ${to.path}`);
+});
+
 export default router;
